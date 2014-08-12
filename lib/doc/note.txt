@@ -1,0 +1,3 @@
+http://phpimageworkshop.com/installation.html
+http://www.meekro.com/download_page.php
+https://github.com/codeguy/Upload

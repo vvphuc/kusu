@@ -21,12 +21,12 @@ function utf8(){
 	mysql_query("SET CHARACTER SET 'utf8'");
 }
 require_once 'meekrodb.2.3.class.php';
-//DB::$user = 'kussu';
-//DB::$password = 'kusu@1qaz@WSX';
-//DB::$dbName = 'kusudemodb';
-DB::$user = 'root';
-DB::$password = '';
+DB::$user = 'kusu';
+DB::$password = 'kusu@1qaz@WSX';
 DB::$dbName = 'kusudemodb';
+//DB::$user = 'root';
+//DB::$password = '';
+//DB::$dbName = 'kusudemodb';
 // tìm kiếm 
 function send($key){
 utf8();

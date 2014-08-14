@@ -2,18 +2,19 @@
 	//Các thiết lập cho Database 
 	
 	//Cấu hình trên localhost
-	/*
+
 	define('HOST','localhost');
 	define('DBUSER','root');
 	define('DBPASS','');
-	define('DBNAME', 'pizzahutdb');
-	*/
+	define('DBNAME', 'kusudemodb');
+
 	
 	//Cấu hình trên server.
-	define('HOST','hdm.com.vn');
+	/*define('HOST','hdm.com.vn');
 	define('DBUSER','kusu');
 	define('DBPASS','kusu@1qaz@WSX');
 	define('DBNAME', 'kusudemodb');
+	*/
 		
 	
 	//URL cua Website

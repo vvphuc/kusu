@@ -9,6 +9,19 @@
 <body>
 <?php 
 require "./lib/functions.php";
+$conn=mysql_connect("localhost","root","") or die("can't connect this database");
+mysql_select_db("kusudemodb",$conn);
+
+$sql="select * from answer";
+$query=mysql_query($sql);
+$row=mysql_fetch_array($query);
+print_r($row);
+$rows =  select_answer();
+print_r($rows);
+for($i=0;$i<count($rows);$i++)
+{
+    echo $rows[$i]['email'];
+}
 /*
 DB::insertUpdate('user', array(
   'id' => 9, //primary key
@@ -69,9 +82,9 @@ $c = array_values($a);echo $c[0];
 echo"<pre>";
 print_r($c);echo "</pre>";
 insert_images($a) */
-$a = images_subjectid(0);
-$a = array_slice ($a, 2, 6);
-print_r($a);
+//$a = images_subjectid(0);
+//$a = array_slice ($a, 2, 6);
+//print_r($a);
 ?>
 </body>
 </html>

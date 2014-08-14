@@ -9,7 +9,7 @@ function function_name($conn){
 		// $query = sprintf("SELECT * FROM winner WHERE fbid!='111' and name!='' ORDER BY time DESC LIMIT 0,500");		
 		// mysql_query("SET NAMES 'utf8'", $conn);
 		// $result = mysql_query($query, $conn);
-		return $result;
+		//return $result;
 	}
 	catch(Exception $e){
 		echo "Message " . $e->getMessage();
@@ -21,8 +21,11 @@ function utf8(){
 	mysql_query("SET CHARACTER SET 'utf8'");
 }
 require_once 'meekrodb.2.3.class.php';
-DB::$user = 'kusu';
-DB::$password = 'kusu@1qaz@WSX';
+//DB::$user = 'kussu';
+//DB::$password = 'kusu@1qaz@WSX';
+//DB::$dbName = 'kusudemodb';
+DB::$user = 'root';
+DB::$password = '';
 DB::$dbName = 'kusudemodb';
 // tìm kiếm 
 function send($key){
@@ -150,5 +153,11 @@ return $a;
 function select_tintuc(){
 $total = DB::query("SELECT `id`, `userid` ,`photoid`, `vote` FROM news  ");
 return $total;
+}
+//lấy câu trả lời
+function select_answer()
+{
+    $total = DB::query("SELECT `email`,`message`,`avatar` FROM answer  ");
+    return $total;
 }
 ?>

@@ -1,11 +1,6 @@
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+﻿<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <?php
-require "config/config.php";
-require "config/function.php";
-require_once 'lib/meekrodb.2.3.class.php';
-DB::$user = 'root';
-DB::$password = '';
-DB::$dbName = 'kusudemodb';
+require "lib/functions.php";
 if(isset($_POST['submit']))
 {
     if($_POST['answer']!="")
@@ -17,12 +12,8 @@ if(isset($_POST['submit']))
             if($_POST['avatar']!="")
             {
                 $avatar = $_POST['avatar'];
-                DB::insert('answer',array(
-                    'email' => $email,
-                    'message' => $message,
-                    'avatar' => $avatar,
-                ));
-                _redirect("landing_page.php");
+                insert_answer($email,$message,$avatar);
+                
             }
             else
             {

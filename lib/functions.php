@@ -1,5 +1,6 @@
 ﻿<?php 
 require './config/config.php';
+require 'config/function.php';
 
 //Demo function
 function function_name($conn){
@@ -153,6 +154,16 @@ return $a;
 function select_tintuc(){
 $total = DB::query("SELECT `id`, `userid` ,`photoid`, `vote` FROM news  ");
 return $total;
+}
+//thêm câu trả lời vào bảng answer
+function insert_answer($email,$message,$avatar)
+{
+    DB::insert('answer',array(
+        'email' => $email,
+        'message' => $message,
+        'avatar' => $avatar,
+    ));
+    _redirect("landing_page.php");
 }
 //lấy câu trả lời
 function select_answer()

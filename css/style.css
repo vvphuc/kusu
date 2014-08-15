@@ -30,4 +30,15 @@ html { background:url(../images/background_landingpage.jpg) no-repeat center cen
 
 /* ------------------- */
 
+@font-face {
+  font-family: 'UTMAndrogyne';
+  src: url('fonts/UTMAndrogyne.eot');
+  src: url('fonts/UTMAndrogyne.eot?#iefix') format('embedded-opentype'),
+       url('fonts/UTMAndrogyne.woff') format('woff'),
+       url('fonts/UTMAndrogyne.ttf') format('truetype'),
+       url('fonts/UTMAndrogyne.svg#UTMAndrogyne') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 

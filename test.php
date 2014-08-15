@@ -12,16 +12,11 @@ require "./lib/functions.php";
 $conn=mysql_connect("localhost","root","") or die("can't connect this database");
 mysql_select_db("kusudemodb",$conn);
 
-$sql="select * from answer";
+$sql="select * from news";
+mysql_query("SET NAMES 'utf8'");
 $query=mysql_query($sql);
 $row=mysql_fetch_array($query);
 print_r($row);
-$rows =  select_answer();
-print_r($rows);
-for($i=0;$i<count($rows);$i++)
-{
-    echo $rows[$i]['email'];
-}
 /*
 DB::insertUpdate('user', array(
   'id' => 9, //primary key

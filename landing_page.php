@@ -1,7 +1,7 @@
 <?php
 require "lib/functions.php";
 $result = select_answer();
-
+$result_news = select_news();
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -83,14 +83,25 @@ $result = select_answer();
 
     <div class="bikipcuame">
         <ul id="mycarousel" class="jcarousel-skin-tango">
-            <li><a href="details.html"><span>15/05/2014</span>&nbsp;&nbsp;<b>Con ngán sữa -  vấn đề chung của mẹ</b></a></li>
-            <li><a href="details.html"><span>15/05/2014</span>&nbsp;&nbsp;<b>Mẹ hiểu gì về tình trạng ngán sữa ở trẻ</b></a></li>
-            <li><a href="details.html"><span>15/05/2014</span>&nbsp;&nbsp;<b>Con ngán sữa không còn là chuyện nhỏ</b></a></li>
-            <li><a href="details.html"><span>15/05/2014</span>&nbsp;&nbsp;<b>Con ngán sữa -  vấn đề chung của mẹ</b></a></li>
-            <li><a href="details.html"><span>15/05/2014</span>&nbsp;&nbsp;<b>Con ngán sữa không còn là chuyện nhỏ</b></a></li>
-            <li><a href="details.html"><span>15/05/2014</span>&nbsp;&nbsp;<b>Con ngán sữa -  vấn đề chung của mẹ</b></a></li>
-            <li><a href="details.html"><span>15/05/2014</span>&nbsp;&nbsp;<b>Mẹ hiểu gì về tình trạng ngán sữa ở trẻ</b></a></li>
-            <li><a href="details.html"><span>15/05/2014</span>&nbsp;&nbsp;<b>Con ngán sữa không còn là chuyện nhỏ</b></a></li>
+            <?php
+            if(count($result_news)==0)
+            {
+                echo "<li>Chưa có tin tức nào .!</li>";
+            }
+            else
+            {
+                for($i = 0;$i < count($result_news);$i++)
+                {
+                    $date = date_create($result_news[$i]['registerdate']);
+            ?>
+
+            <li><a href="details_news.php?id=<?php echo $result_news[$i]['id']; ?>"><span><?php echo date_format($date, 'd/m/Y'); ?></span>&nbsp;&nbsp;<b><?php echo $result_news[$i]['title'] ;?></b></a></li>
+
+            <?php
+                }
+            }
+            ?>
+
         </ul>
     </div>
     <div class="question_img"></div>
@@ -100,6 +111,12 @@ $result = select_answer();
         <ul id="mycarousel-chat" class="jcarousel-skin-tango-chat">
             <!-- -->
             <?php
+            if(count($result)==0)
+            {
+                echo "<li>Chưa có câu trả lời nào . !</li>";
+            }
+            else
+            {
             for($i=0;$i<count($result);$i++)
             {
                 if($i%2==0)
@@ -139,6 +156,8 @@ $result = select_answer();
             <?php
                 }
             }
+            }
+
             ?>
             <!-- -->
         </ul>

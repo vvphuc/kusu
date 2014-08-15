@@ -29,7 +29,7 @@ if(isset($_GET['id']) && $_GET['id'] != "" )
 <div id="wrap_detailspage">
     <div id="details">
         <!-- ------ -->
-        <a href="#" class="back-link"></a>
+        <a href="landing_page.php" class="back-link"></a>
         <!-- ------ -->
         <ul id="menu">
             <li class="active"><b></b><a href="#">Bí kíp của mẹ</a><span></span></li>
@@ -52,7 +52,7 @@ if(isset($_GET['id']) && $_GET['id'] != "" )
                                 for($i=0;$i<count($result);$i++)
                                 {
                                 ?>
-                                    <li><a href="#"><?php echo $result[$i]['title'];?></a></li>
+                                    <li><a href="details_news.php?id=<?php echo $result[$i]['id']; ?>"><?php echo $result[$i]['title'];?></a></li>
                                 <?php
                                 }
                             }
@@ -85,6 +85,8 @@ if(isset($_GET['id']) && $_GET['id'] != "" )
         </div>
     </div>
 </div>
+</body>
+</html>
 <?php
 }
 else
@@ -93,5 +95,3 @@ else
     _redirect("landing_page.php");
 }
 ?>
-</body>
-</html>

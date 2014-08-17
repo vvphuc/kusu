@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document */
+
+#wrap_answerpage { width:1000px; margin:auto; position:relative}
+.milk-bg { width:791px; height:497px; background:url(../images/milk-bg.png) no-repeat; bottom:0; left:0; position:fixed}
+.question { width:467px; height:127px; background:url(../images/answer_question.png) no-repeat; position:absolute; top:30px; left:425px}
+form.ans { position:absolute; right:80px; top:164px; width: 500px}
+form.ans textarea { background:rgba(255,255,255,0.8); resize:none; width:418px; height:136px; border-radius:10px; border:3px solid #009588; font:14px/18px Arial, Helvetica, sans-serif; padding:15px 12px}
+::-webkit-input-placeholder {font-style:italic}
+:-moz-placeholder { /* Firefox 18- */ font-style:italic}
+::-moz-placeholder {  /* Firefox 19+ */ font-style:italic}
+:-ms-input-placeholder { font-style:italic}
+form.ans input[type=text] {background:rgba(255,255,255,0.8); width:368px; height:16px; border-radius:10px; border:3px solid #009588; font:14px/18px Arial, Helvetica, sans-serif; padding:12px 12px 12px 22px; margin:20px 0 0 40px}
+.mail-icon { width:60px; height:61px; background:url(../images/answer_email-icon.png) no-repeat; position:absolute; top:183px}
+.text-chon-ava { width:380px; height:85px; background:url(../images/text-chon-ava.png) 10px 15px no-repeat; margin-top:10px; padding-left:100px}
+.text-chon-ava a { margin-left:10px; float:left}
+.text-chon-ava a img {margin-top:10px; transition:all 0.3s; opacity:0.5}
+.text-chon-ava a:hover img,.text-chon-ava a.active img { margin-top:0px; transition:all 0.3s; opacity:1}
+form.ans input[type=submit] { width:148px; height:46px; border:none; background:url(../images/button-submit.png) 0 -121px no-repeat; margin:20px 0 0 170px;color: transparent}
+form.ans input[type=submit]:hover { cursor:pointer; background-position:0 -303px}

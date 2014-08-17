@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS Document */
+
+#wrap_landingpage { width:1000px; margin:auto; position:relative}
+.tvc { width:437px; height:499px; background:url(../images/background_tvc.png) no-repeat; position: absolute; top:200px; left:-43px}
+.bikipcuame { width:413px; height:248px; position:absolute; top:0; left:-20px; background:url(../images/background_1001bikip.png) no-repeat}
+.question_img { width:467px; height:127px; background:url(../images/landingpage_question.png) no-repeat; position:absolute; left:475px; top:20px}
+.q_and_a { width:515px; position:absolute; top:160px; right:20px}
+.q_and_a .chat { width:100%; clear:both}
+.q_and_a .boy .ava { width:75px; height:75px; float:left}
+.q_and_a .chat .text { float:left; width:425px; margin: 15px 0 10px;}
+.q_and_a .chat .text div { background-color:#f9d110; border-radius:7px; padding:10px 20px; width:auto; float:left}
+.q_and_a .chat .text span { color:#fff; font: 10px italic Arial, Helvetica, sans-serif; display:block; padding-bottom:3px}
+.q_and_a .chat .text b { font:14px/18px Arial, Helvetica, sans-serif; font-weight:normal}
+.q_and_a .boy .arrowleft {width: 0px;height: 0px;border-top: 5px solid transparent;border-bottom: 5px solid transparent;border-right: 18px solid #f9d110;float: left;margin: 32px 0 0;}
+.q_and_a .girl .ava { width:75px; height:75px; float:right}
+.q_and_a .girl .arrowright {width: 0px;height: 0px;border-top: 5px solid transparent;border-bottom: 5px solid transparent;border-left: 18px solid #f9d110;float: left;margin: 32px 0 0;}
+.q_and_a .boy .text div { background-color:#f9d110; border-radius:7px; padding:10px; width:auto; float:left}
+.q_and_a .girl .text div { background-color:#f9d110; border-radius:7px; padding:10px; width:auto; float:right}
+.chat:hover .text div { background-color:#009588}
+.chat:hover .arrowleft { border-right:18px solid #009588}
+.chat:hover .arrowright { border-left:18px solid #009588}
+.tvc .video { margin: 112px 0 0 83px}

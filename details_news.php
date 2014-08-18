@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 require "lib/functions.php";
 if(isset($_GET['id']) && $_GET['id'] != "" )
 {
@@ -22,7 +22,7 @@ if(isset($_GET['id']) && $_GET['id'] != "" )
             $("#scrollbar2").tinyscrollbar({ thumbSize: 80 });
         });
     </script>
-
+    <script type="text/javascript" src="js/ga_kun.js"></script>
 </head>
 
 <body>

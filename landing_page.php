@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 require "lib/functions.php";
 $result = select_answer();
 $result_news = select_news();
@@ -21,6 +21,7 @@ $result_news = select_news();
     <link rel="stylesheet" type="text/css" href="css/skin.css" />
     <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="js/jquery.jcarousel.js"></script>
+    <script type="text/javascript" src="js/ga_kun.js"></script>
     <script type="text/javascript">
 
         function mycarousel_initCallback(carousel)

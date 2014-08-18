@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/question_page.css" />
+    <script type="text/javascript" src="js/ga_kun.js"></script>
 </head>
 
 <body>

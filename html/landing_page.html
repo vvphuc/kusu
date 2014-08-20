@@ -43,12 +43,8 @@ jQuery(document).ready(function() {
 		vertical: true,
         scroll: 1,
 		auto: 2,
-        wrap: 'last'
-    });
-    jQuery('#mycarousel-tvc').jcarousel({
-		vertical: false,
-        scroll: 1,
-        wrap: 'last'
+        wrap: 'last',
+		initCallback: mycarousel_initCallback
     });
     jQuery('#mycarousel-chat').jcarousel({
 		vertical: true,
@@ -65,27 +61,17 @@ jQuery(document).ready(function() {
 <body>
 <div id="wrap_landingpage">
 	<div class="tvc">
-    	<div class="video"><iframe width="274" height="195" src="//www.youtube.com/embed/NXqvabhcI3A" frameborder="0" allowfullscreen></iframe></div>
-        <ul id="mycarousel-tvc" class="jcarousel-skin-tango-tvc">
-        	<li><a><img src="images/youtube-thumb.jpg" /></a></li>
-        	<li><a><img src="images/youtube-thumb.jpg" /></a></li>
-        	<li><a><img src="images/youtube-thumb.jpg" /></a></li>
-        	<li><a><img src="images/youtube-thumb.jpg" /></a></li>
-        	<li><a><img src="images/youtube-thumb.jpg" /></a></li>
-        	<li><a><img src="images/youtube-thumb.jpg" /></a></li>
-        </ul>
+    	<div class="video"><img src="images/youtube-demo.jpg" /></div>
+        <div class="social">LIKE AND SHARE HERE!!!</div>
     </div>
     
 	<div class="bikipcuame">
     	<ul id="mycarousel" class="jcarousel-skin-tango">
-        	<li><a href="details.html"><span>15/05/2014</span>&nbsp;&nbsp;<b>Con ngán sữa -  vấn đề chung của mẹ</b></a></li>
-        	<li><a href="details.html"><span>15/05/2014</span>&nbsp;&nbsp;<b>Mẹ hiểu gì về tình trạng ngán sữa ở trẻ</b></a></li>
-        	<li><a href="details.html"><span>15/05/2014</span>&nbsp;&nbsp;<b>Con ngán sữa không còn là chuyện nhỏ</b></a></li>
-        	<li><a href="details.html"><span>15/05/2014</span>&nbsp;&nbsp;<b>Con ngán sữa -  vấn đề chung của mẹ</b></a></li>
-        	<li><a href="details.html"><span>15/05/2014</span>&nbsp;&nbsp;<b>Con ngán sữa không còn là chuyện nhỏ</b></a></li>
-        	<li><a href="details.html"><span>15/05/2014</span>&nbsp;&nbsp;<b>Con ngán sữa -  vấn đề chung của mẹ</b></a></li>
-        	<li><a href="details.html"><span>15/05/2014</span>&nbsp;&nbsp;<b>Mẹ hiểu gì về tình trạng ngán sữa ở trẻ</b></a></li>
-        	<li><a href="details.html"><span>15/05/2014</span>&nbsp;&nbsp;<b>Con ngán sữa không còn là chuyện nhỏ</b></a></li>
+        	<li><a href="details.html"><b>Con ngán sữa Con ngán sữa Con ngán sữa Con ngán sữa </b><span><img src="images/logo-thanhnien.png" /></span></a></li>
+        	<li><a href="details.html"><b>Con ngán sữa Con ngán sữa Con ngán sữa Con ngán sữa </b><span><img src="images/logo-thanhnien.png" /></span></a></li>
+        	<li><a href="details.html"><b>Con ngán sữa Con ngán sữa Con ngán sữa Con ngán sữa </b><span><img src="images/logo-thanhnien.png" /></span></a></li>
+        	<li><a href="details.html"><b>Con ngán sữa Con ngán sữa Con ngán sữa Con ngán sữa </b><span><img src="images/logo-thanhnien.png" /></span></a></li>
+        	<li><a href="details.html"><b>Con ngán sữa Con ngán sữa Con ngán sữa Con ngán sữa </b><span><img src="images/logo-thanhnien.png" /></span></a></li>
         </ul>
     </div>
     <div class="question_img"></div>
@@ -96,7 +82,7 @@ jQuery(document).ready(function() {
     		<!-- -->
             <li>
             	<div class="chat boy">
-                    <div class="ava"><img src="images/icon-chat-1.png" /></div>
+                    <div class="ava"><img src="images/default-ava.png" /></div>
                     <div class="arrowleft"></div>
                     <div class="text">
                         <div>
@@ -108,7 +94,7 @@ jQuery(document).ready(function() {
             </li>
             <li>
                 <div class="chat girl">
-                    <div class="ava"><img src="images/icon-chat-2.png" /></div>
+                    <div class="ava"><img src="images/default-ava.png" /></div>
                     <div class="text">
                         <div>
                             <span>Nguyenhongngoc@gmail.com</span>
@@ -120,7 +106,7 @@ jQuery(document).ready(function() {
             </li>
             <li>
             	<div class="chat boy">
-                    <div class="ava"><img src="images/icon-chat-1.png" /></div>
+                    <div class="ava"><img src="images/default-ava.png" /></div>
                     <div class="arrowleft"></div>
                     <div class="text">
                         <div>
@@ -134,7 +120,7 @@ jQuery(document).ready(function() {
             </li>
             <li>
             	<div class="chat girl">
-                    <div class="ava"><img src="images/icon-chat-2.png" /></div>
+                    <div class="ava"><img src="images/default-ava.png" /></div>
                     <div class="text">
                         <div>
                             <span>Nguyenhongngoc@gmail.com</span>
@@ -146,7 +132,7 @@ jQuery(document).ready(function() {
             </li>
             <li>
                 <div class="chat boy">
-                    <div class="ava"><img src="images/icon-chat-1.png" /></div>
+                    <div class="ava"><img src="images/default-ava.png" /></div>
                     <div class="arrowleft"></div>
                     <div class="text">
                         <div>
@@ -159,7 +145,7 @@ jQuery(document).ready(function() {
     		<!-- -->
             <li>
             	<div class="chat boy">
-                    <div class="ava"><img src="images/icon-chat-1.png" /></div>
+                    <div class="ava"><img src="images/default-ava.png" /></div>
                     <div class="arrowleft"></div>
                     <div class="text">
                         <div>
@@ -171,7 +157,7 @@ jQuery(document).ready(function() {
             </li>
             <li>
                 <div class="chat girl">
-                    <div class="ava"><img src="images/icon-chat-2.png" /></div>
+                    <div class="ava"><img src="images/default-ava.png" /></div>
                     <div class="text">
                         <div>
                             <span>Nguyenhongngoc@gmail.com</span>
@@ -183,7 +169,7 @@ jQuery(document).ready(function() {
             </li>
             <li>
             	<div class="chat boy">
-                    <div class="ava"><img src="images/icon-chat-1.png" /></div>
+                    <div class="ava"><img src="images/default-ava.png" /></div>
                     <div class="arrowleft"></div>
                     <div class="text">
                         <div>
@@ -197,7 +183,7 @@ jQuery(document).ready(function() {
             </li>
             <li>
             	<div class="chat girl">
-                    <div class="ava"><img src="images/icon-chat-2.png" /></div>
+                    <div class="ava"><img src="images/default-ava.png" /></div>
                     <div class="text">
                         <div>
                             <span>Nguyenhongngoc@gmail.com</span>
@@ -209,7 +195,7 @@ jQuery(document).ready(function() {
             </li>
             <li>
                 <div class="chat boy">
-                    <div class="ava"><img src="images/icon-chat-1.png" /></div>
+                    <div class="ava"><img src="images/default-ava.png" /></div>
                     <div class="arrowleft"></div>
                     <div class="text">
                         <div>
@@ -221,7 +207,7 @@ jQuery(document).ready(function() {
             </li>
             <li>
             	<div class="chat girl">
-                    <div class="ava"><img src="images/icon-chat-2.png" /></div>
+                    <div class="ava"><img src="images/default-ava.png" /></div>
                     <div class="text">
                         <div>
                             <span>Nguyenhongngoc@gmail.com</span>

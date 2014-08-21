@@ -22,7 +22,7 @@ form h3 {font-family:'UTMAndrogyne',Arial, Helvetica, sans-serif; font-size:18px
 }
 .rightside { width:420px; float:left}
 .rightside .rowf { width:400px; clear:both}
-.rightside .rowf span { font-size:15px; color:#fff; font-weight:700; display:block; float:left; width:80px; padding:15px 0 0; text-shadow:0px 0px 2px rgba(0,0,0,1)}
+.rightside .rowf span { font-size:15px; color:#fff; font-weight:700; display:block; float:left; width:80px; padding:15px 0 0; text-shadow: -2px 0px 0 #009588,2px 0px 0 #009588,0px -2px 0 #009588,0px 2px 0 #009588,-2px -2px 0 #009588,2px -2px 0 #009588,-2px 2px 0 #009588,2px 2px 0 #009588;}
 .rightside .rowf input[type=text] { background:#fff; border:3px solid #008a7e; border-radius:10px; padding:7px 10px; width:290px; float:right; margin:5px 0}
 
 /* Flower moving */

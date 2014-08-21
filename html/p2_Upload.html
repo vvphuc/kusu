@@ -13,10 +13,6 @@
     	$(".uploadFile").attr( "value", this.value );
 };
 	});
-	function getID($id){
-		$('#n1,#n2').removeClass('choose');
-		$("#n"+$id).addClass('choose');
-	};
 </script>
 </head>
 
@@ -56,9 +52,8 @@
     		<h3>1. Lựa chọn chủ đề:</h3>
             <div class="f13">Bạn hãy lựa chọn chủ đề mình yêu thích, sau đó tải hình ảnh tương tự như hình chủ đề bạn đã chọn.</div>
             <br>
-            <a href="#" id="n1" onclick="getID(1)" class="choose"><img src="images/p2-chude1.png" /></a>
-            <a href="#" id="n2" onclick="getID(2)"><img src="images/p2-chude2.png" /></a>
-            <p class="clear"></p>
+            <div><img src="images/p2-chude.png" alt="Chủ đề" /></div>
+            <div class="clear"></div>
             <div class="fileUpload">
             	<input class="uploadFile" type="text" value="Chưa chọn file" />
                 <div class="text">Chọn hình</div>

@@ -186,7 +186,7 @@ function select_answer()
 }
 function select_news(){
     DB::$encoding = 'utf8';
-    $total = DB::query("SELECT `id`, `title` ,`registerdate` FROM news ORDER BY registerdate DESC  ");
+    $total = DB::query("SELECT `id`, `title` ,`registerdate`,`photo` FROM news ORDER BY registerdate DESC  ");
     return $total;
 }
 function select_details_news($id){

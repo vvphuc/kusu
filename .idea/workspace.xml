@@ -2,22 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0464133c-b635-4617-8550-7cbd1c505d69" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/details_news.php" afterPath="$PROJECT_DIR$/details_news.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/details_page.css" afterPath="$PROJECT_DIR$/css/details_page.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/background_1001bikip.png" afterPath="$PROJECT_DIR$/images/background_1001bikip.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/background_landingpage.jpg" afterPath="$PROJECT_DIR$/images/background_landingpage.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/question_question.png" afterPath="$PROJECT_DIR$/images/question_question.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/answer.html" afterPath="$PROJECT_DIR$/html/answer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/answer.php" afterPath="$PROJECT_DIR$/answer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/answer_page.css" afterPath="$PROJECT_DIR$/css/answer_page.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/css/answer_page.css" afterPath="$PROJECT_DIR$/html/css/answer_page.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/config.php" afterPath="$PROJECT_DIR$/config/config.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/functions.php" afterPath="$PROJECT_DIR$/lib/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/insert_answer.php" afterPath="$PROJECT_DIR$/insert_answer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/landing_page.css" afterPath="$PROJECT_DIR$/css/landing_page.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/landing_page.php" afterPath="$PROJECT_DIR$/landing_page.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/question.html" afterPath="$PROJECT_DIR$/html/question.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/question_page.css" afterPath="$PROJECT_DIR$/css/question_page.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/skin.css" afterPath="$PROJECT_DIR$/css/skin.css" />
     </list>
     <ignored path="kusu123.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="0464133c-b635-4617-8550-7cbd1c505d69" time="1408094016521" ignored="false" />
-    <file path="/index.php" changelist="0464133c-b635-4617-8550-7cbd1c505d69" time="1408028761292" ignored="false" />
-    <file path="/answer.php" changelist="0464133c-b635-4617-8550-7cbd1c505d69" time="1408035390926" ignored="false" />
-    <file path="/insert_answer.php" changelist="0464133c-b635-4617-8550-7cbd1c505d69" time="1408041031474" ignored="false" />
-    <file path="/functions.php" changelist="0464133c-b635-4617-8550-7cbd1c505d69" time="1408074170055" ignored="false" />
-    <file path="/landing_page.php" changelist="0464133c-b635-4617-8550-7cbd1c505d69" time="1408072864786" ignored="false" />
+    <file path="/Dummy.txt" changelist="0464133c-b635-4617-8550-7cbd1c505d69" time="1408589248924" ignored="false" />
+    <file path="/index.php" changelist="0464133c-b635-4617-8550-7cbd1c505d69" time="1408593279938" ignored="false" />
+    <file path="/answer.php" changelist="0464133c-b635-4617-8550-7cbd1c505d69" time="1408613709973" ignored="false" />
+    <file path="/insert_answer.php" changelist="0464133c-b635-4617-8550-7cbd1c505d69" time="1408602324475" ignored="false" />
+    <file path="/functions.php" changelist="0464133c-b635-4617-8550-7cbd1c505d69" time="1408611031867" ignored="false" />
+    <file path="/landing_page.php" changelist="0464133c-b635-4617-8550-7cbd1c505d69" time="1408612686064" ignored="false" />
     <file path="/test.php" changelist="0464133c-b635-4617-8550-7cbd1c505d69" time="1408074070499" ignored="false" />
     <file path="/details_news.php" changelist="0464133c-b635-4617-8550-7cbd1c505d69" time="1408098318950" ignored="false" />
+    <file path="/loginfb.php" changelist="0464133c-b635-4617-8550-7cbd1c505d69" time="1408604274741" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,99 +49,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="landing_page.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/landing_page.php">
+      <file leaf-file-name="answer.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/answer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="91" column="13" selection-start="3408" selection-end="3408" vertical-scroll-proportion="-0.65384614">
-              <folding>
-                <marker date="1408073036739" expanded="true" signature="3989:4537" placeholder="..." />
-                <marker date="1408073036739" expanded="true" signature="4057:4537" placeholder="..." />
-                <marker date="1408073036739" expanded="true" signature="4399:4537" placeholder="..." />
-                <marker date="1408073036739" expanded="true" signature="4399:4431" placeholder="..." />
-                <marker date="1408073036739" expanded="true" signature="4442:4537" placeholder="..." />
-                <marker date="1408073036739" expanded="true" signature="4661:4757" placeholder="..." />
-                <marker date="1408073036739" expanded="true" signature="4695:4757" placeholder="..." />
-                <marker date="1408073036739" expanded="true" signature="5088:5227" placeholder="..." />
-                <marker date="1408073036739" expanded="true" signature="5132:5227" placeholder="..." />
-                <marker date="1408073036739" expanded="true" signature="5298:5394" placeholder="..." />
-                <marker date="1408073036739" expanded="true" signature="5332:5394" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="details_news.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/details_news.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="34" selection-start="1995" selection-end="1995" vertical-scroll-proportion="0.5633528">
-              <folding>
-                <marker date="1408098320007" expanded="true" signature="2363:2871" placeholder="..." />
-                <marker date="1408098320007" expanded="true" signature="2397:2871" placeholder="..." />
-                <marker date="1408098320007" expanded="true" signature="2532:2871" placeholder="..." />
-                <marker date="1408098320007" expanded="true" signature="2575:2871" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="details.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Desktop/HTML/details.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="17.653847">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="details_page.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/details_page.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="33" selection-start="741" selection-end="744" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="details.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/details.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="11" selection-start="1011" selection-end="1011" vertical-scroll-proportion="-7.923077">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="function.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/function.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="72" selection-start="106" selection-end="106" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="functions.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/functions.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="27" selection-start="794" selection-end="794" vertical-scroll-proportion="-7.8461537">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="meekrodb.2.3.class.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/meekrodb.2.3.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="895" column="14" selection-start="34446" selection-end="34446" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="0" selection-start="374" selection-end="406" vertical-scroll-proportion="0.0">
+            <state line="91" column="11" selection-start="3754" selection-end="3754" vertical-scroll-proportion="0.72360843">
               <folding />
             </state>
           </provider>
@@ -153,15 +76,18 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/config/config.php" />
-        <option value="$PROJECT_DIR$/answer.php" />
-        <option value="$PROJECT_DIR$/insert_answer.php" />
-        <option value="$PROJECT_DIR$/landing_page.php" />
         <option value="$PROJECT_DIR$/test.php" />
-        <option value="$PROJECT_DIR$/lib/functions.php" />
         <option value="$PROJECT_DIR$/details.html" />
         <option value="$PROJECT_DIR$/details_news.php" />
+        <option value="$PROJECT_DIR$/html/css/answer_page.css" />
+        <option value="$PROJECT_DIR$/config/config.php" />
+        <option value="$PROJECT_DIR$/insert_answer.php" />
+        <option value="$PROJECT_DIR$/loginfb.php" />
+        <option value="$PROJECT_DIR$/lib/functions.php" />
+        <option value="$PROJECT_DIR$/landing_page.php" />
+        <option value="$PROJECT_DIR$/html/answer.html" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/answer.php" />
       </list>
     </option>
   </component>
@@ -213,35 +139,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="kusu123" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kusu123" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kusu123" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kusu123" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kusu123" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="kusuv2_1" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -261,6 +159,13 @@
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method />
+    </configuration>
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -273,14 +178,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1378" height="744" extended-state="1" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26595744" sideWeight="0.67064846" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27051672" sideWeight="0.67064846" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -356,120 +261,117 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="443" selection-end="443" vertical-scroll-proportion="-6.5384617" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/answer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="112" selection-start="2098" selection-end="2098" vertical-scroll-proportion="-24.192308" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="27" selection-start="204" selection-end="204" vertical-scroll-proportion="0.35018727" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_paging.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/insert_answer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="43" selection-start="380" selection-end="380" vertical-scroll-proportion="0.41385767" />
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/mysql.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="148" column="9" selection-start="5421" selection-end="5421" vertical-scroll-proportion="0.34932822">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/meekrodb.2.3.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="895" column="14" selection-start="34446" selection-end="34446" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="374" selection-end="406" vertical-scroll-proportion="0.0">
+        <state line="15" column="0" selection-start="374" selection-end="406" vertical-scroll-proportion="0.031835206">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/landing_page.php">
+    <entry file="file://$PROJECT_DIR$/html/css/answer_page.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="13" selection-start="3408" selection-end="3408" vertical-scroll-proportion="-0.65384614">
-          <folding>
-            <marker date="1408073036739" expanded="true" signature="3989:4537" placeholder="..." />
-            <marker date="1408073036739" expanded="true" signature="4057:4537" placeholder="..." />
-            <marker date="1408073036739" expanded="true" signature="4399:4537" placeholder="..." />
-            <marker date="1408073036739" expanded="true" signature="4399:4431" placeholder="..." />
-            <marker date="1408073036739" expanded="true" signature="4442:4537" placeholder="..." />
-            <marker date="1408073036739" expanded="true" signature="4661:4757" placeholder="..." />
-            <marker date="1408073036739" expanded="true" signature="4695:4757" placeholder="..." />
-            <marker date="1408073036739" expanded="true" signature="5088:5227" placeholder="..." />
-            <marker date="1408073036739" expanded="true" signature="5132:5227" placeholder="..." />
-            <marker date="1408073036739" expanded="true" signature="5298:5394" placeholder="..." />
-            <marker date="1408073036739" expanded="true" signature="5332:5394" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/function.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="72" selection-start="106" selection-end="106" vertical-scroll-proportion="0.0">
+        <state line="38" column="48" selection-start="2291" selection-end="2291" vertical-scroll-proportion="0.4559387">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/functions.php">
+    <entry file="file://$PROJECT_DIR$/html/question.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="27" selection-start="794" selection-end="794" vertical-scroll-proportion="-7.8461537">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/details_page.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="33" selection-start="741" selection-end="744" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/details.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="11" selection-start="1011" selection-end="1011" vertical-scroll-proportion="-7.923077">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/HTML/details.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="17.653847">
+        <state line="8" column="0" selection-start="418" selection-end="487" vertical-scroll-proportion="0.09737828">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/details_news.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="34" selection-start="1995" selection-end="1995" vertical-scroll-proportion="0.5633528">
+        <state line="4" column="22" selection-start="104" selection-end="104" vertical-scroll-proportion="0.13051823">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/function.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="72" selection-start="106" selection-end="106" vertical-scroll-proportion="0.034548946">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/meekrodb.2.3.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="895" column="14" selection-start="34446" selection-end="34446" vertical-scroll-proportion="0.032629557">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="22" selection-start="632" selection-end="673" vertical-scroll-proportion="-10.730769">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="0" selection-start="693" selection-end="693" vertical-scroll-proportion="-9.153846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/landing_page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="139" selection-start="2285" selection-end="2324" vertical-scroll-proportion="-45.115383">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/landing_page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="140" column="58" selection-start="4971" selection-end="4971" vertical-scroll-proportion="0.17">
           <folding>
-            <marker date="1408098320007" expanded="true" signature="2363:2871" placeholder="..." />
-            <marker date="1408098320007" expanded="true" signature="2397:2871" placeholder="..." />
-            <marker date="1408098320007" expanded="true" signature="2532:2871" placeholder="..." />
-            <marker date="1408098320007" expanded="true" signature="2575:2871" placeholder="..." />
+            <marker date="1408612705186" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loginfb.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="102" column="42" selection-start="3370" selection-end="3420" vertical-scroll-proportion="0.5224719">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/insert_answer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="1" selection-start="74" selection-end="138" vertical-scroll-proportion="0.15917604">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/answer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="8" selection-start="1924" selection-end="1985" vertical-scroll-proportion="0.8014981">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="7" selection-start="815" selection-end="815" vertical-scroll-proportion="0.3483146">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/answer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="91" column="11" selection-start="3754" selection-end="3754" vertical-scroll-proportion="0.72360843">
+          <folding />
         </state>
       </provider>
     </entry>

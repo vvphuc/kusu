@@ -7,16 +7,28 @@
 
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/question_page.css" />
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="js/ga_kun.js"></script>
+    <script>
+        function directpage(){
+            $("#popup").css("display","block");
+            setTimeout(function () {
+                window.location.href = "landing_page.php";
+            }, 3000);
+        };
+    </script>
 </head>
 
 <body>
+<div id="popup" style="position:absolute;width:100%;height:100%;z-index:100;background:rgba(255,255,255,.7); display:none">
+    <img src="images/p1-popup-chucmung.png" style="position:fixed; top:50%; left:50%; margin:-80px 0 0 -210px" />
+</div>
 <div id="wrap_answerpage">
     <div class="milk-bg"></div>
     <div class="question"></div>
     <form class="ans">
-        <a href="answer.php" class="yes"></a>
-        <a href="landing_page.php" class="no"></a>
+        <a href="#" class="yes" onclick="directpage()" id="yes"></a>
+        <a href="answer.php" class="no"></a>
     </form>
 </div>
 </body>

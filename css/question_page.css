@@ -3,9 +3,59 @@
 
 #wrap_answerpage { width:1000px; margin:auto; position:relative}
 .milk-bg { width:791px; height:497px; background:url(../images/milk-bg.png) no-repeat; bottom:0; left:0; position:fixed}
-.question { width:467px; height:127px; background:url(../images/question_question.png) no-repeat; position:absolute; top:30px; left:425px}
+.question { width:573px; height:40px; background:url(../images/question_question.png) no-repeat; position:absolute; top:110px; left:350px}
 form.ans { position:absolute; right:80px; top:164px; width: 500px}
 form.ans a.yes { width:148px; height:46px; border:none; background:url(../images/button-submit.png) 0 0 no-repeat; margin:20px 0 0 50px; float:left}
 form.ans a.yes:hover { cursor:pointer; background-position:0 -182px}
 form.ans a.no { width:148px; height:46px; border:none; background:url(../images/button-submit.png) 0 -61px no-repeat; margin:20px 0 0 30px; float:left}
 form.ans a.no:hover { cursor:pointer; background-position:0 -243px}
+
+/* Flower moving */
+@-webkit-keyframes spaceboots {
+	0% { -webkit-transform: translate(0px, 0px) rotate(0deg); }
+	10% { -webkit-transform: translate(0px, 0px) rotate(-5deg); }
+	20% { -webkit-transform: translate(0px, 0px) rotate(5deg); }
+	30% { -webkit-transform: translate(0px, 0px) rotate(0deg); }
+	40% { -webkit-transform: translate(0px, 0px) rotate(5deg); }
+	50% { -webkit-transform: translate(0px, 0px) rotate(-5deg); }
+	60% { -webkit-transform: translate(0px, 0px) rotate(0deg); }
+	70% { -webkit-transform: translate(0px, 0px) rotate(-5deg); }
+	80% { -webkit-transform: translate(0px, 0px) rotate(0deg); }
+	90% { -webkit-transform: translate(0px, 0px) rotate(5deg); }
+	100% { -webkit-transform: translate(0px, 0px) rotate(0deg); }
+}
+@-moz-keyframes spaceboots {
+	0% { -moz-transform: translate(0px, 0px) rotate(0deg); }
+	10% { -moz-transform: translate(0px, 0px) rotate(-5deg); }
+	20% { -moz-transform: translate(0px, 0px) rotate(5deg); }
+	30% { -moz-transform: translate(0px, 0px) rotate(0deg); }
+	40% { -moz-transform: translate(0px, 0px) rotate(5deg); }
+	50% { -moz-transform: translate(0px, 0px) rotate(-5deg); }
+	60% { -moz-transform: translate(0px, 0px) rotate(0deg); }
+	70% { -moz-transform: translate(0px, 0px) rotate(-5deg); }
+	80% { -moz-transform: translate(0px, 0px) rotate(5deg); }
+	90% { -moz-transform: translate(0px, 0px) rotate(0deg); }
+	100% { -moz-transform: translate(0px, 0px) rotate(-5deg); }
+}
+.sunflower {
+	position:fixed; background:url(../images/sunflower_landingpage.png) 0 0 no-repeat; background-size:cover;
+	-webkit-animation-name: spaceboots;
+	-webkit-animation-duration: 7s;
+	-webkit-transform-origin:50% 50%;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: ease-in-out;
+	
+	-moz-animation-name: spaceboots;
+	-moz-animation-duration: 4s;
+	-moz-transform-origin:50% 50%;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-timing-function: ease-in-out;
+}
+.sunflower.f1 { bottom:-197px; right:19px; width:133px; height:400px; -webkit-animation-delay: 0.4s; animation-delay: 0.4s}
+.sunflower.f2 { bottom:-156px; right:179px; width:100px; height:300px; -webkit-animation-delay: 0.2s; animation-delay: 0.2s}
+.sunflower.f3 { bottom:-222px; right:240px; width:133px; height:400px; -webkit-animation-delay: 0.6s; animation-delay: 0.6s}
+.sunflower.f4 { bottom:-213px; right:153px; width:111px; height:400px; -webkit-animation-delay: 0.7s; animation-delay: 0.7s; background-position: -155px 0}
+.sunflower.f5 { bottom:-232px; right:62px; width:111px; height:400px; -webkit-animation-delay: 0.3s; animation-delay: 0.3s; background-position: -155px 0}
+.sunflower.f6 { bottom:-213px; right:85px; width:133px; height:400px; -webkit-animation-delay: 0.1s; animation-delay: 0.1s}
+.sunflower.f7 { bottom:-213px; right:37px; width:133px; height:400px; -webkit-animation-delay: 0.5s; animation-delay: 0.5s}
+.sunflower.f8 { bottom:-203px; right:-26px; width:90px; height:324px; -webkit-animation-delay: 0.3s; animation-delay: 0.3s; background-position: -125px 0}

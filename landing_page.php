@@ -1,21 +1,15 @@
 ﻿<?php
-require "lib/functions.php";
-$result = select_answer();
-$result_news = select_news();
+if (!isset($_SESSION)) {
+    ob_start();
+    @session_start();
+}
+
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="DC.title" content="Title here" />
-    <meta name="DC.subject" content="Keywords here" />
-    <meta name="DC.description" content="Description here" />
-    <meta name="DC.format" content="text/html" />
-    <meta name="DC.publisher" content="Publisher here" />
-    <meta name="DC.language" content="en" />
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
     <title>Game Kun - Landing Page</title>
-
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/landing_page.css" />
     <link rel="stylesheet" type="text/css" href="css/skin.css" />
@@ -42,7 +36,7 @@ $result_news = select_news();
                 carousel.startAuto();
             });
 
-        };
+        }
 
         jQuery(document).ready(function() {
             jQuery('#mycarousel').jcarousel({
@@ -69,19 +63,28 @@ $result_news = select_news();
 </head>
 
 <body>
+
 <div id="wrap_landingpage">
     <div class="tvc">
-        <div class="video"><iframe width="274" height="195" src="//www.youtube.com/embed/NXqvabhcI3A" frameborder="0" allowfullscreen></iframe></div>
-        <ul id="mycarousel-tvc" class="jcarousel-skin-tango-tvc">
-            <li><a><img src="images/youtube-thumb.jpg" /></a></li>
-            <li><a><img src="images/youtube-thumb.jpg" /></a></li>
-            <li><a><img src="images/youtube-thumb.jpg" /></a></li>
-            <li><a><img src="images/youtube-thumb.jpg" /></a></li>
-            <li><a><img src="images/youtube-thumb.jpg" /></a></li>
-            <li><a><img src="images/youtube-thumb.jpg" /></a></li>
-        </ul>
+        <div class="video"><iframe width="279" height="190" src="//www.youtube.com/embed/Y-MsUcZ6SNI" frameborder="0" allowfullscreen></iframe></div>
+        <div class="social">
+            <div id="fb-root"></div>
+            <script>(function(d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) return;
+                    js = d.createElement(s); js.id = id;
+                    js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&appId=1408737842716869&version=v2.0";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));</script>
+            <div class="fb-like" data-href="www.youtube.com/embed/NXqvabhcI3A" data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div>
+        </div>
     </div>
+    <?php
 
+    require_once ("lib/functions.php");
+    $result = select_answer();
+    $result_news = select_news();
+    ?>
     <div class="bikipcuame">
         <ul id="mycarousel" class="jcarousel-skin-tango">
             <?php
@@ -96,7 +99,7 @@ $result_news = select_news();
                     $date = date_create($result_news[$i]['registerdate']);
             ?>
 
-            <li><a href="details_news.php?id=<?php echo $result_news[$i]['id']; ?>"><span><?php echo date_format($date, 'd/m/Y'); ?></span>&nbsp;&nbsp;<b><?php echo $result_news[$i]['title'] ;?></b></a></li>
+            <li><a href="details_news.php?id=<?php echo $result_news[$i]['id']; ?>"><span><?php //echo date_format($date, 'd/m/Y'); ?><img src="images/logo-thanhnien.png" /></span>&nbsp;&nbsp;<b><?php echo $result_news[$i]['title'] ;?></b></a></li>
 
             <?php
                 }
@@ -122,14 +125,24 @@ $result_news = select_news();
             {
                 if($i%2==0)
                 {
+                    if($result[$i]['email'] != "")
+                    {
+                        $img = "images/default-ava.png";
+                        $name = $result[$i]['email'];
+                    }
+                    else
+                    {
+                        $img = "https://graph.facebook.com/".$result[$i]['fbid']."/picture?type=large";
+                        $name = $result[$i]['fbname'];
+                    }
                     ?>
                 <li>
                     <div class="chat boy">
-                        <div class="ava"><img src="images/icon-chat-1<?php //echo $result[$i]['avatar']; ?>.png" /></div>
+                        <div class="ava"><img width='100%' src="<?php echo $img; ?>" /></div>
                         <div class="arrowleft"></div>
                         <div class="text">
                             <div>
-                                <span><?php echo $result[$i]['email']; ?></span>
+                                <span><?php echo $name ?></span>
                                 <b><?php echo $result[$i]['message']; ?></b>
                             </div>
                         </div>
@@ -139,14 +152,24 @@ $result_news = select_news();
                 }
                 else
                 {
+                    if($result[$i]['email'] != "")
+                    {
+                        $img = "images/default-ava.png";
+                        $name = $result[$i]['email'];
+                    }
+                    else
+                    {
+                        $img = "https://graph.facebook.com/".$result[$i]['fbid']."/picture?type=large";
+                        $name = $result[$i]['fbname'];
+                    }
              ?>
                 <li>
                     <div class="chat girl">
-                        <div class="ava"><img src="images/icon-chat-2<?php //echo $result[$i]['avatar']; ?>.png" /></div>
+                        <div class="ava"><img width='100%' src="<?php echo $img; ?>" /></div>
 
                         <div class="text">
                             <div>
-                                <span><?php echo $result[$i]['email']; ?></span>
+                                <span><?php echo $name; ?></span>
                                 <b><?php echo $result[$i]['message']; ?></b>
                             </div>
                         </div>

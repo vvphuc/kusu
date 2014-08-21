@@ -9,7 +9,6 @@
 .q_and_a { width:515px; position:absolute; top:160px; right:20px}
 .q_and_a .chat { width:100%; clear:both}
 .q_and_a .boy .ava { width:75px; height:75px; float:left}
-.q_and_a .boy .ava img { width:75px; height:75px}
 .q_and_a .chat .text { float:left; width:425px; margin: 0px 0 10px;}
 .q_and_a .chat .text div { background-color:#f9d110; border-radius:7px; padding:10px 20px; width:auto; float:left}
 .q_and_a .chat .text span { color:#fff; font: 10px italic Arial, Helvetica, sans-serif; display:block; padding-bottom:3px}

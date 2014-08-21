@@ -66,7 +66,7 @@ if (!isset($_SESSION)) {
 
 <div id="wrap_landingpage">
     <div class="tvc">
-        <div class="video"><iframe width="279" height="190" src="//www.youtube.com/embed/Y-MsUcZ6SNI" frameborder="0" allowfullscreen></iframe></div>
+        <div class="video"><iframe width="279" height="190" src="//www.youtube.com/embed/Y-MsUcZ6SNI?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe></div>
         <div class="social">
             <div id="fb-root"></div>
             <script>(function(d, s, id) {

@@ -11,10 +11,15 @@
     <script type="text/javascript" src="js/ga_kun.js"></script>
     <script>
         function directpage(){
+            ga('send', 'event', 'button', 'click', 'Button Yes');
             $("#popup").css("display","block");
             setTimeout(function () {
                 window.location.href = "landing_page.php";
             }, 3000);
+        };
+        function directpageNo(){
+            ga('send', 'event', 'button', 'click', 'Button No');
+            window.location.href = "answer.php";
         };
     </script>
 </head>
@@ -28,7 +33,7 @@
     <div class="question"></div>
     <form class="ans">
         <a href="#" class="yes" onclick="directpage()" id="yes"></a>
-        <a href="answer.php" class="no"></a>
+        <a href="#" class="no" onclick="directpageNo()"></a>
     </form>
 </div>
 </body>

@@ -73,7 +73,7 @@ if (!isset($_SESSION)) {
     <div class="milk-bg"></div>
     <div class="question"></div>
     <form class="ans" method="post" action="insert_answer.php" name="info" onsubmit="return check();">
-        <textarea placeholder="Hãy chia sẻ cho chúng tôi “bí quyết” của bạn tại đây..." name="answer" id="answer"   ></textarea>
+        <textarea placeholder="Hãy chia sẻ “bí quyết” của bạn..." name="answer" id="answer"   ></textarea>
         <div class="sendby">Được gửi bởi</div>
         <div class="mail-icon"></div>
         <input type="radio" name="radiog_dark"  id="radio1" class="css-checkbox"  value="email"  checked="true">

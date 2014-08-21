@@ -16,7 +16,7 @@ form.ans input[type=text] {background:rgba(255,255,255,0.8); width:168px; height
 .text-chon-ava a { margin-left:10px; float:left}
 .text-chon-ava a img {margin-top:10px; transition:all 0.3s; opacity:0.5}
 .text-chon-ava a:hover img,.text-chon-ava a.active img { margin-top:0px; transition:all 0.3s; opacity:1}
-<<<<<<< HEAD
+
 form.ans input[type=submit] { width:148px; height:46px; border:none; background:url(../images/button-submit.png) 0 -121px no-repeat; margin:30px 0 0 155px;color: transparent}
 form.ans input[type=submit]:hover { cursor:pointer; background-position:0 -303px}
 
@@ -48,4 +48,4 @@ label.css-label {
 =======
 form.ans input[type=submit] { width:148px; height:46px; border:none; background:url(../images/button-submit.png) 0 -121px no-repeat; margin:20px 0 0 170px;color: transparent}
 form.ans input[type=submit]:hover { cursor:pointer; background-position:0 -303px}
->>>>>>> 04683f1049b16b20d77356491ad736aaeb35481c
+

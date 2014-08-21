@@ -46,4 +46,6 @@ label.css-label {
 form.ans input[type=submit] { width:148px; height:46px; border:none; background:url(../images/button-submit.png) 0 -121px no-repeat; margin:20px 0 0 170px;color: transparent}
 form.ans input[type=submit]:hover { cursor:pointer; background-position:0 -303px}
 .sendby { font-weight:700; margin:10px 0 0; color: #fff;}
+a.xemthem { font-family: 'UTMAndrogyne'; color:#fff; clear:both; display:block; padding:20px 0 0 120px; font-size:18px}
+a.xemthem:hover { color:#FF3}
 

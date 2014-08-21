@@ -1,27 +1,29 @@
 @charset "utf-8";
 /* CSS Document */
 
-#frame_details { width:934px; height:427px; position:absolute; top:10px; right:0; background:url(../images/p2-background-elements-thuvien.png) 0 0 no-repeat}
+#frame_library { width:934px; height:427px; position:absolute; top:10px; right:0; background:url(../images/p2-background-elements-thuvien.png) 0 0 no-repeat}
 .titlepage { width:238px; height:40px; position:absolute; top:-25px; left:300px; background:url(../images/p2-background-elements-thuvien.png) -90px -430px no-repeat}
-.titlepage h2 { margin:16px 0 0 50px;font-family:'UTMAndrogyne',Arial, Helvetica, sans-serif; font-size:27px; color:#009386;font-weight:100}
-.search { width:212px; height:31px; position:absolute; top:-18px; right:73px; background:url(../images/p2-background-elements-thuvien.png) -550px -430px no-repeat}
-.search input[type=text] { padding:8px 10px; font-size:12px; color:#888; background-color:#ebebeb; border:1px solid #fff; margin:7px 0 0 10px; width:170px; transition:all .3s}
-.search input[type=text]:hover,.search input[type=text]:focus { background-color:#fffbe9; border-color:#fae16a; transition:all .3s}
-.search .icon { width:35px; height:29px; background:url(../images/p2-background-elements-thuvien.png) -770px -430px no-repeat; position:absolute; top:2px; right:-56px}
-.search .icon input[type=submit] { width:29px; height:26px; margin:3px 0 0 3px; background:url(../images/p2-background-elements-thuvien.png) -818px -433px no-repeat; transition:all .3s}
-.search .icon input[type=submit]:hover { background-position:-858px -433px; cursor:pointer; transition:all .3s}
+.titlepage h2 { margin:16px 0 0 28px;font-family:'UTMAndrogyne',Arial, Helvetica, sans-serif; font-size:27px; color:#009386}
 
-/* CONTENT */
-#col-1 { width:116px; float:left; background-color:#eee}
-
-/* Button THAM GIA NGAY */
-.button_play { position:absolute; top:434px; left:300px; background:url(../images/p2-background-elements-thuvien.png) -330px -430px no-repeat; width:200px; height:27px; padding:7px 10px 0; position:relative}
-.button_play a { width:190px; height:30px; margin:-13px 0 0 1px; background-color:#009386; display:block; transition:all .3s}
-.button_play a span { display:block; position:absolute; top:1px; left:20px;width: 0;height: 0; border-top: 8px solid transparent;border-bottom: 8px solid transparent;border-left:13px solid #fff; transition:all .3s}
-.button_play a h4 { font-family:  'UTMAndrogyne', Arial, Helvetica, sans-serif; color:#fff; font-size:18px; margin:0 0 0 20px; position:absolute; top:-1px; left:22px; font-weight:100; transition:all .3s}
-.button_play a:hover { background-color:#f6f501; transition:all .3s}
-.button_play a:hover span { border-left:13px solid #009386; left:25px; transition:all .3s}
-.button_play a:hover h4 { left:25px; color:#009386; transition:all .3s}
+form { position:absolute; top:50px; left:100px; width:870px}
+.leftside { width:420px; float:left}
+form h3 {font-family:'UTMAndrogyne',Arial, Helvetica, sans-serif; font-size:18px; color:#009588; padding-bottom:10px}
+.leftside a { display:block; width:167px; height:167px; float:left; border:3px solid #c2c2c2; border-radius:3px; transition:all .3s}
+.leftside a.choose { border-color:#009285}
+.leftside a:hover { opacity:0.8; transition:all .3s;border-color:#009285}
+.leftside #n1 { margin-right:20px; clear:both}
+.fileUpload {position: relative;overflow: hidden;background:url(../images/p2-upload-inputfile.png) no-repeat;width:371px; height:40px}
+.fileUpload .text { float:right; margin:12px 12px 0 0; color:#fff; font-weight:700; transition:all .3s}
+.fileUpload:hover .text { color:#fce22b; transition:all .3s}
+.fileUpload p.clear { padding:10px 0}
+.leftside p.alert { font-size:12px; font-style:italic; display:block; margin:10px 0 0} 
+.uploadFile { background:none; padding:12px 0 0 15px; width:250px}
+.fileUpload input.upload {position: absolute;top: 0;right: 0;margin: 0;padding: 8px 0;font-size: 20px;cursor: pointer;opacity: 0;filter: alpha(opacity=0);
+}
+.rightside { width:420px; float:left}
+.rightside .rowf { width:400px; clear:both}
+.rightside .rowf span { font-size:15px; color:#fff; font-weight:700; display:block; float:left; width:80px; padding:15px 0 0; text-shadow:0px 0px 2px rgba(0,0,0,1)}
+.rightside .rowf input[type=text] { background:#fff; border:3px solid #008a7e; border-radius:10px; padding:7px 10px; width:290px; float:right; margin:5px 0}
 
 /* Flower moving */
 @-webkit-keyframes spaceboots {

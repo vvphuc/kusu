@@ -6,7 +6,7 @@
 .titlepage h2 { margin:16px 0 0 28px;font-family:'UTMAndrogyne',Arial, Helvetica, sans-serif; font-size:27px; color:#009386}
 
 form { position:absolute; top:50px; left:100px; width:870px}
-.leftside { width:420px; float:left;padding-right: 20px;}
+.leftside { width:420px; float:left}
 form h3 {font-family:'UTMAndrogyne',Arial, Helvetica, sans-serif; font-size:18px; color:#009588; padding-bottom:10px}
 .leftside a { display:block; width:167px; height:167px; float:left; border:3px solid #c2c2c2; border-radius:3px; transition:all .3s}
 .leftside a.choose { border-color:#009285}
@@ -15,19 +15,15 @@ form h3 {font-family:'UTMAndrogyne',Arial, Helvetica, sans-serif; font-size:18px
 .fileUpload {position: relative;overflow: hidden;background:url(../images/p2-upload-inputfile.png) no-repeat;width:371px; height:40px}
 .fileUpload .text { float:right; margin:12px 12px 0 0; color:#fff; font-weight:700; transition:all .3s}
 .fileUpload:hover .text { color:#fce22b; transition:all .3s}
-.leftside div.clear { height:20px}
+.fileUpload p.clear { padding:10px 0}
 .leftside p.alert { font-size:12px; font-style:italic; display:block; margin:10px 0 0} 
 .uploadFile { background:none; padding:12px 0 0 15px; width:250px}
 .fileUpload input.upload {position: absolute;top: 0;right: 0;margin: 0;padding: 8px 0;font-size: 20px;cursor: pointer;opacity: 0;filter: alpha(opacity=0);
 }
 .rightside { width:420px; float:left}
 .rightside .rowf { width:400px; clear:both}
-.rightside .rowf span { font-size:15px; color:#fff; font-weight:700; display:block; float:left; width:80px; padding:15px 0 0; text-shadow: -2px 0px 0 #009588,2px 0px 0 #009588,0px -2px 0 #009588,0px 2px 0 #009588,-2px -2px 0 #009588,2px -2px 0 #009588,-2px 2px 0 #009588,2px 2px 0 #009588;}
+.rightside .rowf span { font-size:15px; color:#fff; font-weight:700; display:block; float:left; width:80px; padding:15px 0 0; text-shadow:0px 0px 2px rgba(0,0,0,1)}
 .rightside .rowf input[type=text] { background:#fff; border:3px solid #008a7e; border-radius:10px; padding:7px 10px; width:290px; float:right; margin:5px 0}
-.rightside input[type=submit] { width:148px; height:46px; border:none; background:url(../images/button-submit.png) 0 -121px no-repeat; margin:20px 0 0 170px;color: transparent}
-.rightside input[type=submit]:hover { cursor:pointer; background-position:0 -303px}
-.rightside h3 { margin-bottom:10px}
-.sendby { font-weight:700; margin:10px 0 0; color: #fff;}
 
 /* Flower moving */
 @-webkit-keyframes spaceboots {

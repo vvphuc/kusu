@@ -22,12 +22,12 @@ function utf8(){
 	mysql_query("SET CHARACTER SET 'utf8'");
 }
 require_once 'meekrodb.2.3.class.php';
-//DB::$user = 'kusu';
-//DB::$password = 'kusu@1qaz@WSX';
-//DB::$dbName = 'kusudemodb';
-DB::$user = 'root';
-DB::$password = '';
+DB::$user = 'kusu';
+DB::$password = 'kusu@1qaz@WSX';
 DB::$dbName = 'kusudemodb';
+/*DB::$user = 'root';
+DB::$password = '';
+DB::$dbName = 'kusudemodb';*/
 // tìm kiếm 
 function send($key){
 utf8();
@@ -157,26 +157,35 @@ return $total;
 }
 //------------------------------Hao--------------------------------------//
 //thêm câu trả lời vào bảng answer
-function insert_answer($email,$message,$avatar)
+function insert_answer($email,$message,$avatar,$fbid,$fbname,$check)
 {
     DB::$encoding = 'utf8';
     DB::insert('answer',array(
         'email' => $email,
         'message' => $message,
         'avatar' => $avatar,
+        'fbid' => $fbid,
+        'fbname'=> $fbname,
     ));
-    _redirect("landing_page.php");
+    if($check == 1)
+    {
+        _redirect("landing_page.php");
+    }
+    else
+    {
+        _redirect("loginfb.php");
+    }
 }
 //lấy câu trả lời
 function select_answer()
 {
     DB::$encoding = 'utf8';
-    $total = DB::query("SELECT `email`,`message`,`avatar` FROM answer  ");
+    $total = DB::query("SELECT `email`,`message`,`avatar`,`fbid`,`fbname` FROM answer ORDER BY submitday DESC ");
     return $total;
 }
 function select_news(){
     DB::$encoding = 'utf8';
-    $total = DB::query("SELECT `id`, `title` ,`registerdate` FROM news  ");
+    $total = DB::query("SELECT `id`, `title` ,`registerdate` FROM news ORDER BY registerdate DESC  ");
     return $total;
 }
 function select_details_news($id){
@@ -184,4 +193,5 @@ function select_details_news($id){
     $total = DB::query("SELECT `title` ,`content`,`description`,`registerdate` FROM news WHERE `id` = $id");
     return $total;
 }
+
 ?>

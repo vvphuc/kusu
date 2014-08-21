@@ -21,11 +21,12 @@
 	define('PAGEURL', 'https://www.facebook.com/VietnamPizzaHut/app_328181834014483'); 
 	define('LINKPAGE','http://app.digitalconference.vn/khamphapizza/');
 	define('LINKIMG','http://app.digitalconference.vn/demo/pizzahut/images/share_image_new.png');
+    define('SITEURL','http://app.digitalconference.vn/demo/kusu/loginfb.php');
     define('VONGQUAY','http://app.digitalconference.vn/khamphapizza/vongquaymayman.php?id=');
 	
 	//Tập làm Pizza Hut
-	define('APP_ID', '328181834014483');
-	define('APP_SECRET', '1c42f2b79c0928fb7fb2750e4c7a510b');
+	define('APPID', '1408737842716869');
+	define('SECRET', '63be8454116a86bc785b7e71785eb0d2');
     define('APPNAME','khamphapizza');
 	   	
 ?>

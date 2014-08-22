@@ -28,12 +28,16 @@ ul#menu li b { display:block; float:right; width: 0;height: 0;border-top: 5px so
 /* Tiny Scrollbar Content */
 #scrollbar2 { width: 645px}
 #scrollbar2 .viewport { width: 630px; height: 370px; overflow: hidden; position: relative; }
-#scrollbar2 .overview { list-style: none; position: absolute; left: 0; top: 0; padding: 0; margin: 0; }
+#scrollbar2 .overview { list-style: none; position: absolute; left: 0; top: 0; padding: 0; margin: 0; font-size:13px}
 #scrollbar2 .scrollbar{ background: transparent url(../images/bg-scrollbar-track-y.png) no-repeat 0 0; position: relative; background-position: 0 0; float: right; width: 6px; }
 #scrollbar2 .track { height: 100%; width:13px; position: relative; padding: 0 1px; }
 #scrollbar2 .thumb { background: #faac2a; height: 10px; width: 8px; cursor: pointer; overflow: hidden; position: absolute; top:0; left:-1px}
 #scrollbar2 .disable { display: none; }
 .noSelect { user-select: none; -o-user-select: none; -moz-user-select: none; -khtml-user-select: none; -webkit-user-select: none; }
+#scrollbar2 .overview h2 { padding:10px 0 20px}
+#scrollbar2 .overview p strong em { font-size:12px; color:#009588}
+#scrollbar2 .overview em { font-size:13px}
 
 /* Content */
 #content_details { width:645px; height:370px; position:absolute; top:63px; right:28px}
+

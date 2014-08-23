@@ -2,33 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0464133c-b635-4617-8550-7cbd1c505d69" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/background_1001bikip.png" afterPath="$PROJECT_DIR$/images/background_1001bikip.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/background_landingpage.jpg" afterPath="$PROJECT_DIR$/images/background_landingpage.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/question_question.png" afterPath="$PROJECT_DIR$/images/question_question.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/answer.html" afterPath="$PROJECT_DIR$/html/answer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/answer.php" afterPath="$PROJECT_DIR$/answer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/answer_page.css" afterPath="$PROJECT_DIR$/css/answer_page.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/css/answer_page.css" afterPath="$PROJECT_DIR$/html/css/answer_page.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/config.php" afterPath="$PROJECT_DIR$/config/config.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/functions.php" afterPath="$PROJECT_DIR$/lib/functions.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/insert_answer.php" afterPath="$PROJECT_DIR$/insert_answer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/landing_page.css" afterPath="$PROJECT_DIR$/css/landing_page.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/landing_page.php" afterPath="$PROJECT_DIR$/landing_page.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/question.html" afterPath="$PROJECT_DIR$/html/question.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/question_page.css" afterPath="$PROJECT_DIR$/css/question_page.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/skin.css" afterPath="$PROJECT_DIR$/css/skin.css" />
     </list>
     <ignored path="kusu123.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="0464133c-b635-4617-8550-7cbd1c505d69" time="1408589248924" ignored="false" />
-    <file path="/index.php" changelist="0464133c-b635-4617-8550-7cbd1c505d69" time="1408593279938" ignored="false" />
-    <file path="/answer.php" changelist="0464133c-b635-4617-8550-7cbd1c505d69" time="1408613709973" ignored="false" />
+    <file path="/Dummy.txt" changelist="0464133c-b635-4617-8550-7cbd1c505d69" time="1408628873579" ignored="false" />
+    <file path="/index.php" changelist="0464133c-b635-4617-8550-7cbd1c505d69" time="1408630070715" ignored="false" />
+    <file path="/answer.php" changelist="0464133c-b635-4617-8550-7cbd1c505d69" time="1408630096319" ignored="false" />
     <file path="/insert_answer.php" changelist="0464133c-b635-4617-8550-7cbd1c505d69" time="1408602324475" ignored="false" />
-    <file path="/functions.php" changelist="0464133c-b635-4617-8550-7cbd1c505d69" time="1408611031867" ignored="false" />
-    <file path="/landing_page.php" changelist="0464133c-b635-4617-8550-7cbd1c505d69" time="1408612686064" ignored="false" />
+    <file path="/functions.php" changelist="0464133c-b635-4617-8550-7cbd1c505d69" time="1408633159203" ignored="false" />
+    <file path="/landing_page.php" changelist="0464133c-b635-4617-8550-7cbd1c505d69" time="1408633218889" ignored="false" />
     <file path="/test.php" changelist="0464133c-b635-4617-8550-7cbd1c505d69" time="1408074070499" ignored="false" />
-    <file path="/details_news.php" changelist="0464133c-b635-4617-8550-7cbd1c505d69" time="1408098318950" ignored="false" />
+    <file path="/details_news.php" changelist="0464133c-b635-4617-8550-7cbd1c505d69" time="1408630328670" ignored="false" />
     <file path="/loginfb.php" changelist="0464133c-b635-4617-8550-7cbd1c505d69" time="1408604274741" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,10 +37,64 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="answer.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="answer.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/answer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="91" column="11" selection-start="3754" selection-end="3754" vertical-scroll-proportion="0.72360843">
+            <state line="10" column="28" selection-start="349" selection-end="349" vertical-scroll-proportion="-2.7307692">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="11" selection-start="1528" selection-end="1528" vertical-scroll-proportion="0.68164796">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="landing_page.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/landing_page.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="99" column="74" selection-start="3620" selection-end="3620" vertical-scroll-proportion="-11.769231">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="details_news.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/details_news.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="62" selection-start="963" selection-end="963" vertical-scroll-proportion="-13.730769">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="54" selection-start="595" selection-end="595" vertical-scroll-proportion="-15.038462">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="insert_answer.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/insert_answer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="1" selection-start="74" selection-end="138" vertical-scroll-proportion="-3.2692308">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="functions.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/functions.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="188" column="67" selection-start="4915" selection-end="4915" vertical-scroll-proportion="-119.0">
               <folding />
             </state>
           </provider>
@@ -78,16 +120,16 @@
       <list>
         <option value="$PROJECT_DIR$/test.php" />
         <option value="$PROJECT_DIR$/details.html" />
-        <option value="$PROJECT_DIR$/details_news.php" />
         <option value="$PROJECT_DIR$/html/css/answer_page.css" />
-        <option value="$PROJECT_DIR$/config/config.php" />
         <option value="$PROJECT_DIR$/insert_answer.php" />
         <option value="$PROJECT_DIR$/loginfb.php" />
+        <option value="$PROJECT_DIR$/html/answer.html" />
+        <option value="$PROJECT_DIR$/answer.php" />
+        <option value="$PROJECT_DIR$/details_news.php" />
         <option value="$PROJECT_DIR$/lib/functions.php" />
         <option value="$PROJECT_DIR$/landing_page.php" />
-        <option value="$PROJECT_DIR$/html/answer.html" />
+        <option value="$PROJECT_DIR$/config/config.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/answer.php" />
       </list>
     </option>
   </component>
@@ -139,7 +181,35 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="kusuv2_1" />
+              <option name="myItemId" value="kusuv3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kusu123" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kusuv3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kusu123" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kusuv3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -161,7 +231,7 @@
     </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
       <JSDebuggerConfigurationSettings>
-        <option name="engineId" />
+        <option name="engineId" value="embedded" />
         <option name="fileUrl" />
       </JSDebuggerConfigurationSettings>
       <method />
@@ -185,7 +255,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27051672" sideWeight="0.67064846" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.275076" sideWeight="0.67064846" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -263,30 +333,17 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/test.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="374" selection-end="406" vertical-scroll-proportion="0.031835206">
-          <folding />
-        </state>
+        <state line="15" column="0" selection-start="374" selection-end="406" vertical-scroll-proportion="0.031835206" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/css/answer_page.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="48" selection-start="2291" selection-end="2291" vertical-scroll-proportion="0.4559387">
-          <folding />
-        </state>
+        <state line="38" column="48" selection-start="2291" selection-end="2291" vertical-scroll-proportion="0.4559387" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/question.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="418" selection-end="487" vertical-scroll-proportion="0.09737828">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/details_news.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="22" selection-start="104" selection-end="104" vertical-scroll-proportion="0.13051823">
-          <folding />
-        </state>
+        <state line="8" column="0" selection-start="418" selection-end="487" vertical-scroll-proportion="0.09737828" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/function.php">
@@ -305,72 +362,69 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="22" selection-start="632" selection-end="673" vertical-scroll-proportion="-10.730769">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="693" selection-end="693" vertical-scroll-proportion="-9.153846">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/landing_page.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="139" selection-start="2285" selection-end="2324" vertical-scroll-proportion="-45.115383">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/landing_page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="140" column="58" selection-start="4971" selection-end="4971" vertical-scroll-proportion="0.17">
-          <folding>
-            <marker date="1408612705186" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
+        <state line="69" column="139" selection-start="2285" selection-end="2324" vertical-scroll-proportion="-45.115383" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/loginfb.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="42" selection-start="3370" selection-end="3420" vertical-scroll-proportion="0.5224719">
+        <state line="102" column="42" selection-start="3370" selection-end="3420" vertical-scroll-proportion="0.5224719" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/answer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="8" selection-start="1924" selection-end="1985" vertical-scroll-proportion="0.8014981" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/answer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="28" selection-start="349" selection-end="349" vertical-scroll-proportion="-2.7307692">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/details_news.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="62" selection-start="963" selection-end="963" vertical-scroll-proportion="-13.730769">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/insert_answer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="1" selection-start="74" selection-end="138" vertical-scroll-proportion="0.15917604">
+        <state line="5" column="1" selection-start="74" selection-end="138" vertical-scroll-proportion="-3.2692308">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/answer.html">
+    <entry file="file://$PROJECT_DIR$/landing_page.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="8" selection-start="1924" selection-end="1985" vertical-scroll-proportion="0.8014981">
+        <state line="99" column="74" selection-start="3620" selection-end="3620" vertical-scroll-proportion="-11.769231">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="188" column="67" selection-start="4915" selection-end="4915" vertical-scroll-proportion="-119.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="54" selection-start="595" selection-end="595" vertical-scroll-proportion="-15.038462">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="7" selection-start="815" selection-end="815" vertical-scroll-proportion="0.3483146">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/answer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="11" selection-start="3754" selection-end="3754" vertical-scroll-proportion="0.72360843">
+        <state line="36" column="11" selection-start="1528" selection-end="1528" vertical-scroll-proportion="0.68164796">
           <folding />
         </state>
       </provider>

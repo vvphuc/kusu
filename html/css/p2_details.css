@@ -1,0 +1,96 @@
+@charset "utf-8";
+/* CSS Document */
+
+#frame_details { width:934px; height:427px; position:absolute; top:10px; right:0; background:url(../images/p2-background-elements-thuvien.png) 0 0 no-repeat}
+.titlepage { width:238px; height:40px; position:absolute; top:-25px; left:300px; background:url(../images/p2-background-elements-thuvien.png) -90px -430px no-repeat}
+.titlepage h2 { margin:16px 0 0 50px;font-family:'UTMAndrogyne',Arial, Helvetica, sans-serif; font-size:27px; color:#009386;font-weight:100}
+.search { width:212px; height:31px; position:absolute; top:-18px; right:73px; background:url(../images/p2-background-elements-thuvien.png) -550px -430px no-repeat}
+.search input[type=text] { padding:8px 10px; font-size:12px; color:#888; background-color:#ebebeb; border:1px solid #fff; margin:7px 0 0 10px; width:170px; transition:all .3s}
+.search input[type=text]:hover,.search input[type=text]:focus { background-color:#fffbe9; border-color:#fae16a; transition:all .3s}
+.search .icon { width:35px; height:29px; background:url(../images/p2-background-elements-thuvien.png) -770px -430px no-repeat; position:absolute; top:2px; right:-56px}
+.search .icon input[type=submit] { width:29px; height:26px; margin:3px 0 0 3px; background:url(../images/p2-background-elements-thuvien.png) -818px -433px no-repeat; transition:all .3s}
+.search .icon input[type=submit]:hover { background-position:-858px -433px; cursor:pointer; transition:all .3s}
+
+/* CONTENT Col-1 */
+#col-1 { width:116px; float:left}
+#col-1 .face { width:70px; height:70px; overflow:hidden; margin:20px 0 0 23px}
+#col-1 .face img { width:100%}
+#col-1 .name { font-size:11px; width:100%; text-align:center; margin:5px 0}
+#col-1 .view { background:url(../images/p2-background-elements-thuvien.png) -110px -510px no-repeat; font-size:21px; color:#f9ce00; width:100px; height:25px; padding:4px 0 0 35px; margin:15px 0 0 20px}
+#col-1 .like { background:url(../images/p2-background-elements-thuvien.png) -110px -550px no-repeat; font-size:21px; color:#009386; width:100px; height:25px; padding:4px 0 0 35px; margin:5px 0 0 20px}
+#col-1 .date { text-align:center; color:#888; font-size:12px; line-height:16px; margin:10px 0 0}
+#col-1 strong { display:block; font-size:13px; text-decoration:underline; color:#5b5b5b; text-align:center; margin:10px 0 0}
+#col-1 .vote a { display:block; width:100px; height:100px; background:url(../images/p2-background-elements-thuvien.png) 0px -510px no-repeat; transition:all 0.3s; margin:10px 0 0 7px}
+#col-1 .vote a:hover { -webkit-transform: rotate(10deg);-moz-transform: rotate(10deg); transition:all 0.3s}
+#col-1 .otherpic { font-family:  'UTMAndrogyne', Arial, Helvetica, sans-serif; color:#676767; text-decoration:underline; font-size:11px; text-align:center; display:block; margin:15px 0 0}
+#col-1 .otherpic:hover { color:#009386}
+
+/* CONTENT Col-2 */
+#col-2 { width:459px; height:389px; float:left; border:2px dashed #f9ce00; border-radius:10px; margin:13px 0 0; overflow:hidden}
+#col-2 img { margin:6px 0 0 6px; border-radius:5px; float:left}
+#col-2 .name { background-color:rgba(255,255,255,0.7); width:100%; padding:10px 10px 50px; float:left; margin:-34px 0 0; font-size:18px; color:#595959;}
+
+/* CONTENT Col-3 */
+#col-3 { width:330px; height:387px; float:left; margin:20px 0 0 10px}
+
+/* Button THAM GIA NGAY */
+.button_play { position:absolute; top:434px; left:300px; background:url(../images/p2-background-elements-thuvien.png) -330px -430px no-repeat; width:200px; height:27px; padding:7px 10px 0; position:relative}
+.button_play a { width:190px; height:30px; margin:-13px 0 0 1px; background-color:#009386; display:block; transition:all .3s}
+.button_play a span { display:block; position:absolute; top:1px; left:20px;width: 0;height: 0; border-top: 8px solid transparent;border-bottom: 8px solid transparent;border-left:13px solid #fff; transition:all .3s}
+.button_play a h4 { font-family:  'UTMAndrogyne', Arial, Helvetica, sans-serif; color:#fff; font-size:18px; margin:0 0 0 20px; position:absolute; top:-1px; left:22px; font-weight:100; transition:all .3s}
+.button_play a:hover { background-color:#f6f501; transition:all .3s}
+.button_play a:hover span { border-left:13px solid #009386; left:25px; transition:all .3s}
+.button_play a:hover h4 { left:25px; color:#009386; transition:all .3s}
+
+/* Flower moving */
+@-webkit-keyframes spaceboots {
+	0% { -webkit-transform: translate(0px, 0px) rotate(0deg); }
+	10% { -webkit-transform: translate(0px, 0px) rotate(-10deg); }
+	20% { -webkit-transform: translate(0px, 0px) rotate(10deg); }
+	30% { -webkit-transform: translate(0px, 0px) rotate(0deg); }
+	40% { -webkit-transform: translate(0px, 0px) rotate(10deg); }
+	50% { -webkit-transform: translate(0px, 0px) rotate(-10deg); }
+	60% { -webkit-transform: translate(0px, 0px) rotate(0deg); }
+	70% { -webkit-transform: translate(0px, 0px) rotate(-10deg); }
+	80% { -webkit-transform: translate(0px, 0px) rotate(0deg); }
+	90% { -webkit-transform: translate(0px, 0px) rotate(10deg); }
+	100% { -webkit-transform: translate(0px, 0px) rotate(0deg); }
+}
+@-moz-keyframes spaceboots {
+	0% { -moz-transform: translate(0px, 0px) rotate(0deg); }
+	10% { -moz-transform: translate(0px, 0px) rotate(-10deg); }
+	20% { -moz-transform: translate(0px, 0px) rotate(10deg); }
+	30% { -moz-transform: translate(0px, 0px) rotate(0deg); }
+	40% { -moz-transform: translate(0px, 0px) rotate(10deg); }
+	50% { -moz-transform: translate(0px, 0px) rotate(-10deg); }
+	60% { -moz-transform: translate(0px, 0px) rotate(0deg); }
+	70% { -moz-transform: translate(0px, 0px) rotate(-10deg); }
+	80% { -moz-transform: translate(0px, 0px) rotate(10deg); }
+	90% { -moz-transform: translate(0px, 0px) rotate(0deg); }
+	100% { -moz-transform: translate(0px, 0px) rotate(-10deg); }
+}
+.sunflower {
+	position:fixed; background:url(../images/sunflower.png) no-repeat; background-size:cover;
+	-webkit-animation-name: spaceboots;
+	-webkit-animation-duration: 7s;
+	-webkit-transform-origin:50% 50%;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: ease-in-out;
+	
+	-moz-animation-name: spaceboots;
+	-moz-animation-duration: 4s;
+	-moz-transform-origin:50% 50%;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-timing-function: ease-in-out;
+}
+.sunflower.f1 { bottom:-82px; right:19px; width:66px; height:169px; -webkit-animation-delay: 0.2s; animation-delay: 0.2s}
+.sunflower.f2 { bottom:-16px; right:144px; width:48px; height:123px; -webkit-animation-delay: 0.2s; animation-delay: 0.2s}
+.sunflower.f3 { bottom:11px; right:184px; width:31px; height:79px; -webkit-animation-delay: 0.6s; animation-delay: 0.6s}
+.sunflower.f4 { bottom:-37px; right:93px; width:66px; height:169px; -webkit-animation-delay: 0.7s; animation-delay: 0.7s}
+.sunflower.f5 { bottom:-67px; right:62px; width:66px; height:169px; -webkit-animation-delay: 0.3s; animation-delay: 0.3s}
+.sunflower.f6 { bottom:-43px; right:85px; width:38px; height:97px; -webkit-animation-delay: 0.1s; animation-delay: 0.1s}
+.sunflower.f7 { bottom:-44px; right:37px; width:66px; height:169px; -webkit-animation-delay: 0.5s; animation-delay: 0.5s}
+.sunflower.f8 { bottom:-60px; right:37px; width:48px; height:123px; -webkit-animation-delay: 0.4s; animation-delay: 0.4s}
+.sunflower.f9 { bottom:-60px; right:115px; width:48px; height:123px; -webkit-animation-delay: 0.4s; animation-delay: 0.4s}
+.sunflower.f10 { bottom:-44px; right:-6px; width:48px; height:123px; -webkit-animation-delay: 0.2s; animation-delay: 0.2s}
+.sunflower.f11 { bottom:-103px; right:162px; width:66px; height:169px; -webkit-animation-delay: 0.2s; animation-delay: 0.3s}

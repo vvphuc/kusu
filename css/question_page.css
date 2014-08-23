@@ -3,7 +3,7 @@
 
 #wrap_answerpage { width:1000px; margin:auto; position:relative}
 .milk-bg { width:791px; height:497px; background:url(../images/milk-bg.png) no-repeat; bottom:0; left:0; position:fixed}
-.question { width:573px; height:40px; background:url(../images/question_question.png) no-repeat; position:absolute; top:110px; left:350px}
+.question { width:600px; height:40px; background:url(../images/question_question.png) no-repeat; position:absolute; top:105px; left:320px}
 form.ans { position:absolute; right:80px; top:164px; width: 500px}
 form.ans a.yes { width:148px; height:46px; border:none; background:url(../images/button-submit.png) 0 0 no-repeat; margin:20px 0 0 50px; float:left}
 form.ans a.yes:hover { cursor:pointer; background-position:0 -182px}

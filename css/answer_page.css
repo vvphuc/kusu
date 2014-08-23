@@ -3,7 +3,7 @@
 
 #wrap_answerpage { width:1000px; margin:auto; position:relative}
 .milk-bg { width:791px; height:497px; background:url(../images/milk-bg.png) no-repeat; bottom:0; left:0; position:fixed}
-.question { width:573px; height:40px; background:url(../images/question_question.png) no-repeat; position:absolute; top:110px; left:350px}
+.question { width:750px; height:43px; background:url(../images/question_question_2.png) no-repeat; position:absolute; top:105px; left:270px}
 form.ans { position:absolute; right:80px; top:164px; width: 500px}
 form.ans textarea { background:rgba(255,255,255,0.8); resize:none; width:418px; height:136px; border-radius:10px; border:3px solid #009588; font:14px/18px Arial, Helvetica, sans-serif; padding:15px 12px}
 ::-webkit-input-placeholder {font-style:italic}

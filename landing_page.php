@@ -3,13 +3,14 @@ if (!isset($_SESSION)) {
     ob_start();
     @session_start();
 }
-
+require 'config/config.php';
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Game Kun - Landing Page</title>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>Giải pháp khi con ngán sữa</title>
+
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/landing_page.css" />
     <link rel="stylesheet" type="text/css" href="css/skin.css" />
@@ -66,17 +67,17 @@ if (!isset($_SESSION)) {
 
 <div id="wrap_landingpage">
     <div class="tvc">
-        <div class="video"><iframe width="279" height="190" src="//www.youtube.com/embed/Y-MsUcZ6SNI" frameborder="0" allowfullscreen></iframe></div>
+        <div class="video"><iframe width="279" height="190" src="//www.youtube.com/embed/Y-MsUcZ6SNI?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe></div>
         <div class="social">
             <div id="fb-root"></div>
             <script>(function(d, s, id) {
                     var js, fjs = d.getElementsByTagName(s)[0];
                     if (d.getElementById(id)) return;
                     js = d.createElement(s); js.id = id;
-                    js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&appId=1408737842716869&version=v2.0";
+                    js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&appId=<?php echo APPID; ?>&version=v2.0";
                     fjs.parentNode.insertBefore(js, fjs);
                 }(document, 'script', 'facebook-jssdk'));</script>
-            <div class="fb-like" data-href="www.youtube.com/embed/NXqvabhcI3A" data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div>
+            <div class="fb-like" data-href="<?php echo WEBSITEURL.$_SERVER['PHP_SELF'];  ?>" data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div>
         </div>
     </div>
     <?php
@@ -99,7 +100,7 @@ if (!isset($_SESSION)) {
                     $date = date_create($result_news[$i]['registerdate']);
             ?>
 
-            <li><a href="details_news.php?id=<?php echo $result_news[$i]['id']; ?>"><span><?php //echo date_format($date, 'd/m/Y'); ?><img src="images/logo-thanhnien.png" /></span>&nbsp;&nbsp;<b><?php echo $result_news[$i]['title'] ;?></b></a></li>
+            <li><a href="details_news.php?id=<?php echo $result_news[$i]['id']; ?>"><span><?php //echo date_format($date, 'd/m/Y'); ?><img src="images/<?php echo $result_news[$i]['photo'] ;  ?>" /></span>&nbsp;&nbsp;<b><?php echo $result_news[$i]['title'] ;?></b></a></li>
 
             <?php
                 }

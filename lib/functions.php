@@ -22,12 +22,13 @@ function utf8(){
 	mysql_query("SET CHARACTER SET 'utf8'");
 }
 require_once 'meekrodb.2.3.class.php';
-DB::$user = 'kusu';
+/*DB::$user = 'kusu';
 DB::$password = 'kusu@1qaz@WSX';
 DB::$dbName = 'kusudemodb';
-/*DB::$user = 'root';
-DB::$password = '';
-DB::$dbName = 'kusudemodb';*/
+*/
+DB::$user = DBUSER;
+DB::$password = DBPASS;
+DB::$dbName = DBNAME;
 // tìm kiếm 
 function send($key){
 utf8();
@@ -185,7 +186,7 @@ function select_answer()
 }
 function select_news(){
     DB::$encoding = 'utf8';
-    $total = DB::query("SELECT `id`, `title` ,`registerdate` FROM news ORDER BY registerdate DESC  ");
+    $total = DB::query("SELECT `id`, `title` ,`registerdate`,`photo` FROM news ORDER BY registerdate DESC  ");
     return $total;
 }
 function select_details_news($id){

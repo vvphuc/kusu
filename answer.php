@@ -8,7 +8,7 @@ if (!isset($_SESSION)) {
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Game Kun - Answer Page</title>
+    <title>Giải pháp của bạn</title>
 
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/answer_page.css" />
@@ -73,7 +73,7 @@ if (!isset($_SESSION)) {
     <div class="milk-bg"></div>
     <div class="question"></div>
     <form class="ans" method="post" action="insert_answer.php" name="info" onsubmit="return check();">
-        <textarea placeholder="Hãy chia sẻ cho chúng tôi “bí quyết” của bạn tại đây..." name="answer" id="answer"   ></textarea>
+        <textarea placeholder="Hãy chia sẻ “bí quyết” của bạn..." name="answer" id="answer"   ></textarea>
         <div class="sendby">Được gửi bởi</div>
         <div class="mail-icon"></div>
         <input type="radio" name="radiog_dark"  id="radio1" class="css-checkbox"  value="email"  checked="true">

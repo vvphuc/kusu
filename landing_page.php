@@ -186,6 +186,7 @@ require 'config/config.php';
             ?>
             <!-- -->
         </ul>
+        <a href="answer.php" class="binhluantiep">Bình luận tiếp</a>
     </div>
 </div>
 </body>

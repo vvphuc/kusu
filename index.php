@@ -26,7 +26,7 @@
 
 <body>
 <div id="popup" style="position:absolute;width:100%;height:100%;z-index:100;background:rgba(0,0,0,.5); display:none">
-    <img src="images/p1-popup-chucmung.png" style="position:fixed; top:50%; left:50%; margin:-140px 0 0 -200px" />
+	<img src="images/p1-popup-chucmung.png" style="position:fixed; top:50%; left:50%; margin:-150px 0 0 -260px" />
 </div>
 <div id="wrap_answerpage">
     <div class="milk-bg"></div>

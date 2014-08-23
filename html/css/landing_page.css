@@ -1,6 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
-
+::selection { background: transparent}
+::-moz-selection { background: transparent}
 #wrap_landingpage { width:1000px; margin:auto; position:relative}
 .tvc { width:437px; height:499px; background:url(../images/background_tvc.png) no-repeat; position: absolute; top:200px; left:-43px}
 .tvc .social { width:200px; margin:35px 0 0 82px}
@@ -25,4 +26,6 @@
 .chat:hover .arrowright { border-left:18px solid #009588}
 .tvc .video { margin: 167px 0 0 83px}
 .jcarousel-skin-tango li a b { width:290px; overflow:hidden; float:left}
-.jcarousel-skin-tango li a span { display:block; width:80px; height:20px; float:right}
+.jcarousel-skin-tango li a span { display:block; width:80px; height:20px; float:left}
+.binhluantiep { width:117px; height:29px; background:url(../images/p1-bt-binhluantiep.png) no-repeat; position:absolute; top:435px; right:-10px; font-family: 'UTMAndrogyne', Arial, Helvetica, sans-serif; color:#fff; padding:8px 0 0 24px; border-radius:5px; transition:all .3s}
+.binhluantiep:hover { box-shadow: 0px 0px 10px 5px #fff; transition:all .3s}

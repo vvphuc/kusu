@@ -4,7 +4,7 @@
 #wrap_detailspage { width:1000px; margin:auto; position:relative}
 html { background:url(../images/background_landingpage.jpg) no-repeat center center fixed;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover}
 #details { width:964px; height:464px; background:url(../images/bg_details.png) 30px 0 no-repeat; position:relative; margin-top:95px}
-.back-link { display:block; width:67px; height:12px; position:absolute; top:50px; right:100px; background:url(../images/back-details.png) -15px 0 no-repeat;padding:7px;top:29px;right:44px; transition:all 0.3s}
+.back-link { display:block; width:67px; height:12px; position:absolute; background:url(../images/back-details.png) -15px 0 no-repeat;padding:7px;top:29px;right:44px; transition:all 0.3s}
 .back-link:hover { background-position:0 0; transition:all 0.3s}
 ul#menu { width:230px; position:absolute; top:50px; left:20px}
 ul#menu li { background-color:#f9ce00; margin-bottom:10px}

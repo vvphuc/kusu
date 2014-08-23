@@ -1,0 +1,79 @@
+@charset "utf-8";
+/* CSS Document */
+
+#frame_library { width:934px; height:427px; position:absolute; top:10px; right:0; background:url(../images/p2-background-elements-thuvien.png) 0 0 no-repeat}
+.titlepage { width:238px; height:40px; position:absolute; top:-25px; left:300px; background:url(../images/p2-background-elements-thuvien.png) -90px -430px no-repeat}
+.titlepage h2 { margin:16px 0 0 28px;font-family:'UTMAndrogyne',Arial, Helvetica, sans-serif; font-size:27px; color:#009386}
+
+/*form { position:absolute; top:50px; left:100px; width:870px}*/
+.leftside { width:420px; float:left}
+form h3 {font-family:'UTMAndrogyne',Arial, Helvetica, sans-serif; font-size:18px; color:#009588; padding-bottom:10px}
+.leftside a { display:block; width:167px; height:167px; float:left; border:3px solid #c2c2c2; border-radius:3px; transition:all .3s}
+.leftside a.choose { border-color:#009285}
+.leftside a:hover { opacity:0.8; transition:all .3s;border-color:#009285}
+.leftside #n1 { margin-right:20px; clear:both}
+.fileUpload {position: relative;overflow: hidden;background:url(../images/p2-upload-inputfile.png) no-repeat;width:371px; height:40px}
+.fileUpload .text { float:right; margin:12px 12px 0 0; color:#fff; font-weight:700; transition:all .3s}
+.fileUpload:hover .text { color:#fce22b; transition:all .3s}
+.fileUpload p.clear { padding:10px 0}
+.leftside p.alert { font-size:12px; font-style:italic; display:block; margin:10px 0 0} 
+.uploadFile { background:none; padding:12px 0 0 15px; width:250px}
+.fileUpload input.upload {position: absolute;top: 0;right: 0;margin: 0;padding: 8px 0;font-size: 20px;cursor: pointer;opacity: 0;filter: alpha(opacity=0);
+}
+.rightside { width:420px; float:left}
+.rightside .rowf { width:400px; clear:both}
+.rightside .rowf span { font-size:15px; color:#fff; font-weight:700; display:block; float:left; width:80px; padding:15px 0 0; text-shadow:0px 0px 2px rgba(0,0,0,1)}
+.rightside .rowf input[type=text] { background:#fff; border:3px solid #008a7e; border-radius:10px; padding:7px 10px; width:290px; float:right; margin:5px 0}
+
+/* Flower moving */
+@-webkit-keyframes spaceboots {
+	0% { -webkit-transform: translate(0px, 0px) rotate(0deg); }
+	10% { -webkit-transform: translate(0px, 0px) rotate(-10deg); }
+	20% { -webkit-transform: translate(0px, 0px) rotate(10deg); }
+	30% { -webkit-transform: translate(0px, 0px) rotate(0deg); }
+	40% { -webkit-transform: translate(0px, 0px) rotate(10deg); }
+	50% { -webkit-transform: translate(0px, 0px) rotate(-10deg); }
+	60% { -webkit-transform: translate(0px, 0px) rotate(0deg); }
+	70% { -webkit-transform: translate(0px, 0px) rotate(-10deg); }
+	80% { -webkit-transform: translate(0px, 0px) rotate(0deg); }
+	90% { -webkit-transform: translate(0px, 0px) rotate(10deg); }
+	100% { -webkit-transform: translate(0px, 0px) rotate(0deg); }
+}
+@-moz-keyframes spaceboots {
+	0% { -moz-transform: translate(0px, 0px) rotate(0deg); }
+	10% { -moz-transform: translate(0px, 0px) rotate(-10deg); }
+	20% { -moz-transform: translate(0px, 0px) rotate(10deg); }
+	30% { -moz-transform: translate(0px, 0px) rotate(0deg); }
+	40% { -moz-transform: translate(0px, 0px) rotate(10deg); }
+	50% { -moz-transform: translate(0px, 0px) rotate(-10deg); }
+	60% { -moz-transform: translate(0px, 0px) rotate(0deg); }
+	70% { -moz-transform: translate(0px, 0px) rotate(-10deg); }
+	80% { -moz-transform: translate(0px, 0px) rotate(10deg); }
+	90% { -moz-transform: translate(0px, 0px) rotate(0deg); }
+	100% { -moz-transform: translate(0px, 0px) rotate(-10deg); }
+}
+.sunflower {
+	position:fixed; background:url(../images/sunflower.png) no-repeat; background-size:cover;
+	-webkit-animation-name: spaceboots;
+	-webkit-animation-duration: 7s;
+	-webkit-transform-origin:50% 50%;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: ease-in-out;
+	
+	-moz-animation-name: spaceboots;
+	-moz-animation-duration: 4s;
+	-moz-transform-origin:50% 50%;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-timing-function: ease-in-out;
+}
+.sunflower.f1 { bottom:-82px; right:19px; width:66px; height:169px; -webkit-animation-delay: 0.2s; animation-delay: 0.2s}
+.sunflower.f2 { bottom:-16px; right:144px; width:48px; height:123px; -webkit-animation-delay: 0.2s; animation-delay: 0.2s}
+.sunflower.f3 { bottom:11px; right:184px; width:31px; height:79px; -webkit-animation-delay: 0.6s; animation-delay: 0.6s}
+.sunflower.f4 { bottom:-37px; right:93px; width:66px; height:169px; -webkit-animation-delay: 0.7s; animation-delay: 0.7s}
+.sunflower.f5 { bottom:-67px; right:62px; width:66px; height:169px; -webkit-animation-delay: 0.3s; animation-delay: 0.3s}
+.sunflower.f6 { bottom:-43px; right:85px; width:38px; height:97px; -webkit-animation-delay: 0.1s; animation-delay: 0.1s}
+.sunflower.f7 { bottom:-44px; right:37px; width:66px; height:169px; -webkit-animation-delay: 0.5s; animation-delay: 0.5s}
+.sunflower.f8 { bottom:-60px; right:37px; width:48px; height:123px; -webkit-animation-delay: 0.4s; animation-delay: 0.4s}
+.sunflower.f9 { bottom:-60px; right:115px; width:48px; height:123px; -webkit-animation-delay: 0.4s; animation-delay: 0.4s}
+.sunflower.f10 { bottom:-44px; right:-6px; width:48px; height:123px; -webkit-animation-delay: 0.2s; animation-delay: 0.2s}
+.sunflower.f11 { bottom:-103px; right:162px; width:66px; height:169px; -webkit-animation-delay: 0.2s; animation-delay: 0.3s}

@@ -1,0 +1,11 @@
+.edit-avatar-region{display: none; width: 770px; z-index:99999; background-color: #EAEAEA; margin:0 auto; padding: 20px; position: absolute; top:2%;}
+.edit-avatar-region .close-btn{position: absolute; right:0px; top: 0px; width: 20px; height:20px; cursor: pointer;}
+.uploadBtn	{ position: absolute;top: 0;right: 0;margin: 0;padding: 8px 0;font-size: 20px;cursor: pointer;opacity: 0;filter: alpha(opacity=0); width: 371px; height: 40px;}
+.main-form{ position:absolute; top:50px; left:100px; width:870px;}
+#btn-upload {background:url('../images/guiloichuc-upload.png') no-repeat; width:75px; height:27px; border:none;float:left; margin-right:10px; margin-top:10px; cursor:pointer;}
+#btn-resert { margin-top:10px;}
+.step2{display: none;}
+.step2 h2{color:#fc9bb4;}
+.step1 h2{color:#fc9bb4;}
+#CurrImg, #FrameImg { display: none;}
+.btn-submit{ width: 100px; height: 40px;}

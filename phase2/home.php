@@ -6,17 +6,10 @@
 
 <link rel="stylesheet" type="text/css" href="css/p2_style.css" />
 <link rel="stylesheet" type="text/css" href="css/p2_homepage.css" />
-<<<<<<< HEAD
 </head>
 
 <body>
 <h1>Sữa Kun</h1>
-=======
-<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-</head>
-
-<body>
->>>>>>> 04683f1049b16b20d77356491ad736aaeb35481c
 <div id="topbar">
     <div class="repeatmenu"></div>
     <div class="wrapper_1000">

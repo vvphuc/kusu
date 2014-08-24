@@ -43,8 +43,9 @@ function clearInfo() {
 function fileSelectHandler() {
 
     // get selected file
-    var oFile = $('#image_file')[0].files[0];
 
+    var oFile = $('#image_file')[0].files[0];
+    $('.uploadFile').val(oFile.name);
     // hide all errors
     $('.error').hide();
 

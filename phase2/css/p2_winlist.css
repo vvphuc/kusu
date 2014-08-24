@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* CSS Document */
+
+#wrap_winlist { width:1000px; margin:auto; position:relative; background:url(../images/p2-bg-winlist.png) top right no-repeat; height:464px}
+.titlepage { width:238px; height:40px; position:absolute; top:-3px; left:290px}
+.titlepage h2 { margin:16px 0 0 28px;font-family:'UTMAndrogyne',Arial, Helvetica, sans-serif; font-size:27px; color:#009386}
+.imgtitle { width:142px; height:108px; background:url(../images/p2-bg-winlist.png) 0 -490px no-repeat; position:absolute; top:-15px; left:486px}
+h3 { position:absolute; top:100px; left:320px; font-size:20px; color:#008a7e; font-weight:700}
+table { border-collapse:collapse; width:640px}
+table th { padding:0 0 10px; border-right:1px solid #d7d7d7}
+table td { padding:9px 15px; border-right:1px solid #d7d7d7;border-bottom:1px solid #d7d7d7}
+thead { border-bottom:1px solid #d7d7d7}
+.back-link { display:block; width:67px; height:12px; position:absolute; background:url(../images/back-details.png) -15px 0 no-repeat;padding:7px;top:29px;right:77px; transition:all 0.3s}
+.back-link:hover { background-position:0 0; transition:all 0.3s}
+.upload { width:110px; height:66px; position:absolute; top:80px; left:200px}
+.playgame { width:95px; height:52px; position:absolute; top:150px; left:185px}
+
+/* Tiny Scrollbar */
+#scrollbar1 { width: 645px; position:absolute; top:140px; left:320px}
+#scrollbar1 .viewport { width: 635px; height: 290px; overflow: hidden; position: relative; }
+#scrollbar1 .overview { list-style: none; position: absolute; left: 0; top: 0; padding: 0; margin: 0; font-size:13px}
+#scrollbar1 .scrollbar{ background: transparent url(../images/bg-scrollbar-track-y.png) no-repeat 0 0; position: relative; background-position: 0 0; float: right; width: 6px; }
+#scrollbar1 .track { height: 100%; width:13px; position: relative; padding: 0 1px; }
+#scrollbar1 .thumb { background: #faac2a; height: 10px; width: 8px; cursor: pointer; overflow: hidden; position: absolute; top:0; left:-1px}
+#scrollbar1 .disable { display: none; }
+.noSelect { user-select: none; -o-user-select: none; -moz-user-select: none; -khtml-user-select: none; -webkit-user-select: none; }
+
+

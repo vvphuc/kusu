@@ -1,15 +1,41 @@
 <?php
 session_start();
-require 'config.php';
+require  '../config/config.php';
+require '../config/funtions.php';
 $userid = '123';
 if($userid)
 {
+	if(!isset($_POST['frameImg']) && $_POST['frameImg'] ==''){
+		_redirect('home.php');
+	}	
 	$frame = $_POST['frameImg'];
+	if(!isset($_POST['ImgCurr']) && $_POST['ImgCurr'] ==''){
+		_redirect('home.php');
+	}	
 	$Img = $_POST['ImgCurr'];
-	$message = $_POST['message'];
+	if(!isset($_POST['babyname']) && $_POST['babyname'] ==''){
+		_redirect('home.php');
+	}	
+	$babyname = $_POST['babyname'];
+	if(!isset($_POST['yourname']) && $_POST['yourname'] ==''){
+		_redirect('home.php');
+	}	
+	$yourname = $_POST['yourname'];
+	if(!isset($_POST['phone']) && $_POST['phone'] ==''){
+		_redirect('home.php');
+	}	
+	$phone = $_POST['phone'];
+	if(!isset($_POST['email']) && $_POST['email'] ==''){
+		_redirect('home.php');
+	}	
+	$email = $_POST['email'];
+	if(!isset($_POST['pid']) && $_POST['pid'] ==''){
+		_redirect('home.php');
+	}	
+	$pid = $_POST['pid'];
 	$published = "yes";
-	$width = 440;
-	$height = 340;
+	$width = 447;
+	$height = 379;
 	$final_img = imagecreatetruecolor ($width, $height);
 	
 	imagealphablending($final_img, true);
@@ -43,6 +69,10 @@ if($userid)
 	// mysql_query("SET NAMES 'utf8'", $conn);
 	// mysql_query($query, $conn);
 	print ' <script>window.location.href="library.php?page=1"</script>';
+}
+else{
+	_redirect('home.php');
+	exit();
 }
 
 ?>

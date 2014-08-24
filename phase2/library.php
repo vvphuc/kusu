@@ -12,9 +12,9 @@
 <body>
 <h1>Sữa Kun</h1>
 <div id="topbar">
-	<div class="repeatmenu"></div>
+    <div class="repeatmenu"></div>
     <div class="wrapper_1000">
-    	<div id="logo"><img src="images/logo-kunkun.png" title="logo_kunkun" alt="logo_kunkun" /></div>
+        <div id="logo"><img src="images/logo-kunkun.png" title="logo_kunkun" alt="logo_kunkun" /></div>
         <div class="iconKun"></div>
         <div class="login"><a href="#">Đăng nhập</a><span></span></div>
         <!-- ------ -->
@@ -36,97 +36,97 @@
     </div>
 </div>
 <div class="wrapper_1000">
-	<div id="frame_library"></div>
+    <div id="frame_library"></div>
     <div class="titlepage"><h2>Thư Viện</h2></div>
     <div class="search">
-    	<input type="text" placeholder="Tìm bài dự thi_" />
+        <input type="text" placeholder="Tìm bài dự thi_" />
         <div class="icon"><input type="submit" value="" /></div>
     </div>
     <div class="tableft">
-    	<div class="tab current">
-    		<a href="#">Chủ đề 1</a>
+        <div class="tab current">
+            <a href="#">Chủ đề 1</a>
         </div>
-    	<div class="tab">
-    		<a href="#">Chủ đề 2</a>
+        <div class="tab">
+            <a href="#">Chủ đề 2</a>
         </div>
     </div>
     <div id="wrap_item">
-    	<!-- -->
-    	<div class="item">
-        	<div class="thumb">
-            	<a href="#"><img src="images/thumbs-library.jpg" alt="thumb" /></a>
-            	<div class="circle"><span>999</span></div>
+        <!-- -->
+        <div class="item">
+            <div class="thumb">
+                <a href="#"><img src="images/thumbs-library.jpg" alt="thumb" /></a>
+                <div class="circle"><span>999</span></div>
                 <div class="info"><span>Tên của bé</span>01/08/2014</div>
                 <div class="like">999</div>
             </div>
         </div>
-    	<!-- -->
-    	<div class="item">
-        	<div class="thumb">
-            	<a href="#"><img src="images/thumbs-library.jpg" alt="thumb" /></a>
-            	<div class="circle"><span>999</span></div>
+        <!-- -->
+        <div class="item">
+            <div class="thumb">
+                <a href="#"><img src="images/thumbs-library.jpg" alt="thumb" /></a>
+                <div class="circle"><span>999</span></div>
                 <div class="info"><span>Tên của bé</span>01/08/2014</div>
                 <div class="like">999</div>
             </div>
         </div>
-    	<!-- -->
-    	<div class="item">
-        	<div class="thumb">
-            	<a href="#"><img src="images/thumbs-library.jpg" alt="thumb" /></a>
-            	<div class="circle"><span>999</span></div>
+        <!-- -->
+        <div class="item">
+            <div class="thumb">
+                <a href="#"><img src="images/thumbs-library.jpg" alt="thumb" /></a>
+                <div class="circle"><span>999</span></div>
                 <div class="info"><span>Tên của bé</span>01/08/2014</div>
                 <div class="like">999</div>
             </div>
         </div>
-    	<!-- -->
-    	<div class="item">
-        	<div class="thumb">
-            	<a href="#"><img src="images/thumbs-library.jpg" alt="thumb" /></a>
-            	<div class="circle"><span>999</span></div>
+        <!-- -->
+        <div class="item">
+            <div class="thumb">
+                <a href="#"><img src="images/thumbs-library.jpg" alt="thumb" /></a>
+                <div class="circle"><span>999</span></div>
                 <div class="info"><span>Tên của bé</span>01/08/2014</div>
                 <div class="like">999</div>
             </div>
         </div>
-    	<!-- -->
-    	<div class="item">
-        	<div class="thumb">
-            	<a href="#"><img src="images/thumbs-library.jpg" alt="thumb" /></a>
-            	<div class="circle"><span>999</span></div>
+        <!-- -->
+        <div class="item">
+            <div class="thumb">
+                <a href="#"><img src="images/thumbs-library.jpg" alt="thumb" /></a>
+                <div class="circle"><span>999</span></div>
                 <div class="info"><span>Tên của bé</span>01/08/2014</div>
                 <div class="like">999</div>
             </div>
         </div>
-    	<!-- -->
-    	<div class="item">
-        	<div class="thumb">
-            	<a href="#"><img src="images/thumbs-library.jpg" alt="thumb" /></a>
-            	<div class="circle"><span>999</span></div>
+        <!-- -->
+        <div class="item">
+            <div class="thumb">
+                <a href="#"><img src="images/thumbs-library.jpg" alt="thumb" /></a>
+                <div class="circle"><span>999</span></div>
                 <div class="info"><span>Tên của bé</span>01/08/2014</div>
                 <div class="like">999</div>
             </div>
         </div>
-    	<!-- -->
-    	<div class="item">
-        	<div class="thumb">
-            	<a href="#"><img src="images/thumbs-library.jpg" alt="thumb" /></a>
-            	<div class="circle"><span>999</span></div>
+        <!-- -->
+        <div class="item">
+            <div class="thumb">
+                <a href="#"><img src="images/thumbs-library.jpg" alt="thumb" /></a>
+                <div class="circle"><span>999</span></div>
                 <div class="info"><span>Tên của bé</span>01/08/2014</div>
                 <div class="like">999</div>
             </div>
         </div>
-    	<!-- -->
-    	<div class="item">
-        	<div class="thumb">
-            	<a href="#"><img src="images/thumbs-library.jpg" alt="thumb" /></a>
-            	<div class="circle"><span>999</span></div>
+        <!-- -->
+        <div class="item">
+            <div class="thumb">
+                <a href="#"><img src="images/thumbs-library.jpg" alt="thumb" /></a>
+                <div class="circle"><span>999</span></div>
                 <div class="info"><span>Tên của bé</span>01/08/2014</div>
                 <div class="like">999</div>
             </div>
         </div>
-    	<!-- -->
+        <!-- -->
     </div>
     <div class="paging">
-    	<a href="#" class="prev"></a>
+        <a href="#" class="prev"></a>
         <a href="#">1</a>
         <a href="#">2</a>
         <a href="#" class="pageon">3</a>
@@ -134,7 +134,7 @@
         <span>...</span>
         <a href="#">6</a>
         <a href="#">7</a>
-    	<a href="#" class="next"></a>
+        <a href="#" class="next"></a>
     </div>
     <!-- -->
 </div>

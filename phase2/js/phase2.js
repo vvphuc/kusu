@@ -7,6 +7,28 @@ $( document ).ready(function() {
    $( ".close-btn" ).click(function() {
 		closeAvaEdit();
 	});
+   $(".main-form").validate({
+		"rules" :{
+			"babyname" :{
+				"required" : true	
+			},
+			"yourname" :{
+				"required" : true	
+			},
+			"phone" :{
+				"required" : true	
+			},
+			"email" :{
+				"required" : true	
+			},
+			"pid" :{
+				"required" : true	
+			},
+			"filename" :{
+				"required" : true	
+			},
+		},
+	});
 });
 
 /**

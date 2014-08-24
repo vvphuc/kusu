@@ -4,27 +4,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Game Kun - P2 - Library</title>
 <link href="css/jquery.Jcrop.min.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" type="text/css" href="../css/p2_style.css" />
-<link rel="stylesheet" type="text/css" href="../css/p2_upload.css" />
+<link rel="stylesheet" type="text/css" href="css/p2_style.css" />
+<link rel="stylesheet" type="text/css" href="css/p2_upload.css" />
 <link rel="stylesheet" type="text/css" href="css/phase2.css" />
-<link rel="stylesheet" type="text/css" href="css/htv3.css" />
-<!-- <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script> -->
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.Jcrop.min.js"></script>
 <script src="js/script.js"></script>
 <script src="js/phase2.js"></script>
 <script type="text/javascript" src="js/jquery.validate.min.js"></script>
-<script>	
-// 	$(document).ready(function(){
-// 		document.getElementById("uploadBtn").onchange = function () {
-//     	$(".uploadFile").attr( "value", this.value );
-// };
-// 	});
-// 	function getID($id){
-// 		$('#n1,#n2').removeClass('choose');
-// 		$("#n"+$id).addClass('choose');
-// 	};
-</script>
 </head>
 
 <body>
@@ -62,11 +49,13 @@
     		<h3>1. Lựa chọn chủ đề:</h3>
             <div class="f13">Bạn hãy lựa chọn chủ đề mình yêu thích, sau đó tải hình ảnh tương tự như hình chủ đề bạn đã chọn.</div>
             <br>
-            <a href="#" id="n1" onclick="getID(1)" class="choose"><img src="../images/p2-chude1.png" /></a>
-            <a href="#" id="n2" onclick="getID(2)"><img src="../images/p2-chude2.png" /></a>
-            <p class="clear"></p>
+            <div>
+                <a href="#" id="n1" onclick="getID(1)" class="choose"><img src="../images/p2-chude1.png" /></a>
+                <a href="#" id="n2" onclick="getID(2)"><img src="../images/p2-chude2.png" /></a>
+            </div>
+            <div class="clear"></div>
             <div class="fileUpload">
-            	<input class="uploadFile" type="text" value="Chưa chọn file" />
+            	<input class="uploadFile" name="filename" type="text" value="Chưa chọn file" />
                 <div class="text">Chọn hình</div>
                 <div class="uploadBtn" id="uploadBtn" ></div>
             </div>
@@ -74,11 +63,12 @@
         </div>
         <div class="rightside">
         	<h3>2. Thông tin người dự thi</h3>
-            <div class="rowf"><span>Tên bé:</span><input type="text" /></div>
-            <div class="rowf"><span>Tên bạn:</span><input type="text" /></div>
-            <div class="rowf"><span>Điện thoại:</span><input type="text" /></div>
-            <div class="rowf"><span>Email:</span><input type="text" /></div>
-            <div class="rowf"><span>CMND:</span><input type="text" /></div>
+            <div class="rowf"><span>Tên bé:</span><input type="text" name="babyname" value="" /></div>
+            <div class="rowf"><span>Tên bạn:</span><input type="text" name="yourname" value="" /></div>
+            <div class="rowf"><span>Điện thoại:</span><input type="text" name="phone" value="" /></div>
+            <div class="rowf"><span>Email:</span><input type="text" name="email" value="" /></div>
+            <div class="rowf"><span>CMND:</span><input type="text" name="pid" value="" /></div>
+             <input type="submit" > 
         </div>
        <div id="FrameImg">
            <img src="images/frame1.png" />
@@ -88,7 +78,6 @@
             <img src="images/b1.jpg" />
             <input type="hidden" name="ImgCurr" id="ImgCurr" value="images/b1.jpg" >
         </div>
-        <input type="submit" value="Gửi" class="btn-submit"> 
     </form>
     <!-- -->
     <div class="edit-avatar-region">

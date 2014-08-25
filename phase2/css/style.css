@@ -1,146 +1,44 @@
 @charset "utf-8";
 /* CSS Document */
+/* ====================== Default ====================== */
+* { margin:0; padding:0; border:0}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend{ font-family: Arial,Helvetica,sans-serif}
+strong,strong span,b,b a { font-weight:700}
+em { font-style:italic; font-family:Arial, Helvetica, sans-serif}
+ul,ol { list-style:none}
+img { border:none}
+a image {border: none}
+a { text-decoration:none; color:#2398c9; outline: none}
+a:hover { color:#ff7100; cursor:pointer}
+p { padding:3px 0}
+i { color:#999}
+hr { clear:both; padding:0; margin:0; border:0}
+.italic { font-style:italic}
+.block { display:block}
+.clear { clear:both} 
+.right { float: right} 
+.left { float: left}
+h1{font-size:2.2em}
+h2{font-size:2em}
+h3{font-size:1.8em}
+h4{font-size:1.6em}
+h5{font-size:1.4em}
+p{font-size:1.2em}
+input::-webkit-input-placeholder,textarea::-webkit-input-placeholder,input:-moz-placeholder,textarea:-moz-placeholder,input:-ms-input-placeholder,textarea:-ms-input-placeholder { color:#bbb; font-style:italic;font-family:Arial, Helvetica, sans-serif}
+body{ font:14px/18px Arial, Helvetica, sans-serif; ; background-size:100%; color:#000; overflow-y:hidden}
+html { background:url(../images/background_landingpage.jpg) no-repeat center center fixed;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover}
 
-#wrapper { width:810px; height:600px; margin:auto; background:url(../img/trangchu.jpg); overflow: hidden; position:relative}
-.centerhome { position:absolute; background:url(../img/center-home.png); z-index:-9; width:810px; height:600px}
-/*LIGHT*/
-#lightEffect {
-	overflow: hidden;
-	position:absolute;
-    width: 810px;
-	height:600px;
-    z-index: 0;
-}
-#lightEffect img { position:absolute}
+/* ------------------- */
 
-.topLight {animation: lightAnimation 20s linear 0s infinite; -webkit-animation: lightAnimation 20s linear 0s infinite;z-index:1}
-.topLight2 {animation: lightAnimation 60s linear 0s infinite; -webkit-animation: lightAnimation 60s linear 0s infinite;z-index:1}
-@-keyframes lightAnimation { 0% { transform: rotate(0deg); -moz-transform: rotate(0deg); -webkit-transform: rotate(0deg); } 100% { transform: rotate(360deg); -moz-transform: rotate(360deg); -webkit-transform: rotate(360deg); } }
-@-moz-keyframes lightAnimation { 0% { transform: rotate(0deg); -moz-transform: rotate(0deg); -webkit-transform: rotate(0deg); } 100% { transform: rotate(360deg); -moz-transform: rotate(360deg); -webkit-transform: rotate(360deg); } }            
-@-webkit-keyframes lightAnimation { 0% { transform: rotate(0deg); -moz-transform: rotate(0deg); -webkit-transform: rotate(0deg); } 100% { transform: rotate(360deg); -moz-transform: rotate(360deg); -webkit-transform: rotate(360deg); } }
-@-keyframes reverseLightAnimation { 0% { transform: rotate(360deg); -moz-transform: rotate(360deg); -webkit-transform: rotate(360deg); } 100% { transform: rotate(0deg); -moz-transform: rotate(0deg); -webkit-transform: rotate(0deg); } }
-@-moz-keyframes reverseLightAnimation { 0% { transform: rotate(360deg); -moz-transform: rotate(360deg); -webkit-transform: rotate(360deg); } 100% { transform: rotate(0deg); -moz-transform: rotate(0deg); -webkit-transform: rotate(0deg); } }           
-@-webkit-keyframes reverseLightAnimation { 0% { transform: rotate(360deg); -moz-transform: rotate(360deg); -webkit-transform: rotate(360deg); } 100% { transform: rotate(0deg); -moz-transform: rotate(0deg); -webkit-transform: rotate(0deg); } }
-
-/*END LIGHT*/
-
-/*LOGO & ANIMATION
-#cloud {
-	position: absolute;
-		
-	-webkit-transition: all 2s ease-in-out;
-    -moz-transition: all 2s ease-in-out;
-    -o-transition: all 2s ease-in-out;
-    -ms-transition: all 2s ease-in-out;
-    transition: all 2s ease-in-out;
-    
-    -webkit-animation-direction: normal;
-    -webkit-animation-duration: 2s;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-name: floating;
-    -webkit-animation-timing-function: ease-in-out;
-    
-	-moz-animation-direction: normal;
-    -moz-animation-duration: 2s;
-    -moz-animation-iteration-count: infinite;
-    -moz-animation-name: floating;
-    -moz-animation-timing-function: ease-in-out;    
+@font-face {
+  font-family: 'UTMAndrogyne';
+  src: url('fonts/UTMAndrogyne.eot');
+  src: url('fonts/UTMAndrogyne.eot?#iefix') format('embedded-opentype'),
+       url('fonts/UTMAndrogyne.woff') format('woff'),
+       url('fonts/UTMAndrogyne.ttf') format('truetype'),
+       url('fonts/UTMAndrogyne.svg#UTMAndrogyne') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
-@-webkit-keyframes floating {
-    0% {
-        top:10px;
-    }
-    50% {
-        top:20px;
-    }
-    100% {
-        top:10px;
-    }
-}
-@-moz-keyframes floating {
-    0% {
-        top:10px;
-    }
-    50% {
-        top:20px;
-    }
-    100% {
-        top:10px;
-    }
-} */
-/*LOGO & ANIMATION*/
-.g01 { position:absolute; z-index:10; left: 360px;top: 450px;width: 120px;height: 111px; }
-.g01 a {background:url(../img/01.png) no-repeat;display:block; width:86px; height:102px;margin-top: 5px;}
-.g01 a:hover { background:url(../img/01.gif) no-repeat;margin-left: -18px;margin-top: -5px;width: 120px;height: 117px;display:block}
-.g02 { position:absolute; z-index:10; left: 445px;top: 450px;width: 120px;height: 111px; }
-.g02 a {background:url(../img/02.png) no-repeat;display:block; height:105px;margin-left: -4px;margin-top: 3px;}
-.g02 a:hover { background:url(../img/02.gif) no-repeat;margin-left: -18px;margin-top: -5px;width: 120px;height: 117px;display:block}
-.g03 { position:absolute; z-index:10; left: 516px;top: 459px;width: 120px;height: 111px;}
-.g03 a {background:url(../img/03.png) no-repeat;display:block; height:105px;}
-.g03 a:hover { background:url(../img/03.gif) no-repeat;margin-left: -18px;margin-top: -5px;width: 120px;height: 117px;display:block}
-.g04 { position:absolute; z-index:10; left: 605px;top: 421px;width: 120px;height: 111px; }
-.g04 a {background:url(../img/04.png) no-repeat;display:block; height:134px; width: 145px;}
-.g04 a:hover { background:url(../img/04.gif) no-repeat;margin-left: -14px;margin-top: -18px;width: 172px;height: 152px;display:block}
-.g05 { position:absolute; z-index:10; left: 712px;top: 454px;width: 120px;height: 111px; }
-.g05 a {background:url(../img/05.png) no-repeat;display:block; height:105px; }
-.g05 a:hover { background:url(../img/05.gif) no-repeat;margin-left: -3px;margin-top: -5px;width: 120px;height: 117px;display:block}
-.homehot { position:absolute; width:436; height:128px; top:4px; left:273px; background: url(../images/homehot.png) 0 0 no-repeat;}
-.home-btn {
-	margin-right: 25px;
-	width:19px;
-	height:23px;
-	background:url(../img/btnhome.png) no-repeat top center;
-}
-a.danganh { position:absolute; z-index:10; left: 488px;top: 356px;background:url(../img/btndanganh.png) no-repeat;display:block; width:190px; height:102px; }
-
-a.danganh:hover {position:absolute; z-index:10; left: 486px;top: 338px; background:url(../img/hoverdanganh.png) no-repeat;width: 190px;height: 97px;display:block}
-
-
-
-/* MENU */
-.menu-gioithieu { position:absolute; z-index:10; left:665px; top:170px; }
-.menu-gioithieu img { width:56px; height:105px; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; -o-transition: all 1s ease}
-.menu-gioithieu img:hover { margin-top:-20px}
-
-.menu-guiloichuc { position:absolute; z-index:10; left:512px; top:200px}
-.menu-guiloichuc img { width:78px; height:84px; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; -o-transition: all 1s ease}
-.menu-guiloichuc img:hover { margin-top:-20px}
-
-.menu-thuvien { position:absolute; z-index:10; top:178px; left:385px}
-.menu-thuvien img { width:75px; height:120px; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; -o-transition: all 1s ease}
-.menu-thuvien img:hover { margin-top:-20px}
-
-.menu-touoc { position:absolute; z-index:10; top:400px; left:182px}
-.menu-touoc img { width:194px; height:92px; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; -o-transition: all 1s ease}
-.menu-touoc img:hover { margin-top:-20px}
-
-.menu-truyenthong { position:absolute; z-index:10; top:400px; left:482px}
-.menu-truyenthong img { width:208px; height:92px; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; -o-transition: all 1s ease}
-.menu-truyenthong img:hover { margin-top:-20px}
-
-.menu-text-video { width:68px; height:27px; position:absolute; top:173px; left:567px; z-index:11}
-
-.menu-video { position:absolute; z-index:10; top:200px; left:577px}
-.menu-video a { display:block; background:url(../img/menu_video.png); width:215px; height:165px}
-.menu-video a:hover { background:url(../img/menu_video_hover.png)}
-    
-#plane{
-	position:absolute;
-	z-index:3;
-    width:810px;
-    height:75px;
-    background:url(../img/plane.png) no-repeat;
-    -webkit-animation: slide 12s linear infinite;
-    -moz-animation: slide 12s linear infinite;
-}
-@-webkit-keyframes slide { 
-	from{background-position:-370px;}
-    to{ background-position:880px;}
-}
-@-moz-keyframes slide { 
-	from{background-position:-370px;}
-    to{ background-position:880px;}
-}
-.logo-skintalk{width:232px; height:132px; position:absolute;top:0;left:0;background:url(../img/logo.png) 0 0 no-repeat;}
 

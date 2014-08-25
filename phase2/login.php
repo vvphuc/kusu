@@ -23,7 +23,7 @@
                 <li><a href="#"><span></span>Giới thiệu</a></li>
                 <li><a href="#"><span></span>Thể lệ & Giải thưởng</a></li>
                 <li><a href="#"><span></span>Cuộc thi ảnh</a></li>
-                <li class="active"><a href="#"><span></span>Thư viện ảnh</a></li>
+                <li><a href="#"><span></span>Thư viện ảnh</a></li>
                 <li><a href="#"><span></span>Mẹo hay</a>
                     <ul>
                         <li><a href="#">Bí kíp của mẹ</a></li>

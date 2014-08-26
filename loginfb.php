@@ -120,5 +120,5 @@ if ( isset( $session ) ) {
   _redirect($loginUrl);  
 }
 if($_SESSION['fb_uid']){
-  _redirect("http://app.digitalconference.vn/demo/kusu/landing_page.php");
+  _redirect("http://ngansua.vn/uongsuachudong.php");
 }

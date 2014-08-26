@@ -66,7 +66,7 @@ if (!isset($_SESSION)) {
 
 <div id="wrap_landingpage">
     <div class="tvc">
-        <div class="video"><iframe width="279" height="190" src="//www.youtube.com/embed/Y-MsUcZ6SNI?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe></div>
+        <div class="video"><iframe width="279" height="190" src="//www.youtube.com/embed/NTt_cIoAQfA?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe></div>
         <div class="social">
             <div id="fb-root"></div>
             <script>(function(d, s, id) {
@@ -99,7 +99,7 @@ if (!isset($_SESSION)) {
                     $date = date_create($result_news[$i]['registerdate']);
             ?>
 
-            <li><a href="details_news.php?id=<?php echo $result_news[$i]['id']; ?>"><span><?php //echo date_format($date, 'd/m/Y'); ?><img src="images/<?php echo $result_news[$i]['photo'] ;  ?>" /></span>&nbsp;&nbsp;<b><?php echo $result_news[$i]['title'] ;?></b></a></li>
+            <li><a href="details_news.php?id=<?php echo $result_news[$i]['id']; ?>"><span><?php //echo date_format($date, 'd/m/Y H:i:s'); ?><img src="images/<?php echo $result_news[$i]['photo'] ;  ?>" /></span>&nbsp;&nbsp;<b><?php echo $result_news[$i]['title'] ;?></b></a></li>
 
             <?php
                 }
@@ -123,17 +123,18 @@ if (!isset($_SESSION)) {
             {
             for($i=0;$i<count($result);$i++)
             {
+                $date = date_create($result[$i]['submitday']);
                 if($i%2==0)
                 {
                     if($result[$i]['email'] != "")
                     {
                         $img = "images/default-ava.png";
-                        $name = $result[$i]['email'];
+                        $name = $result[$i]['email']."  |  ".date_format($date, 'd/m/Y H:i:s');
                     }
                     else
                     {
                         $img = "https://graph.facebook.com/".$result[$i]['fbid']."/picture?type=large";
-                        $name = $result[$i]['fbname'];
+                        $name = $result[$i]['fbname']."  |  ".date_format($date, 'd/m/Y H:i:s');
                     }
                     ?>
                 <li>
@@ -155,12 +156,12 @@ if (!isset($_SESSION)) {
                     if($result[$i]['email'] != "")
                     {
                         $img = "images/default-ava.png";
-                        $name = $result[$i]['email'];
+                        $name = $result[$i]['email']."  |  ".date_format($date, 'd/m/Y H:i:s');
                     }
                     else
                     {
                         $img = "https://graph.facebook.com/".$result[$i]['fbid']."/picture?type=large";
-                        $name = $result[$i]['fbname'];
+                        $name = $result[$i]['fbname']."  |  ".date_format($date, 'd/m/Y H:i:s');
                     }
              ?>
                 <li>
@@ -186,6 +187,7 @@ if (!isset($_SESSION)) {
             <!-- -->
         </ul>
         <a href="answer.php" class="binhluantiep">Bình luận tiếp</a>
+	<div class="count_cm">Tổng số bình luận: <?php echo count($result); ?></div>
     </div>
 </div>
 </body>

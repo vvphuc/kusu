@@ -3,23 +3,23 @@
 	
 	//Cấu hình trên localhost
 	
-	define('HOST','localhost');
+	/*define('HOST','localhost');
 	define('DBUSER','root');
 	define('DBPASS','');
-	define('DBNAME', 'kusudemodb');
+	define('DBNAME', 'kusudemodb');*/
 	
 	
 	//Cấu hình trên server.
-	/*define('HOST','hdm.com.vn');
+	define('HOST','localhost');
 	define('DBUSER','kusu');
 	define('DBPASS','kusu@1qaz@WSX');
-	define('DBNAME', 'kusudemodb');*/
+	define('DBNAME', 'kusudb');
 	
 		
 	
 	//URL cua Website
 	define('WEBSITEURL', 'https://ngansua.vn');
-	define('SITEURL','http://app.digitalconference.vn/demo/kusu/loginfb.php');
+	define('SITEURL','http://ngansua.vn/loginfb.php');
 
 	//Cấu hình application
 	define('APPID', '689829694437730');

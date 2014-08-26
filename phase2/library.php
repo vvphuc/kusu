@@ -20,7 +20,7 @@ $im = select_paging(photo,$page,8);
 
 <link rel="stylesheet" type="text/css" href="css/p2_style.css" />
 <link rel="stylesheet" type="text/css" href="css/p2_library.css" />
-<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script src="js/jquery.min.js"></script>
 </head>
 
 <body>

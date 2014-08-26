@@ -1,4 +1,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php 
+require '../lib/functions.php';
+$p = isset($_GET['p']) ? ((int) $_GET['p']) : 1;
+$photo = select_photo_by_id($p);
+if(!$photo){
+    _redirect('library.php');
+    return;
+}
+?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -6,7 +15,9 @@
 
 <link rel="stylesheet" type="text/css" href="css/p2_style.css" />
 <link rel="stylesheet" type="text/css" href="css/p2_details.css" />
-<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/phase2.js"></script>
+<script type="text/javascript" src="js/jquery.validate.min.js"></script>
 </head>
 
 <body>
@@ -41,17 +52,17 @@
     	<div id="col-1">
         	<div class="face"><img src="images/p2-char-home.png" /></div>
             <div class="name">Tên facebook</div>
-            <div class="view"><b>999</b></div>
-            <div class="like"><b>999</b></div>
-            <div class="date">Ngày đăng<Br />01/08/2014</div>
+            <div class="view"><b><?php echo $photo['0']['view'];?></b></div>
+            <div class="like"><b><?php echo $photo['0']['vote'];?></b></div>
+            <div class="date">Ngày đăng<Br /><?php echo date('d/m/Y',strtotime($photo['0']['submitdate']));?></div>
             <strong>Chủ đề 1</strong>
-            <div class="vote"><a href="#"></a></div>
-            <a class="otherpic" href="#">Hình ảnh khác >></a>
+            <div class="vote"><a href="#" id="vote-photo"></a><input type="hidden" value="<?php echo $p;?>" id ="pt-id" name = "ptid"></div>
+            <a class="otherpic" href="library.php">Hình ảnh khác >></a>
         </div>
         <!-- -->
         <div id="col-2">
-        	<img src="images/post/baby.png" />
-            <div class="name">Tên của bé </div>
+        	<img src="<?php echo $photo['0']['photo'];?>" />
+            <div class="name"><?php echo $photo['0']['title'];?></div>
         </div>
         <!-- -->
         <div id="col-3">[API FACEBOOK COMMENT HERE]</div>
@@ -66,7 +77,7 @@
     </div>
     <!-- -->
     <div class="button_play">
-    	<a>
+    	<a href="gameboard.php">
             <span></span>
             <h4>THAM GIA NGAY!</h4>
         </a>

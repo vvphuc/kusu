@@ -1,12 +1,14 @@
 $( document ).ready(function() {
    // call show popup funtion
    $( ".uploadBtn" ).click(function() {
+   		$( ".uploadBtn" ).attr("disabled", "disabled");
 		showCropAvatar();
 	});
    // call close popup function
    $( ".close-btn" ).click(function() {
 		closeAvaEdit();
 	});
+   //validate profile form
    $(".main-form").validate({
 		"rules" :{
 			"babyname" :{
@@ -16,18 +18,39 @@ $( document ).ready(function() {
 				"required" : true	
 			},
 			"phone" :{
-				"required" : true	
+				"required" : true,
+				"digits"   : true,
+				"rangelength": [6, 12]
 			},
 			"email" :{
-				"required" : true	
+				"required" : true,
+				"email"	   : true
 			},
 			"pid" :{
-				"required" : true	
+				"required" : true,	
+				"number"   : true
 			},
 			"filename" :{
 				"required" : true	
 			},
 		},
+	});
+
+   $('#vote-photo').click(function(){
+   		console.log('co');
+	   $.ajax({
+		  type: "POST",
+		  url: "vote.php",
+		  data: { ptid: $('#pt-id').val()}
+		}).done(function( msg ) {
+			alert(msg);
+			if(msg == 1){
+		 	   alert( "Bạn đã bình chọn thành công!");
+			}
+			else{
+				alert("Bạn đã bình chọn rồi");
+			}
+		  });
 	});
 });
 

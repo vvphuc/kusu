@@ -105,11 +105,57 @@ DB::insertUpdate('user', array(
  /*
 	lấy danh sách chủ đề dự thi
  */	
- function select_subjec(){
+ function select_subject(){
   utf8();
 	$data = DB::query("SELECT * FROM `subject`");
 	return $data;
  }
+ /**
+  * Select photo by id
+  */
+ function select_photo_by_id($id){
+ 	utf8();
+ 	$photo = DB::query("SELECT * FROM photo WHERE id = %d",$id);
+ 	return $photo;
+ }
+ /**
+  * check have_photo
+  */
+ function have_photo($ptid){
+ 	utf8();
+ 	$photo = DB::query("SELECT count(*) FROM photo WHERE id = %d",$ptid);
+ 	return $photo;
+ }
+ /**
+  * check have vote
+  */
+ function have_vote($userid,$ptid){
+ 	utf8();
+ 	$voted = DB::query("SELECT count(*) FROM vote WHERE userid = %d AND photoid = %d",$userid,$ptid);
+ 	return $voted;
+ }
+ /**
+  * check have vote
+  */
+ function insert_vote($userid,$ptid,$ip){
+ 	utf8();
+ 	$result = DB::insert('vote', array(
+		'userid'=>$userid,
+		'photoid'=>$ptid,
+		'ip'=>$ip
+		));
+
+ 	return $result;
+ }
+ /**
+  * search detail
+  */
+ function search_detail($title){
+ 	utf8();
+ 	$result = DB::query("SELECT * FROM photo WHERE title = %s",$title);
+ 	return $result;
+ }
+
  //gửi hình dự thi (insert vào DB)
  function insert_images($data){
   utf8();

@@ -4,13 +4,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Game Kun - Details Page</title>
 
-<link rel="stylesheet" type="text/css" href="css/style.css" />
-<link rel="stylesheet" type="text/css" href="css/details_page.css" />
+<link rel="stylesheet" type="text/css" href="css/p2_style.css" />
+<link rel="stylesheet" type="text/css" href="css/p2_article.css" />
 <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="js/jquery.tinyscrollbar.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
-		$('#scrollbar1').tinyscrollbar({ thumbSize: 80 });
+		$('#scrollbar1').tinyscrollbar({ thumbSize: 40 });
 		$("#scrollbar2").tinyscrollbar({ thumbSize: 80 });
 	});
 </script>
@@ -18,16 +18,48 @@
 </head>
 
 <body>
+<h1>Sữa Kun</h1>
+<div id="topbar">
+	<div class="repeatmenu"></div>
+    <div class="wrapper_1000">
+    	<div id="logo"><img src="images/logo-kunkun.png" title="logo_kunkun" alt="logo_kunkun" /></div>
+        <div class="iconKun"></div>
+        <div class="login"><a href="#">Đăng nhập</a><span></span></div>
+        <!-- ------ -->
+        <nav>
+            <ul>
+                <li><a href="#"><span></span>Giới thiệu</a></li>
+                <li><a href="#"><span></span>Thể lệ & Giải thưởng</a></li>
+                <li><a href="#"><span></span>Cuộc thi ảnh</a></li>
+                <li class="active"><a href="#"><span></span>Thư viện ảnh</a></li>
+                <li><a href="#"><span></span>Mẹo hay</a>
+                    <ul>
+                        <li><a href="#">Bí kíp của mẹ</a></li>
+                        <li><a href="#">Cẩm nang</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!-- ------ -->
+    </div>
+</div>
+
 <div id="wrap_detailspage">
 	<div id="details">
     	<!-- ------ -->
     	<a href="#" class="back-link"></a>
         <!-- ------ -->
-        <ul id="menu">
-        	<li class="active"><b></b><a href="#">Bí kíp của mẹ</a><span></span></li>
+        <ul id="menu" class="noilongansua">
+        	<li><b></b><a href="#">Nỗi lo ngán sữa</a><span></span></li>
+        </ul>
+        <ul id="menu" class="bikipcuame op2">
+        	<li><b></b><a href="#">Bí kíp của mẹ</a><span></span></li>
+        </ul>
+        <ul id="menu" class="suakun active">
+        	<li><b></b><a href="#">Sữa Kun Cookies</a><span></span></li>
         </ul>
         <!-- ------ -->
-        <div id="scrollbar1">
+        <div id="scrollbar1" class="tab3">
             <div class="scrollbar"><div class="track"><div class="thumb"></div></div></div>
             <div class="viewport">
                  <div class="overview">
@@ -53,6 +85,7 @@
                 </div>
             </div>
         </div>
+        <!-- ------ -->
         <!-- ------ -->
         <div id="content_details">
             <div class="source">Nguồn bài viết<img src="images/logo-dantri.png" alt="dantri" /></div>
@@ -96,5 +129,16 @@
         </div>
     </div>
 </div>
+<div class="sunflower f7"></div>
+<div class="sunflower f1"></div>
+<div class="sunflower f2"></div>
+<div class="sunflower f3"></div>
+<div class="sunflower f4"></div>
+<div class="sunflower f5"></div>
+<div class="sunflower f6"></div>
+<div class="sunflower f8"></div>
+<div class="sunflower f9"></div>
+<div class="sunflower f10"></div>
+<div class="sunflower f11"></div>
 </body>
 </html>

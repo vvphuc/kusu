@@ -6,13 +6,13 @@
 <link rel="stylesheet" type="text/css" href="css/p2_style.css" />
 <link rel="stylesheet" type="text/css" href="css/p2_winlist.css" />
 <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="js/jquery.tinyscrollbar.js"></script>
-<script type="text/javascript">
+<script>	
 	$(document).ready(function(){
-		$('#scrollbar1').tinyscrollbar({ thumbSize: 80 });
+		document.getElementById("uploadBtn").onchange = function () {
+    	$(".uploadFile").attr( "value", this.value );
+};
 	});
 </script>
-
 </head>
 
 <body>
@@ -48,83 +48,34 @@
         <a href="#" class="playgame"></a>
     	<div class="titlepage"><h2>Cuộc thi ảnh</h2></div>
     	<div class="imgtitle"></div>
-        <h3>Danh sách trúng thưởng</h3>
         <!-- -->
-        <div id="scrollbar1">
-            <div class="scrollbar"><div class="track"><div class="thumb"></div></div></div>
-            <div class="viewport">
-                 <div class="overview">
-                 <!-- -->
-                 <table cellpadding="0" cellspacing="0">
-                    <thead>
-                        <tr>
-                            <th width="5%">STT</th>
-                            <th width="30%">Tên</th>
-                            <th width="30%">Email</th>
-                            <th width="35%">Giải thưởng</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>01</td>
-                            <td>Tên người chơi</td>
-                            <td>Email người chơi</td>
-                            <td>Giải thưởng đạt được</td>
-                        </tr>
-                        <tr>
-                            <td>01</td>
-                            <td>Tên người chơi</td>
-                            <td>Email người chơi</td>
-                            <td>Giải thưởng đạt được</td>
-                        </tr>
-                        <tr>
-                            <td>01</td>
-                            <td>Tên người chơi</td>
-                            <td>Email người chơi</td>
-                            <td>Giải thưởng đạt được</td>
-                        </tr>
-                        <tr>
-                            <td>01</td>
-                            <td>Tên người chơi</td>
-                            <td>Email người chơi</td>
-                            <td>Giải thưởng đạt được</td>
-                        </tr>
-                        <tr>
-                            <td>01</td>
-                            <td>Tên người chơi</td>
-                            <td>Email người chơi</td>
-                            <td>Giải thưởng đạt được</td>
-                        </tr>
-                        <tr>
-                            <td>01</td>
-                            <td>Tên người chơi</td>
-                            <td>Email người chơi</td>
-                            <td>Giải thưởng đạt được</td>
-                        </tr>
-                        <tr>
-                            <td>01</td>
-                            <td>Tên người chơi</td>
-                            <td>Email người chơi</td>
-                            <td>Giải thưởng đạt được</td>
-                        </tr>
-                        <tr>
-                            <td>01</td>
-                            <td>Tên người chơi</td>
-                            <td>Email người chơi</td>
-                            <td>Giải thưởng đạt được</td>
-                        </tr>
-                        <tr>
-                            <td>01</td>
-                            <td>Tên người chơi</td>
-                            <td>Email người chơi</td>
-                            <td>Giải thưởng đạt được</td>
-                        </tr>
-                    </tbody>
-                </table>
-                 <!-- -->
-                 </div>
+        <form>
+            <!-- -->
+            <div class="leftside">
+                <h3>1. Chủ đề tuần này</h3>
+                <div class="f13">Bạn hãy lựa chọn chủ đề mình yêu thích, sau đó tải hình ảnh tương tự như hình chủ đề bạn đã chọn.</div>
+                <br>
+                <div><img src="images/p2-chude.png" alt="Chủ đề" /></div>
+                <div class="clear"></div>
             </div>
-        </div>
+            <!-- -->
+            <div class="rightside">
+                <h3>2. Thông tin người dự thi</h3>
+                <div class="rowf"><span>Tên bé:</span><input type="text" /></div>
+                <div class="rowf"><span>Tên bạn:</span><input type="text" /></div>
+                <div class="rowf"><span>Điện thoại:</span><input type="text" /></div>
+                <div class="rowf"><span>Email:</span><input type="text" /></div>
+                <div class="rowf"><span>Up ảnh:</span></div>
+                <div class="fileUpload">
+                    <input class="uploadFile" type="text" value="Chưa chọn file" />
+                    <div class="text">Chọn hình</div>
+                    <input id="uploadBtn" type="file" class="upload" />
+                </div>
+                <p class="alert">Hình dự thi là JPG/PNG và dung lượng không quá 5MB</p>
+                <input type="submit" />
+            </div>
+            <!-- -->
+        </form>
         <!-- -->
     </div>
 </div>

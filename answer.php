@@ -88,7 +88,7 @@ if (!isset($_SESSION)) {
         </div>-->
         <input type="hidden" id="hide" name="avatar" value="1" />
         <input type="submit" name="submit" value="ok" />
-        <a class="xemthem" href="landing_page.php">Xem các giải pháp của các mẹ!</a>
+        <a class="xemthem" href="uongsuachudong.php">Xem các giải pháp của các mẹ!</a>
     </form>
 </div>
 </body>

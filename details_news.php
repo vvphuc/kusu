@@ -29,7 +29,7 @@ if(isset($_GET['id']) && $_GET['id'] != "" )
 <div id="wrap_detailspage">
     <div id="details">
         <!-- ------ -->
-        <a href="landing_page.php" class="back-link"></a>
+        <a href="uongsuachudong.php" class="back-link"></a>
         <!-- ------ -->
         <ul id="menu">
             <li class="active"><b></b><a href="#">Bí kíp của mẹ</a><span></span></li>
@@ -65,6 +65,7 @@ if(isset($_GET['id']) && $_GET['id'] != "" )
         </div>
         <!-- ------ -->
         <div id="content_details">
+			<div class="source"><img src="<?php echo "images/b-".$result_news[0]['photo']?>" alt="<?php echo $result_news[0]['photo']?>" width="140" height="40" /></div>
             <div id="scrollbar2">
                 <div class="scrollbar"><div class="track"><div class="thumb"></div></div></div>
                 <div class="viewport">
@@ -72,7 +73,7 @@ if(isset($_GET['id']) && $_GET['id'] != "" )
                         <?php
                         if(count($result_news)==0)
                         {
-                            _redirect("landing_page.php");
+                            _redirect("uongsuachudong.php");
                         }
                         else
                         {
@@ -92,6 +93,6 @@ if(isset($_GET['id']) && $_GET['id'] != "" )
 else
 {
     _alert("Not found id URL !!");
-    _redirect("landing_page.php");
+    _redirect("uongsuachudong.php");
 }
 ?>

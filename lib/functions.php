@@ -1,6 +1,6 @@
 ﻿<?php 
-require './config/config.php';
-require 'config/function.php';
+require('config/config.php');
+require('config/function.php');
 
 //Demo function
 function function_name($conn){
@@ -114,35 +114,29 @@ DB::insertUpdate('user', array(
  function insert_images($data){
   utf8();
  DB::insert('photo', array(
-	'id'=>$data[id],
-	'subjectid'=>$data[subjectid],
-	'userid'=>$data[userid],
-	'title'=>$data[title],
-	'thumbnail'=>$data[thumbnail],
-	'photo'=>$data[photo],
-	'description'=>$data[description],
-	'view'=>$data[view],
-	'vote'=>$data[vote],
-	'published'=>$data[published],
-	'ip'=>$data[ip],
-	'submitdate'=>$data[submitdate]
+	'subjectid'=>$data['subjectid'],
+	'userid'=>$data['userid'],
+	'title'=>$data['title'],
+	'thumbnail'=>$data['thumbnail'],
+	'photo'=>$data['photo'],
+	'description'=>$data['description'],
+	'view'=>$data['view'],
+	'vote'=>$data['vote'],
+	'published'=>$data['published'],
+	'ip'=>$data['ip'],
 ));
  }
  //phân trang
- function select_paging($conn,$cpage)
+ function select_paging($tablename,$cpage = 1,$rpp = 8,$oderby = '',$order = '')
 {
-	mysql_query("SET NAMES 'utf8'");
-	mysql_query("SET CHARACTER SET 'utf8'");
-	$truoc  = (6*($cpage-1));
-	$sau  = 6;
-	mysql_query("SET NAMES 'utf8'", $conn);
-	$result = DB::query("SELECT photo FROM photo LIMIT $truoc,$sau",$conn);//lấy ra 6 dòng 
-	
+	utf8();
+	$from = (($cpage * $rpp) - $rpp); 
+	$result = DB::query("SELECT * FROM photo LIMIT %d, %d",$from,$rpp);//lấy ra 6 dòng 
 	return $result;
 }
 //danh sách các hình 
 function select_images_subjectid($key){
-$images = DB::query("SELECT photo FROM photo  WHERE `subjectid` = $key");
+$images = DB::query("SELECT * FROM photo  WHERE `subjectid` = $key");
 return $images;
 }
 //lấy phần tử phân trang
@@ -170,7 +164,7 @@ function insert_answer($email,$message,$avatar,$fbid,$fbname,$check)
     ));
     if($check == 1)
     {
-        _redirect("landing_page.php");
+        _redirect("uongsuachudong.php");
     }
     else
     {
@@ -181,7 +175,7 @@ function insert_answer($email,$message,$avatar,$fbid,$fbname,$check)
 function select_answer()
 {
     DB::$encoding = 'utf8';
-    $total = DB::query("SELECT `email`,`message`,`avatar`,`fbid`,`fbname` FROM answer ORDER BY submitday DESC ");
+    $total = DB::query("SELECT `email`,`message`,`avatar`,`fbid`,`fbname`,`submitday` FROM answer ORDER BY submitday DESC ");
     return $total;
 }
 function select_news(){
@@ -191,7 +185,7 @@ function select_news(){
 }
 function select_details_news($id){
     DB::$encoding = 'utf8';
-    $total = DB::query("SELECT `title` ,`content`,`description`,`registerdate` FROM news WHERE `id` = $id");
+    $total = DB::query("SELECT `title` ,`content`,`description`,`registerdate`,`photo` FROM news WHERE `id` = $id");
     return $total;
 }
 

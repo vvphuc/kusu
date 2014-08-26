@@ -1,4 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php 
+require '../lib/functions.php';
+require '../lib/PHPPagination/Pagination.class.php';
+$image = select_images_subjectid(1);
+$total = count($image);
+// determine page (based on <_GET>)
+$page = isset($_GET['page']) ? ((int) $_GET['page']) : 1;
+// instantiate; set current page; set number of records
+$pagination = (new Pagination());
+$pagination->setCurrent($page);
+$pagination->setRPP(8);
+$pagination->setTotal($total);
+$im = select_paging(photo,$page,8);
+?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -52,81 +66,32 @@
     </div>
     <div id="wrap_item">
         <!-- -->
-        <div class="item">
-            <div class="thumb">
-                <a href="#"><img src="images/thumbs-library.jpg" alt="thumb" /></a>
-                <div class="circle"><span>999</span></div>
-                <div class="info"><span>Tên của bé</span>01/08/2014</div>
-                <div class="like">999</div>
-            </div>
-        </div>
-        <!-- -->
-        <div class="item">
-            <div class="thumb">
-                <a href="#"><img src="images/thumbs-library.jpg" alt="thumb" /></a>
-                <div class="circle"><span>999</span></div>
-                <div class="info"><span>Tên của bé</span>01/08/2014</div>
-                <div class="like">999</div>
-            </div>
-        </div>
-        <!-- -->
-        <div class="item">
-            <div class="thumb">
-                <a href="#"><img src="images/thumbs-library.jpg" alt="thumb" /></a>
-                <div class="circle"><span>999</span></div>
-                <div class="info"><span>Tên của bé</span>01/08/2014</div>
-                <div class="like">999</div>
-            </div>
-        </div>
-        <!-- -->
-        <div class="item">
-            <div class="thumb">
-                <a href="#"><img src="images/thumbs-library.jpg" alt="thumb" /></a>
-                <div class="circle"><span>999</span></div>
-                <div class="info"><span>Tên của bé</span>01/08/2014</div>
-                <div class="like">999</div>
-            </div>
-        </div>
-        <!-- -->
-        <div class="item">
-            <div class="thumb">
-                <a href="#"><img src="images/thumbs-library.jpg" alt="thumb" /></a>
-                <div class="circle"><span>999</span></div>
-                <div class="info"><span>Tên của bé</span>01/08/2014</div>
-                <div class="like">999</div>
-            </div>
-        </div>
-        <!-- -->
-        <div class="item">
-            <div class="thumb">
-                <a href="#"><img src="images/thumbs-library.jpg" alt="thumb" /></a>
-                <div class="circle"><span>999</span></div>
-                <div class="info"><span>Tên của bé</span>01/08/2014</div>
-                <div class="like">999</div>
-            </div>
-        </div>
-        <!-- -->
-        <div class="item">
-            <div class="thumb">
-                <a href="#"><img src="images/thumbs-library.jpg" alt="thumb" /></a>
-                <div class="circle"><span>999</span></div>
-                <div class="info"><span>Tên của bé</span>01/08/2014</div>
-                <div class="like">999</div>
-            </div>
-        </div>
-        <!-- -->
-        <div class="item">
-            <div class="thumb">
-                <a href="#"><img src="images/thumbs-library.jpg" alt="thumb" /></a>
-                <div class="circle"><span>999</span></div>
-                <div class="info"><span>Tên của bé</span>01/08/2014</div>
-                <div class="like">999</div>
-            </div>
-        </div>
+        <?php 
+        if($im){
+            foreach ($im as $key => $value) {
+        ?>    
+                <div class="item">
+                    <div class="thumb">
+                        <a href="<?php echo 'detail.php?p='.$value['id']; ?> "><img src="<?php echo $value['thumbnail'];?>" alt="thumb" /></a>
+                        <div class="circle"><span><?php echo $value['view']; ?></span></div>
+                        <div class="info"><span><?php echo $value['title'] ?></span><?php echo date('d/m/Y',strtotime($value['submitdate']));?></div>
+                        <div class="like"><?php echo $value['vote']; ?></div>
+                    </div>
+                </div>
+        <?php
+            }
+        }
+        ?>
+        
         <!-- -->
     </div>
     <div class="paging">
-        <a href="#" class="prev"></a>
+    <?php
+        // grab rendered/parsed pagination markup
+        $markup = $pagination->parse();
+        echo $markup;
+    ?>
+        <!-- <a href="#" class="prev"></a>
         <a href="#">1</a>
         <a href="#">2</a>
         <a href="#" class="pageon">3</a>
@@ -134,7 +99,7 @@
         <span>...</span>
         <a href="#">6</a>
         <a href="#">7</a>
-        <a href="#" class="next"></a>
+        <a href="#" class="next"></a> -->
     </div>
     <!-- -->
 </div>

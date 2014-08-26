@@ -15,7 +15,7 @@
     <div class="wrapper_1000">
         <div id="logo"><img src="images/logo-kunkun.png" title="logo_kunkun" alt="logo_kunkun" /></div>
         <div class="iconKun"></div>
-        <div class="login"><a href="#">Đăng nhập</a><span></span></div>
+        <div class="login"><a href="login.php">Đăng nhập</a><span></span></div>
         <!-- ------ -->
         <nav>
             <ul>

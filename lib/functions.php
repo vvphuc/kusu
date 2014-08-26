@@ -1,6 +1,6 @@
 ﻿<?php 
-require './config/config.php';
-require 'config/function.php';
+require '../config/config.php';
+require '../config/function.php';
 
 //Demo function
 function function_name($conn){
@@ -114,35 +114,29 @@ DB::insertUpdate('user', array(
  function insert_images($data){
   utf8();
  DB::insert('photo', array(
-	'id'=>$data[id],
-	'subjectid'=>$data[subjectid],
-	'userid'=>$data[userid],
-	'title'=>$data[title],
-	'thumbnail'=>$data[thumbnail],
-	'photo'=>$data[photo],
-	'description'=>$data[description],
-	'view'=>$data[view],
-	'vote'=>$data[vote],
-	'published'=>$data[published],
-	'ip'=>$data[ip],
-	'submitdate'=>$data[submitdate]
+	'subjectid'=>$data['subjectid'],
+	'userid'=>$data['userid'],
+	'title'=>$data['title'],
+	'thumbnail'=>$data['thumbnail'],
+	'photo'=>$data['photo'],
+	'description'=>$data['description'],
+	'view'=>$data['view'],
+	'vote'=>$data['vote'],
+	'published'=>$data['published'],
+	'ip'=>$data['ip'],
 ));
  }
  //phân trang
- function select_paging($conn,$cpage)
+ function select_paging($tablename,$cpage = 1,$rpp = 8,$oderby = '',$order = '')
 {
-	mysql_query("SET NAMES 'utf8'");
-	mysql_query("SET CHARACTER SET 'utf8'");
-	$truoc  = (6*($cpage-1));
-	$sau  = 6;
-	mysql_query("SET NAMES 'utf8'", $conn);
-	$result = DB::query("SELECT photo FROM photo LIMIT $truoc,$sau",$conn);//lấy ra 6 dòng 
-	
+	utf8();
+	$from = (($cpage * $rpp) - $rpp); 
+	$result = DB::query("SELECT * FROM photo LIMIT %d, %d",$from,$rpp);//lấy ra 6 dòng 
 	return $result;
 }
 //danh sách các hình 
 function select_images_subjectid($key){
-$images = DB::query("SELECT photo FROM photo  WHERE `subjectid` = $key");
+$images = DB::query("SELECT * FROM photo  WHERE `subjectid` = $key");
 return $images;
 }
 //lấy phần tử phân trang

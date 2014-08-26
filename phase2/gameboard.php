@@ -55,7 +55,7 @@
             </div>
             <div class="clear"></div>
             <div class="fileUpload">
-            	<input class="uploadFile" name="filename" type="text" value="Chưa chọn file" />
+            	<input class="uploadFile" name="filename" type="text" placeholder = "Chưa chọn file" value="" />
                 <div class="text">Chọn hình</div>
                 <div class="uploadBtn" id="uploadBtn" ></div>
             </div>
@@ -70,13 +70,13 @@
             <div class="rowf"><span>CMND:</span><input type="text" name="pid" value="" /></div>
              <input type="submit" > 
         </div>
-       <div id="FrameImg">
+        <div id="FrameImg">
            <img src="images/frame1.png" />
            <input type="hidden" name="frameImg" id="frameImg"value="images/frame1.png" >
         </div>
         <div id="CurrImg">
-            <img src="images/b1.jpg" />
-            <input type="hidden" name="ImgCurr" id="ImgCurr" value="images/b1.jpg" >
+            <img src="" />
+            <input type="hidden" name="ImgCurr" id="ImgCurr" value="" >
         </div>
     </form>
     <!-- -->

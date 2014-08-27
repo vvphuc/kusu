@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <?php 
-require '../lib/functions.php';
+require 'lib/functions.php';
 $p = isset($_GET['p']) ? ((int) $_GET['p']) : 1;
 $photo = select_photo_by_id($p);
 if(!$photo){

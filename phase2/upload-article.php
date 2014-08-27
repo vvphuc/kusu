@@ -3,7 +3,7 @@ if (!isset($_SESSION)) {
     ob_start();
 	@session_start();
 }
-require '../lib/functions.php';
+require 'lib/functions.php';
 $userid = '123';
 if($userid)
 {

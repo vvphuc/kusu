@@ -1,5 +1,5 @@
 <?php 
-require '../lib/functions.php';
+require 'lib/functions.php';
 if(!isset($_POST['ptid']) ||  $_POST['ptid'] == ''){
 	echo -1;
 	return;
@@ -17,7 +17,7 @@ if(have_vote($userid,$ptid)){
 $ip = getIP();
 $result = insert_vote($userid, $ptid,$ip);
 if($result){
-	
+
 	echo  1;
 	return ;
 }

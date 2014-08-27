@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <?php 
-require '../lib/functions.php';
-require '../lib/PHPPagination/Pagination.class.php';
+require 'lib/functions.php';
+require 'lib/PHPPagination/Pagination.class.php';
 $image = select_images_subjectid(1);
 $total = count($image);
 // determine page (based on <_GET>)

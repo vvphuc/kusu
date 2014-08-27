@@ -1,6 +1,6 @@
 ﻿<?php 
-require('../config/config.php');
-require('../config/function.php');
+require('config/config.php');
+require('config/function.php');
 
 //Demo function
 function function_name($conn){

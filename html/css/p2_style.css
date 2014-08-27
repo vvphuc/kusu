@@ -50,30 +50,49 @@ h1 { position:fixed; top:-99px}
 #topbar { width:100%; height:128px; background:url(../images/p2-background-elements.png) top center no-repeat}
 #topbar .repeatmenu { width:100%; height:48px; background-color:#fafafa; position:absolute}
 #logo { width:129px; height:117px; background: url(../images/p2-background-elements.png) -400px -930px no-repeat; position:absolute; top:9px; left:50px}
-.iconKun { width:85px; height:67px; background:url(../images/p2-background-elements.png) -560px -780px no-repeat; position:absolute; right:110px}
+.iconKun { width:85px; height:67px; background:url(../images/p2-background-elements.png) -560px -780px no-repeat; position:absolute; right:120px; transition:all .3s}
+.iconKun:hover { right:130px; transition:all .3s; cursor:pointer}
+.iconKun.active span { display:block; float:left; width:21px; height:19px; margin:26px 0 0 -25px;; background:url(../images/p2-background-elements.png) -299px -880px no-repeat}
+.iconKun.active:hover { right:120px}
 .login { float:right; margin:20px 10px 0 0; transition:all .3s}
 .login a{ font-family:'UTMAndrogyne'; font-size:12px; color:#002d56; padding:8px 10px; border-left:1px dashed #002d56; transition:all .3s}
 .login span {width: 0px;height: 0px;border-top: 4px solid transparent;border-bottom: 4px solid transparent;border-left: 8px solid #002d56; float:right; margin-top:7px; transition:all .3s}
 .login:hover a { border-left:4px double #f9ce00; color:#f9ce00; transition:all .3s; padding-right:5px}
 .login:hover span { border-left: 8px solid #f9ce00; transition:all .3s}
 .login:hover { margin-right:0; transition:all .3s}
+.welcome { float:right; margin:5px 0 0 0; width:110px}
+.welcome i { font-size:10px; color:#666; display:block; line-height:14px}
+.welcome b { font-size:12px; display:block; color:#009386}
+.welcome a { font-size:11px; color:#009386; transition:all .3s}
+.welcome a:hover { padding-left:10px; color:#F00; transition:all .3s}
 
 /* Menu Dropdown */
-nav {position:absolute; left:200px}
+nav {position:absolute; left:270px}
 nav ul ul{display:none}
 nav ul li:hover > ul{display:block}
 nav ul{background:none;list-style:none;position:relative;display:inline-table}
-nav ul li{float:left}
+nav ul li{float:left; margin-left:20px}
 nav ul li:hover{}
 nav ul li:hover a,nav ul li.active a{ color:#008a7e}
 nav ul li a{display:block;padding:28px 8px 10px;color:#a1a1a1;text-decoration:none; font-family:'UTMAndrogyne'; font-size:13px}
-nav ul li a span { display:block; float:left; width:21px; height:19px; background:url(../images/p2-background-elements.png) -293px -920px no-repeat; margin-top:-3px}
+nav ul li a span { display:block; float:left; width:21px; height:19px; margin-top:-3px; background:url(../images/p2-background-elements.png) -293px -920px no-repeat}
 nav ul li:hover a span,nav ul li.active a span { background-position: -300px -880px}
-nav ul ul{background:url(../images/p2-background-elements.png) -560px -880px no-repeat;padding:0;position:absolute;top:100%;min-height: 125px; z-index:100}
-nav ul ul li{float:none;position:relative}
-nav ul ul li a{padding:14px 0px 0px 20px;color:#e2e2e2!important; width:110px; text-shadow:3px 3px 3px #006156}
-nav ul ul li a:hover{color:#fff!important; background:url(../images/p2-background-elements.png) -291px -910px no-repeat}
+nav ul ul{ padding:7px 0 0;position:absolute;top:100%;min-height: 125px; z-index:100}
+nav ul ul li{float:none;position:relative; background:url(../images/p2-bg-menu-dropdown.png) repeat-y; margin-left:0}
+nav ul ul li a{padding:7px 10px 7px 30px;color:#a8a8a8!important; width:111px}
+nav ul ul li a:hover{color:#008a7e!important}
 nav ul ul ul{position:absolute;left:100%;top:0}
+nav ul ul li.last { width:151px; height:41px; padding:0; margin:0; background:url(../images/p2-bg-menu-dropdown.png) -200px 0 no-repeat}
+nav ul ul li.last:hover { list-style-type:none}
+nav ul ul li:hover a { background:url(../images/p2-bg-menu-dropdown-list.png) 18px 14px no-repeat;}
+nav ul ul li {
+	-webkit-filter: drop-shadow(0px 4px 2px rgba(0,0,0,0.3));
+    filter: url("data:image/svg+xml;utf8,<svg height='0' xmlns='http://www.w3.org/2000/svg'><filter id='drop-shadow'><feGaussianBlur in='SourceAlpha' stdDeviation='2'/><feOffset dx='0' dy='4' result='offsetblur'/><feFlood flood-color='rgba(0,0,0,0.3)'/><feComposite in2='offsetblur' operator='in'/><feMerge><feMergeNode/><feMergeNode in='SourceGraphic'/></feMerge></filter></svg>#drop-shadow");
+    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=4, Color='#888')";
+    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=4, Color='#888')";
+}
+
+
 
 /* Flower moving */
 @-webkit-keyframes spaceboots {

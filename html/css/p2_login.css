@@ -7,18 +7,18 @@
 .flogin { width:184px; padding:30px 20px 0; position:absolute; top:50px; left:72px}
 .flogin h4 { font-size:15px; font-family:'UTMAndrogyne', Arial, Helvetica, sans-serif; font-weight:300; color:#009386; padding-bottom:20px}
 .flogin span { display:block; color:#757575; font-size:13px; padding:5px 0}
-.flogin input[type=text] { background-color:#dedede; padding:10px; border-radius:5px; width:160px}
-.flogin input[type=submit] { width:188px; background:url(../images/p2-bg-button.png) no-repeat; margin:10px 0 0 -7px; font-family:'UTMAndrogyne', Arial, Helvetica, sans-serif; color:#fff; font-size:18px; padding:3px 0 16px 0; transition:all .3s}
-.flogin input[type=submit]:hover { cursor:pointer; background:url(../images/p2-bg-button_hover.png) no-repeat; transition:all .3s}
+.flogin input[type=text],.flogin input[type=password] { background-color:#dedede; padding:10px; border-radius:5px; width:160px}
+.flogin input.submit { width:188px; background:url(../images/p2-bg-button.png) no-repeat; margin:10px 0 0 -7px; font-family:'UTMAndrogyne', Arial, Helvetica, sans-serif; color:#fff; font-size:18px; padding:3px 0 16px 0; transition:all .3s}
+.flogin input.submit:hover { cursor:pointer; background:url(../images/p2-bg-button_hover.png) no-repeat; transition:all .3s}
 .flogin center { display:block; margin:30px 0 0; font-family:'UTMAndrogyne'; font-size:13px; color:#757575}
-.flogin input[type=button] { width:190px; background:url(../images/p2-background-login.png) -210px -500px no-repeat; margin:10px 0 0 -7px; font-family:'UTMAndrogyne', Arial, Helvetica, sans-serif; color:#fff; font-size:18px; padding:3px 0 16px 0}
-.flogin input[type=button]:hover { background-position:-210px -560px; cursor:pointer}
+.flogin input.fb { width:190px; background:url(../images/p2-background-login.png) -210px -500px no-repeat; margin:10px 0 0 -7px; font-family:'UTMAndrogyne', Arial, Helvetica, sans-serif; color:#fff; font-size:18px; padding:3px 0 16px 0}
+.flogin input.fb:hover { background-position:-210px -560px; cursor:pointer}
  
  /* REGISTER FORM */
 .fregister { width:690px; height:300px; position:absolute; top:80px; right:0px}
 .fregister h4 { font-size:15px; font-family:'UTMAndrogyne', Arial, Helvetica, sans-serif; font-weight:300; color:#009386; padding-bottom:20px}
 .fregister .text { width:115px; height:182px; background:url(../images/p2-background-login.png) -410px -500px no-repeat; position:absolute; top:50px; right:575px}
-.fregister input[type=text] { background:#dedede; border-radius:10px; padding:10px 10px; width:290px; float:left; margin:1px 0 17px 130px; clear:both}
+.fregister input[type=text],.fregister input[type=password] { background:#dedede; border-radius:10px; padding:10px 10px; width:290px; float:left; margin:1px 0 17px 130px; clear:both}
 .fregister .fam { width:210px; height:270px; position:absolute; top:-60px; right:5px; background:url(../images/p2-background-login.png) 0px -500px no-repeat}
 .fregister .capt { width:200px; position:absolute; top:222px; right:25px; text-align:center; font-size:26px}
 .fregister input[type=submit] { width:188px; background:url(../images/p2-bg-button.png) no-repeat; font-family:'UTMAndrogyne', Arial, Helvetica, sans-serif; color:#fff; font-size:18px; padding:3px 0 16px 0; position:absolute; top:260px; right:300px; transition:all .3s}

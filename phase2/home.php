@@ -1,3 +1,10 @@
+<?php
+if (!isset($_SESSION)) {
+    ob_start();
+    @session_start();
+}
+require_once "lib/functions.php";
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -15,11 +22,27 @@
     <div class="wrapper_1000">
         <div id="logo"><img src="images/logo-kunkun.png" title="logo_kunkun" alt="logo_kunkun" /></div>
         <div class="iconKun"></div>
-        <div class="login"><a href="login.php">Đăng nhập</a><span></span></div>
+        <?php
+            if(!isset($_SESSION['uid']) || $_SESSION['uid'] =="")
+            {
+            ?>
+                <div class="login"><a href="login.php">Đăng nhập</a><span></span></div>
+            <?php
+            }
+            else
+            {
+                if(check_user_login($_SESSION['uid'],$_SESSION['pass']) == 1)
+                {
+                ?>
+                <div class="login"><a href="profile.php"><?php $a = get_name_user($_SESSION['uid']); ?></a><a href="logout.php">logout</a><span></span></div>
+                <?php
+                }
+            }
+        ?>
         <!-- ------ -->
         <nav>
             <ul>
-                <li class="active"><a href="#"><span></span>Giới thiệu</a></li>
+                <li class="active"><a href="home.php"><span></span>Giới thiệu</a></li>
                 <li><a href="#"><span></span>Thể lệ & Giải thưởng</a></li>
                 <li><a href="#"><span></span>Cuộc thi ảnh</a></li>
                 <li><a href="#"><span></span>Thư viện ảnh</a></li>

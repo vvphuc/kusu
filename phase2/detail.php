@@ -1,8 +1,22 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <?php 
 require 'lib/functions.php';
+$subjectid =1;
 $p = isset($_GET['p']) ? ((int) $_GET['p']) : 1;
-$photo = select_photo_by_id($p);
+$s ='';
+if(isset($_GET['s']) && $_GET['s'] != ''){
+    $s = $_GET['s'];
+}
+if($s !=''){
+    $sp = select_photo_by_title($title);
+    if($sp != 0 ){
+        $p = $sp;    
+    }
+}
+//$photo = select_photo_by_id($p);
+if(have_photo($p)){
+    update_view($p,$subjectid);
+}
 if(!$photo){
     _redirect('library.php');
     return;
@@ -72,8 +86,9 @@ if(!$photo){
     <div class="titlepage"><h2>Ảnh dự thi</h2></div>
     <!-- -->
     <div class="search">
-    	<input type="text" placeholder="Tìm bài dự thi_" />
-        <div class="icon"><input type="submit" value="" /></div>
+        	<input type="text" placeholder="Tìm bài dự thi_" name="photo_title" id="search-text" />
+            <input type ="hidden" value="detail.php?p=<?php echo $p;?>" name ="crr_url" id ="curr_url">
+            <div class="icon"><input type="submit" value="" id = "search-btn"/></div>
     </div>
     <!-- -->
     <div class="button_play">

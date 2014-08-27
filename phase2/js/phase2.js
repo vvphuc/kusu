@@ -52,6 +52,13 @@ $( document ).ready(function() {
 			}
 		  });
 	});
+   $('#search-btn').click(function(){
+   		var searchtext = $('#search-text').val();
+   		var curr_url= $('#curr_url').val();
+   		if(searchtext != ''){
+   			window.location.href = curr_url+"&s="+searchtext;
+   		}
+   });
 });
 
 /**

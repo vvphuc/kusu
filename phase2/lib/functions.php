@@ -119,6 +119,14 @@ DB::insertUpdate('user', array(
  	return $photo;
  }
  /**
+  * Select photo by title
+  */
+ function select_photo_by_title($title){
+ 	utf8();
+ 	$pt = DB::query("SELECT * FROM photo WHERE title = %s",$title);
+ 	return $pt;
+ }
+ /**
   * check have_photo
   */
  function have_photo($ptid){
@@ -159,6 +167,14 @@ function insert_vote($userid,$ptid,$ip){
  function update_vote($id, $subjectid){
  	utf8();
 	$result = DB::query("UPDATE photo SET vote = vote+1 WHERE id = %d AND subjectid = %d",$id,$subjectid);
+	return $result;
+}
+/**
+  * update view for photo
+  */
+ function update_view($id, $subjectid){
+ 	utf8();
+	$result = DB::query("UPDATE photo SET view = view+1 WHERE id = %d AND subjectid = %d",$id,$subjectid);
 	return $result;
 }
  /**

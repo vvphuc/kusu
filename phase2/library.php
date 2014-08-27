@@ -3,6 +3,16 @@
 require 'lib/functions.php';
 require 'lib/PHPPagination/Pagination.class.php';
 $image = select_images_subjectid(1);
+$s ='';
+if(isset($_GET['s']) && $_GET['s'] != ''){
+    $s = $_GET['s'];
+}
+if($s !=''){
+    $sp = search_images_subjectid(1,$s);
+    if(count($sp) != 0 ){
+        $image= $sp;    
+    }
+}
 $total = count($image);
 // determine page (based on <_GET>)
 $page = isset($_GET['page']) ? ((int) $_GET['page']) : 1;
@@ -11,7 +21,7 @@ $pagination = (new Pagination());
 $pagination->setCurrent($page);
 $pagination->setRPP(8);
 $pagination->setTotal($total);
-$im = select_paging(photo,$page,8);
+$im = select_paging($page,8,$s);
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -21,6 +31,7 @@ $im = select_paging(photo,$page,8);
 <link rel="stylesheet" type="text/css" href="css/p2_style.css" />
 <link rel="stylesheet" type="text/css" href="css/p2_library.css" />
 <script src="js/jquery.min.js"></script>
+<script src="js/phase2.js"></script>
 </head>
 
 <body>
@@ -53,8 +64,9 @@ $im = select_paging(photo,$page,8);
     <div id="frame_library"></div>
     <div class="titlepage"><h2>Thư Viện</h2></div>
     <div class="search">
-        <input type="text" placeholder="Tìm bài dự thi_" />
-        <div class="icon"><input type="submit" value="" /></div>
+        <input type="text" placeholder="Tìm bài dự thi_" name="photo_title" class="search-text" />
+        <input type ="hidden" value="library.php?" name ="crr_url" class="curr_url">
+        <div class="icon"><input type="submit" value="" class="search-btn" /></div>
     </div>
     <div class="tableft">
         <div class="tab current">
@@ -80,6 +92,9 @@ $im = select_paging(photo,$page,8);
                 </div>
         <?php
             }
+        }
+        else{
+            echo 'không có kết quả nào!';
         }
         ?>
         

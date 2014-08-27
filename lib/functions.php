@@ -131,8 +131,14 @@ DB::insertUpdate('user', array(
   */
  function have_vote($userid,$ptid){
  	utf8();
- 	$voted = DB::query("SELECT count(*) FROM vote WHERE userid = %d AND photoid = %d",$userid,$ptid);
- 	return $voted;
+ 	$voted = DB::query("SELECT * FROM vote WHERE userid = %d AND photoid = %d",$userid,$ptid);
+ 	$count =count($voted);
+ 	if($count == 0){
+ 		return false;
+ 	}
+ 	else{
+ 		return true;
+ 	}
  }
  /**
   * check have vote
@@ -146,7 +152,17 @@ DB::insertUpdate('user', array(
 		));
 
  	return $result;
+
  }
+  /**
+  * update vote for photo
+  */
+ function update_vote($id, $subjectid){
+	 DB::update('photo', array(
+	  'age' => 25,
+	  'height' => 10.99
+	), "id=%d AND subjectid=%d", $id, $subjectid);
+}
  /**
   * search detail
   */

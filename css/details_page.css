@@ -4,7 +4,7 @@
 #wrap_detailspage { width:1000px; margin:auto; position:relative}
 html { background:url(../images/background_landingpage.jpg) no-repeat center center fixed;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover}
 #details { width:964px; height:464px; background:url(../images/bg_details.png) 30px 0 no-repeat; position:relative; margin-top:95px}
-.back-link { display:block; width:67px; height:12px; position:absolute; top:50px; right:100px; background:url(../images/back-details.png) -15px 0 no-repeat;padding:7px;top:29px;right:44px; transition:all 0.3s}
+.back-link { display:block; width:67px; height:12px; position:absolute; background:url(../images/back-details.png) -15px 0 no-repeat;padding:7px;top:29px;right:44px; transition:all 0.3s}
 .back-link:hover { background-position:0 0; transition:all 0.3s}
 ul#menu { width:230px; position:absolute; top:50px; left:20px}
 ul#menu li { background-color:#f9ce00; margin-bottom:10px}
@@ -14,7 +14,7 @@ ul#menu li span { display:block; width:10px; height:10px; clear:both; float:left
 ul#menu li.active b { display:block; float:right; width: 0;height: 0;border-left: 5px solid transparent;border-right: 5px solid transparent;border-top: 10px solid #fff; margin:16px 15px 0 0}
 ul#menu li b { display:block; float:right; width: 0;height: 0;border-top: 5px solid transparent;border-left: 10px solid #fff;border-bottom: 5px solid transparent; margin:16px 15px 0 0}
 
-/* Tiny Scrollbar */
+/* Tiny Scrollbar 1 */
 #scrollbar1 { width: 200px; position:absolute; top:100px; left:50px}
 #scrollbar1 .viewport { width: 185px; height: 350px; overflow: hidden; position: relative; }
 #scrollbar1 .overview { list-style: none; position: absolute; left: 0; top: 0; padding: 0; margin: 0; }
@@ -25,15 +25,22 @@ ul#menu li b { display:block; float:right; width: 0;height: 0;border-top: 5px so
 .noSelect { user-select: none; -o-user-select: none; -moz-user-select: none; -khtml-user-select: none; -webkit-user-select: none; }
 #scrollbar1 .overview ul li a { padding:10px 0; display:block; color:#000; font-weight:700}
 #scrollbar1 .overview ul li a:hover { color:#009386}
+
 /* Tiny Scrollbar Content */
 #scrollbar2 { width: 645px}
-#scrollbar2 .viewport { width: 630px; height: 370px; overflow: hidden; position: relative; }
-#scrollbar2 .overview { list-style: none; position: absolute; left: 0; top: 0; padding: 0; margin: 0; }
+#scrollbar2 .viewport { width: 630px; height: 340px; overflow: hidden; position: relative; margin-top:30px}
+#scrollbar2 .overview { list-style: none; position: absolute; left: 0; top: 0; padding: 0; margin: 0; font-size:13px}
 #scrollbar2 .scrollbar{ background: transparent url(../images/bg-scrollbar-track-y.png) no-repeat 0 0; position: relative; background-position: 0 0; float: right; width: 6px; }
 #scrollbar2 .track { height: 100%; width:13px; position: relative; padding: 0 1px; }
 #scrollbar2 .thumb { background: #faac2a; height: 10px; width: 8px; cursor: pointer; overflow: hidden; position: absolute; top:0; left:-1px}
 #scrollbar2 .disable { display: none; }
 .noSelect { user-select: none; -o-user-select: none; -moz-user-select: none; -khtml-user-select: none; -webkit-user-select: none; }
+.overview em,.overview p,.overview p strong em { font-size:13px!important}
+.overview h2 { padding:10px 0 10px; font-size:20px; color:#009588}
+.overview p strong em { font-size:12px}
+.overview img { margin:auto; display:block}
+.source { width:160px; position:absolute; top:-19px; right:-10px; font-size:11px; font-style:italic; color:#777}
 
 /* Content */
 #content_details { width:645px; height:370px; position:absolute; top:63px; right:28px}
+

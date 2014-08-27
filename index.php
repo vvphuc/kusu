@@ -1,4 +1,4 @@
-
+﻿
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -14,7 +14,7 @@
             ga('send', 'event', 'button', 'click', 'Button Yes');
             $("#popup").css("display","block");
             setTimeout(function () {
-                window.location.href = "landing_page.php";
+                window.location.href = "uongsuachudong.php";
             }, 3000);
         };
         function directpageNo(){

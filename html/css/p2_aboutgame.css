@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* CSS Document */
+::selection { background: transparent}
+::-moz-selection { background: transparent}
+#wrap_winlist { width:1000px; margin:auto; position:relative; background:url(../images/p2-bg-winlist.png) top right no-repeat; height:464px;top:-20px;}
+.titlepage { width:238px; height:40px; position:absolute; top:-3px; left:290px}
+.titlepage h2 { margin:16px 0 0 28px;font-family:'UTMAndrogyne',Arial, Helvetica, sans-serif; font-size:27px; color:#009386}
+.imgtitle { width:142px; height:108px; background:url(../images/p2-bg-winlist.png) 0 -490px no-repeat; position:absolute; top:-25px; left:486px; z-index:2}
+.back-link { display:block; width:67px; height:12px; position:absolute; background:url(../images/back-details.png) -15px 0 no-repeat;padding:7px;top:29px;right:77px; transition:all 0.3s}
+.back-link:hover { background-position:0 0; transition:all 0.3s}
+.upload { width:110px; height:66px; position:absolute; top:80px; left:200px}
+.playgame { width:95px; height:52px; position:absolute; top:150px; left:185px}
+.info { background:url(../images/p2-bg-info-cuocthianh.png) no-repeat; position:absolute; top:50px; left:305px; width:532px; height:155px; padding:35px 20px 0 120px; font-size:13px}
+
+/* Button THAM GIA NGAY */
+.button_play { position:absolute; top:229px; left:274px; width:200px; height:27px; padding:7px 10px 0; position:relative}
+.button_play a { width:204px; height:30px; margin:-13px 0 0 1px; background-color:#009386; display:block; transition:all .3s}
+.button_play a span { display:block; position:absolute; top:1px; left:20px;width: 0;height: 0; border-top: 8px solid transparent;border-bottom: 8px solid transparent;border-left:13px solid #fff; transition:all .3s}
+.button_play a h4 { font-family:  'UTMAndrogyne', Arial, Helvetica, sans-serif; color:#fff; font-size:18px; margin:0 0 0 20px; position:absolute; top:-1px; left:22px; font-weight:100; transition:all .3s}
+.button_play a:hover { background-color:#f6f501; transition:all .3s}
+.button_play a:hover span { border-left:13px solid #009386; left:25px; transition:all .3s}
+.button_play a:hover h4 { left:25px; color:#009386; transition:all .3s}
+
+/* MENU LIST */
+ul#menu { width:204px; position:absolute; left:285px}
+ul#menu li { background-color:#f9ce00; margin-bottom:10px; transition:all .3s}
+ul#menu li:hover,ul#menu.active li { background-color:#009386; transition:all .3s}
+ul#menu li a { display:block; font:15px/18px 'UTMAndrogyne'; color:#009386; padding:12px 0px 12px 15px; width:189px; height:100%; vertical-align:top}
+ul#menu li:hover a { color:#fff}
+ul#menu li span { display:block; width:10px; height:10px; clear:both; float:left;width: 0;height: 0;border-top: 10px solid #005f56;border-left: 10px solid transparent}
+ul#menu li b { display:block; float:right; width: 0;height: 0;border-top: 5px solid transparent;border-left: 10px solid #fff;border-bottom: 5px solid transparent; margin:16px 15px 0 0}
+ul#menu.anhduthi { top:270px}
+ul#menu.thele { top:320px}
+ul#menu.danhsach { top:370px}
+ul#menu.top5 { top:222px; left:520px; z-index:3}
+ul#menu.top5 a { color:#c621bf; font-size:21px}
+ul#menu.top5 li:hover { background-color:#f9ce00}
+ul#menu.top5 li:hover a:hover { color:#c621bf}
+
+/* TOP 5 IMAGE */
+.topimg { width:444px; height:163px; border:2px dashed #f9ce00; position:absolute; top:250px; left:530px; border-radius:10px}
+.otherpic { font-family:  'UTMAndrogyne', Arial, Helvetica, sans-serif; color:#676767; text-decoration:underline; font-size:11px; text-align:center; position:absolute; top:430px; left:530px}
+.otherpic:hover { color:#009386}

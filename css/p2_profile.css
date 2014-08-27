@@ -1,0 +1,42 @@
+@charset "utf-8";
+/* CSS Document */
+
+#frame_profile { width:934px; height:463px; position:absolute; top:-25px; right:0; background:url(../images/p2-background-profile.png) 0 0 no-repeat}
+
+/* LEFT SIDE */
+#leftside { width:400px; position:absolute; top:40px; left:100px}
+#leftside h4 { font-size:18px; font-family:'UTMAndrogyne', Arial, Helvetica, sans-serif; font-weight:300; color:#009386; padding-bottom:20px}
+#leftside .rowf { width:400px; clear:both}
+#leftside .rowf span { font-size:15px; color:#009588; font-weight:700; display:block; float:left; width:80px; padding:15px 0 0}
+#leftside .rowf input[type=text] { border:3px solid #fff; border-radius:13px; padding:9px 100px 9px 10px; width:190px; float:right; margin:5px 0}
+#leftside .rowf .edit { position:absolute; left:310px; padding:17px 0 0; font-size:12px}
+#leftside .rowf:hover input[type=text], #leftside .rowf input[type=text]:focus { border-color: #008a7e}
+#leftside .rowf:hover .edit, #leftside .rowf:focus .edit { display:none}
+.rowf input[type=text]:focus > .edit { display:none}
+#leftside input[type=submit] { width:188px; background:url(../images/p2-bg-button.png) no-repeat; margin:10px 0 0 100px; font-family:'UTMAndrogyne', Arial, Helvetica, sans-serif; color:#fff; font-size:18px; padding:3px 0 16px 0; transition:all .3s}
+#leftside input[type=submit]:hover { cursor:pointer; background:url(../images/p2-bg-button_hover.png) no-repeat; transition:all .3s}
+
+/* RIGHT SIDE */
+#rightside { position:absolute; top:39px; left:535px; width:460px; height:385px}
+#rightside h4 { font-size:18px; font-family:'UTMAndrogyne', Arial, Helvetica, sans-serif; font-weight:300; color:#009386; padding:0 0 5px 13px}
+.item { width:194px; height:163px; border:2px dashed #f9ce00; border-radius:5px; margin:16px; float:left; position:relative}
+.item .thumb { width:185px; height:156px; margin:4px 5px; border-radius:5px; overflow:hidden; position:absolute}
+.thumb img { position:absolute; border-radius:5px; width:185px; height:156px; transition:all .3s}
+.thumb .circle { width:86px; height:86px; border-radius:43px; background-color:#009386; border:1px dotted #c7edea; position:absolute; right:-33px; top:78px; transition:all .3s}
+.thumb .circle span { padding:0 0 0 18px; height:16px; color:#f9ce00; font-size:12px; background:url(../images/p2-background-elements-thuvien.png) -90px -480px no-repeat; display:block; margin:20px 0 0 7px;font-weight:700}
+.thumb .info { width:175px; height:30px; position:absolute; top:121px; background:rgba(255,255,255,0.7); font:10px Arial, Helvetica, sans-serif; color:#858585; padding:5px 0 0 10px; transition:all .3s}
+.thumb .info span { display:block; font:12px Arial, Helvetica, sans-serif; color:#595959}
+.thumb .like { height:16px; position:absolute; top:130px; right:7px; background-color:#360; background:url(../images/p2-background-elements-thuvien.png) -160px -480px no-repeat; padding:0 0 0 18px;font-size:12px; color:#009386; font-weight:700; transition:all .3s}
+.thumb:hover .info,.thumb:hover .like,.thumb:hover .circle { top:200px; transition:all .3s}
+.thumb:hover img { width:191px; height:162px; transition:all .3s; opacity:0.8}
+.score { position:absolute; top:315px; left:270px}
+.score { font-family:'UTMAndrogyne'; color:#009588}
+.score b { font-size:29px; font-family:'UTMAndrogyne'; font-weight:300}
+.score span { font-size:15px; font-family:'UTMAndrogyne'; font-weight:300}
+
+/* Paging */
+.paging { position:absolute; top:228px; left:132px; width:200px; height:27px; padding:7px 10px 0}
+.paging a,.paging span { display:block; float:left; width:15px; height:15px;text-align:center; padding:3px; color:#caa700}
+.paging a:hover,.paging a.pageon { color:#009386}
+.paging a.prev { background:url(../images/p2-background-elements-thuvien.png) -330px -476px no-repeat}
+.paging a.next { background:url(../images/p2-background-elements-thuvien.png) -360px -476px no-repeat; float:right}

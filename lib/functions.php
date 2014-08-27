@@ -1,6 +1,6 @@
 ﻿<?php 
-require '../config/config.php';
-require '../config/function.php';
+require('config/config.php');
+require('config/function.php');
 
 //Demo function
 function function_name($conn){
@@ -210,7 +210,7 @@ function insert_answer($email,$message,$avatar,$fbid,$fbname,$check)
     ));
     if($check == 1)
     {
-        _redirect("landing_page.php");
+        _redirect("uongsuachudong.php");
     }
     else
     {
@@ -221,7 +221,7 @@ function insert_answer($email,$message,$avatar,$fbid,$fbname,$check)
 function select_answer()
 {
     DB::$encoding = 'utf8';
-    $total = DB::query("SELECT `email`,`message`,`avatar`,`fbid`,`fbname` FROM answer ORDER BY submitday DESC ");
+    $total = DB::query("SELECT `email`,`message`,`avatar`,`fbid`,`fbname`,`submitday` FROM answer ORDER BY submitday DESC ");
     return $total;
 }
 function select_news(){
@@ -231,7 +231,7 @@ function select_news(){
 }
 function select_details_news($id){
     DB::$encoding = 'utf8';
-    $total = DB::query("SELECT `title` ,`content`,`description`,`registerdate` FROM news WHERE `id` = $id");
+    $total = DB::query("SELECT `title` ,`content`,`description`,`registerdate`,`photo` FROM news WHERE `id` = $id");
     return $total;
 }
 

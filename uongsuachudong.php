@@ -3,7 +3,6 @@ if (!isset($_SESSION)) {
     ob_start();
     @session_start();
 }
-require 'config/config.php';
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -67,7 +66,7 @@ require 'config/config.php';
 
 <div id="wrap_landingpage">
     <div class="tvc">
-        <div class="video"><iframe width="279" height="190" src="//www.youtube.com/embed/Y-MsUcZ6SNI?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe></div>
+        <div class="video"><iframe width="279" height="190" src="//www.youtube.com/embed/NTt_cIoAQfA?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe></div>
         <div class="social">
             <div id="fb-root"></div>
             <script>(function(d, s, id) {
@@ -100,7 +99,7 @@ require 'config/config.php';
                     $date = date_create($result_news[$i]['registerdate']);
             ?>
 
-            <li><a href="details_news.php?id=<?php echo $result_news[$i]['id']; ?>"><span><?php //echo date_format($date, 'd/m/Y'); ?><img src="images/<?php echo $result_news[$i]['photo'] ;  ?>" /></span>&nbsp;&nbsp;<b><?php echo $result_news[$i]['title'] ;?></b></a></li>
+            <li><a href="details_news.php?id=<?php echo $result_news[$i]['id']; ?>"><span><?php //echo date_format($date, 'd/m/Y H:i:s'); ?><img src="images/<?php echo $result_news[$i]['photo'] ;  ?>" /></span>&nbsp;&nbsp;<b><?php echo $result_news[$i]['title'] ;?></b></a></li>
 
             <?php
                 }
@@ -124,17 +123,18 @@ require 'config/config.php';
             {
             for($i=0;$i<count($result);$i++)
             {
+                $date = date_create($result[$i]['submitday']);
                 if($i%2==0)
                 {
                     if($result[$i]['email'] != "")
                     {
                         $img = "images/default-ava.png";
-                        $name = $result[$i]['email'];
+                        $name = $result[$i]['email']."  |  ".date_format($date, 'd/m/Y H:i:s');
                     }
                     else
                     {
                         $img = "https://graph.facebook.com/".$result[$i]['fbid']."/picture?type=large";
-                        $name = $result[$i]['fbname'];
+                        $name = $result[$i]['fbname']."  |  ".date_format($date, 'd/m/Y H:i:s');
                     }
                     ?>
                 <li>
@@ -156,12 +156,12 @@ require 'config/config.php';
                     if($result[$i]['email'] != "")
                     {
                         $img = "images/default-ava.png";
-                        $name = $result[$i]['email'];
+                        $name = $result[$i]['email']."  |  ".date_format($date, 'd/m/Y H:i:s');
                     }
                     else
                     {
                         $img = "https://graph.facebook.com/".$result[$i]['fbid']."/picture?type=large";
-                        $name = $result[$i]['fbname'];
+                        $name = $result[$i]['fbname']."  |  ".date_format($date, 'd/m/Y H:i:s');
                     }
              ?>
                 <li>
@@ -187,6 +187,7 @@ require 'config/config.php';
             <!-- -->
         </ul>
         <a href="answer.php" class="binhluantiep">Bình luận tiếp</a>
+	<div class="count_cm">Tổng số bình luận: <?php echo count($result); ?></div>
     </div>
 </div>
 </body>

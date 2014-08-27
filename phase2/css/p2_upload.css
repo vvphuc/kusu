@@ -5,7 +5,7 @@
 .titlepage { width:238px; height:40px; position:absolute; top:-25px; left:300px; background:url(../images/p2-background-elements-thuvien.png) -90px -430px no-repeat}
 .titlepage h2 { margin:16px 0 0 28px;font-family:'UTMAndrogyne',Arial, Helvetica, sans-serif; font-size:27px; color:#009386}
 
-.main-form { position:absolute; top:50px; left:100px; width:870px}
+form { position:absolute; top:50px; left:100px; width:870px}
 .leftside { width:420px; float:left;padding-right: 20px;}
 form h3 {font-family:'UTMAndrogyne',Arial, Helvetica, sans-serif; font-size:18px; color:#009588; padding-bottom:10px}
 .leftside a { display:block; width:167px; height:167px; float:left; border:3px solid #c2c2c2; border-radius:3px; transition:all .3s}

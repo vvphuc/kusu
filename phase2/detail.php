@@ -13,7 +13,7 @@ if($s !=''){
         $p = $sp;    
     }
 }
-//$photo = select_photo_by_id($p);
+$photo = select_photo_by_id($p);
 if(have_photo($p)){
     update_view($p,$subjectid);
 }
@@ -67,7 +67,7 @@ if(!$photo){
         	<div class="face"><img src="images/p2-char-home.png" /></div>
             <div class="name">Tên facebook</div>
             <div class="view"><b><?php echo $photo['0']['view'];?></b></div>
-            <div class="like"><b><?php echo $photo['0']['vote'];?></b></div>
+            <div class="like"><b><?php echo $photo['0']['vote'];?></b><input type="hidden" value="<?php echo $photo['0']['vote'];?>" name ="vote-count" id="vote-count"></div>
             <div class="date">Ngày đăng<Br /><?php echo date('d/m/Y',strtotime($photo['0']['submitdate']));?></div>
             <strong>Chủ đề 1</strong>
             <div class="vote"><a href="#" id="vote-photo"></a><input type="hidden" value="<?php echo $p;?>" id ="pt-id" name = "ptid"></div>

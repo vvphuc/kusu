@@ -37,15 +37,16 @@ $( document ).ready(function() {
 	});
 
    $('#vote-photo').click(function(){
-   		console.log('co');
+   		$('#vote-photo').attr('disabled','disabled');
 	   $.ajax({
 		  type: "POST",
 		  url: "vote.php",
 		  data: { ptid: $('#pt-id').val()}
 		}).done(function( msg ) {
-			alert(msg);
 			if(msg == 1){
-		 	   alert( "Bạn đã bình chọn thành công!");
+				var h = $('#vote-count').val();
+				h++;
+				$('.like').html('<b>'+h+'</b>');
 			}
 			else{
 				alert("Bạn đã bình chọn rồi");

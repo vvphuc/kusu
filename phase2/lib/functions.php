@@ -123,7 +123,7 @@ DB::insertUpdate('user', array(
   */
  function select_photo_by_title($title){
  	utf8();
- 	$pt = DB::query("SELECT * FROM photo WHERE title = %s",$title);
+ 	$pt = DB::query("SELECT * FROM photo WHERE title = %ss",$title);
  	return $pt;
  }
  /**

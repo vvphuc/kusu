@@ -5,6 +5,7 @@ if(!isset($_POST['ptid']) ||  $_POST['ptid'] == ''){
 	return;
 }
 $ptid = $_POST['ptid'];
+$subjectid =1;
 $userid = 123;
 if(!have_photo($ptid) || have_photo($ptid) == 0){
 	echo -1;
@@ -17,9 +18,11 @@ if(have_vote($userid,$ptid)){
 $ip = getIP();
 $result = insert_vote($userid, $ptid,$ip);
 if($result){
-
-	echo  1;
-	return ;
+	$re = update_vote($ptid,$subjectid);
+	if($re){
+		echo  1;
+		return ;
+	}
 }
 echo  01;
 return;

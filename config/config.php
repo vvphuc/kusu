@@ -13,7 +13,7 @@
 	define('HOST','localhost');
 	define('DBUSER','kusu');
 	define('DBPASS','kusu@1qaz@WSX');
-	define('DBNAME', 'kusudb');
+	define('DBNAME', 'kusudemodb');
 	
 		
 	

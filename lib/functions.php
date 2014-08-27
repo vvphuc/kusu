@@ -140,28 +140,26 @@ DB::insertUpdate('user', array(
  		return true;
  	}
  }
- /**
-  * check have vote
-  */
- function insert_vote($userid,$ptid,$ip){
+/**
+* check have vote
+*/
+function insert_vote($userid,$ptid,$ip){
  	utf8();
  	$result = DB::insert('vote', array(
 		'userid'=>$userid,
 		'photoid'=>$ptid,
 		'ip'=>$ip
 		));
-
  	return $result;
 
- }
+}
   /**
   * update vote for photo
   */
  function update_vote($id, $subjectid){
-	 DB::update('photo', array(
-	  'age' => 25,
-	  'height' => 10.99
-	), "id=%d AND subjectid=%d", $id, $subjectid);
+ 	utf8();
+	$result = DB::query("UPDATE photo SET vote = vote+1 WHERE id = %d AND subjectid = %d",$id,$subjectid);
+	return $result;
 }
  /**
   * search detail

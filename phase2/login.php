@@ -139,7 +139,11 @@ if(isset($_SESSION['uid']) && $_SESSION['uid'] !="")
             if(check_user_login($_SESSION['uid'],$_SESSION['pass']) == 1)
             {
                 ?>
-                <div class="login"><a href="profile.php"><?php $a = get_name_user($_SESSION['uid']); ?></a><a href="logout.php">logout</a><span></span></div>
+                <div class="welcome">
+                    <b><?php echo get_name_user($_SESSION['uid']); ?></b>
+                    <a href="profile.php">Xem hồ sơ ››</a>
+                    <a href="logout.php">Đăng xuất</a>
+                </div>
             <?php
             }
         }
@@ -148,13 +152,21 @@ if(isset($_SESSION['uid']) && $_SESSION['uid'] !="")
         <nav>
             <ul>
                 <li><a href="home.php"><span></span>Giới thiệu</a></li>
-                <li><a href="#"><span></span>Thể lệ & Giải thưởng</a></li>
-                <li><a href="#"><span></span>Cuộc thi ảnh</a></li>
-                <li><a href="#"><span></span>Thư viện ảnh</a></li>
-                <li><a href="#"><span></span>Mẹo hay</a>
+                <li><a href="#"><span></span>Giải pháp cho trẻ ngán sữa</a>
                     <ul>
+                        <li><a href="#">Nỗi lo ngán sữa</a></li>
                         <li><a href="#">Bí kíp của mẹ</a></li>
-                        <li><a href="#">Cẩm nang</a></li>
+                        <li><a href="#">Sữa KUN Cookies</a></li>
+                        <li class="last"></li>
+                    </ul>
+                </li>
+                <li class="active"><a href="#"><span></span>Cuộc thi ảnh</a>
+                    <ul>
+                        <li><a href="#">Gửi ảnh dự thi</a></li>
+                        <li><a href="#">Ảnh dự thi</a></li>
+                        <li><a href="#">Thể lệ & giải thưởng </a></li>
+                        <li><a href="#">Danh sách trúng thưởng</a></li>
+                        <li class="last"></li>
                     </ul>
                 </li>
             </ul>
@@ -184,7 +196,7 @@ if(isset($_SESSION['uid']) && $_SESSION['uid'] !="")
         <input type="password" name="pass" id="pass" />
         <input type="password" name="cfpass" id="cfpass" />
         <input type="text" name="captcha" id="captcha" maxlength="6" size="6" />
-        <div class="capt"><img src="captcha_code.php"/></div>
+        <div class="capt"><img style="width: 80px;height: 25px;margin-top: -10px;" src="captcha_code.php"/></div>
         <input type="submit" value="Đăng ký" name="submit" />
     </form>
 </div>

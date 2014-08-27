@@ -18,6 +18,7 @@ if(isset($_POST['dt']))
     {
         $_SESSION['uid'] = $email;
         $_SESSION['pass'] = $pass;
+        update_lastlogin($email);
         echo 1;
     }
     else

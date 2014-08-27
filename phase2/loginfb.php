@@ -103,10 +103,19 @@ if ( isset( $session ) ) {
   $fb_avatar = "https://graph.facebook.com/$uid/picture?type=large";
   $fb_email = $user['email'];
   $fb_name = $user['name'];
-  $_SESSION['fb_name'] = $fb_name;
-  $_SESSION['fb_uid'] =$uid;
-  $answer = $_SESSION['answer'];
-  //insert_answer("",$answer,1,$uid,$fb_name,1);
+   $check_user = check_exist_user($uid);
+   if($check_user == 0)
+   {
+        $_SESSION['fbname'] = $fb_name;
+        $_SESSION['uid'] =$uid;
+        insert_user_register($uid,"",$fb_name,$fb_email,2,getIP());
+   }
+   else
+   {
+        _alert("Email đã tồn tại!");
+        _redirect("login.php");
+   }
+
   /**
    * you insert code save your data to database here
    */
@@ -120,5 +129,5 @@ if ( isset( $session ) ) {
   _redirect($loginUrl);  
 }
 if($_SESSION['fb_uid']){
-  _redirect("http://ngansua.vn/uongsuachudong.php");
+  _redirect("index.php");
 }

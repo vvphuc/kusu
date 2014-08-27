@@ -1,6 +1,6 @@
 ﻿<?php 
-require('../config/config.php');
-require('../config/function.php');
+require('config/config.php');
+require('config/function.php');
 
 //Demo function
 function function_name($conn){
@@ -39,6 +39,85 @@ if (isset($key)){
  }
  return $KQ;
  }
+
+/******************************Hao*****************************/
+//get name user
+function get_name_user($id)
+{
+    DB::$encoding = 'utf8';
+    $total = DB::query("SELECT `name`,`fbname` FROM user WHERE `id` = '$id'");
+    if($total[0]['name']=="")
+    {
+        return $total[0]['fbname'];
+    }
+    else
+    {
+        return $total[0]['name'];
+    }
+}
+// check login
+function check_user_login($id,$pass)
+{
+    DB::$encoding = 'utf8';
+    $pass_in = md5(md5($pass));
+    $total = DB::query("SELECT count(*) as total FROM user WHERE `id` = '$id' AND `password` = '$pass_in'");
+    if($total[0]['total'] == 1)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+function check_exist_user($id)
+{
+    DB::$encoding = 'utf8';
+    $total = DB::query("SELECT count(*) as total FROM user WHERE `id` = '$id'");
+    if($total[0]['total'] == 1)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+function insert_user_register($id,$pass,$fbname,$fbmail,$check,$ip)
+{
+    date_default_timezone_set("Asia/Bangkok");
+    DB::$encoding = 'utf8';
+    $pass_in = md5(md5($pass));
+    $today = date("Y-m-d H:i:s");
+    if($check == 1)
+    {
+        DB::insert('user',array(
+            'id' => $id,
+            'password' => $pass_in,
+            'ip' => $ip,
+            'type' => $check,
+            'registerdate' => $today,
+        ));
+        _redirect("index.php");
+    }
+    else
+    {
+        DB::insert('user',array(
+            'id' => $id,
+            'password' => $pass,
+            'fbname' => $fbname,
+            'fbenail' => $fbmail,
+            'ip' => $ip,
+            'type' => $check,
+            'registerdate' => $today,
+        ));
+        _redirect("index.php");
+    }
+}
+
+/******************************end*****************************/
+
+
  //kiểm tra đăng nhập
  function login($user,$pass){
  utf8();

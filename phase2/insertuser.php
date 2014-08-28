@@ -4,10 +4,6 @@ if (!isset($_SESSION)) {
     @session_start();
 }
 require "lib/functions.php";
-if(!isset($_SESSION['uid']) || $_SESSION['uid'] == "")
-{
-    _redirect("login.php");
-}
 if(isset($_POST['submit']) && $_POST['submit'] != "")
 {
     if($_POST['email'] != "")
@@ -23,6 +19,8 @@ if(isset($_POST['submit']) && $_POST['submit'] != "")
                 if($check_user == 0)
                 {
                     insert_user_register($email,$pass,"","",1,$ip);
+                    $_SESSION['uid'] = $email;
+                    $_SESSION['pass'] = $pass;
                     unset($_SESSION['cap_code']);
                 }
                 else

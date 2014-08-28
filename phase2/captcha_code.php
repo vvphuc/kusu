@@ -52,7 +52,7 @@ $_SESSION['cap_code'] = $ranStr; // Lưu giá trị vào session
     header("Content-Type: image/png");
     imagepng($img);
     // Remove image
-    imagedestroy($img);
+    //imagedestroy($img);
 
 ?>
 

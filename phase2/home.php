@@ -23,7 +23,7 @@ require_once "lib/functions.php";
         <div id="logo"><img src="images/logo-kunkun.png" title="logo_kunkun" alt="logo_kunkun" /></div>
         <div class="iconKun"></div>
         <?php
-        if(!isset($_SESSION['uid']) || $_SESSION['uid'] =="")
+        if(!isset($_SESSION['uid']) || $_SESSION['uid'] == "")
         {
             ?>
             <div class="login"><a href="login.php">Đăng nhập</a><span></span></div>
@@ -35,7 +35,7 @@ require_once "lib/functions.php";
             {
                 ?>
                 <div class="welcome">
-                    <b><?php echo "Cúng cùi";//get_name_user($_SESSION['uid']); ?></b>
+                    <b><?php echo get_name_user($_SESSION['uid']); ?></b>
                     <a href="profile.php">Xem hồ sơ ››</a>
                     <a href="logout.php">Đăng xuất</a>
                 </div>
@@ -47,20 +47,20 @@ require_once "lib/functions.php";
         <nav>
             <ul>
                 <li class="active"><a href="home.php"><span></span>Giới thiệu</a></li>
-                <li><a href="#"><span></span>Giải pháp cho trẻ ngán sữa</a>
+                <li class=""><a href="#"><span></span>Giải pháp cho trẻ ngán sữa</a>
                     <ul>
-                        <li><a href="#">Nỗi lo ngán sữa</a></li>
-                        <li><a href="#">Bí kíp của mẹ</a></li>
-                        <li><a href="#">Sữa KUN Cookies</a></li>
+                        <li><a href="article1.php">Nỗi lo ngán sữa</a></li>
+                        <li><a href="article2.php">Bí kíp của mẹ</a></li>
+                        <li><a href="article3.php">Sữa KUN Cookies</a></li>
                         <li class="last"></li>
                     </ul>
                 </li>
-                <li class="active"><a href="#"><span></span>Cuộc thi ảnh</a>
+                <li class=""><a href="#"><span></span>Cuộc thi ảnh</a>
                     <ul>
-                        <li><a href="#">Gửi ảnh dự thi</a></li>
-                        <li><a href="#">Ảnh dự thi</a></li>
-                        <li><a href="#">Thể lệ & giải thưởng </a></li>
-                        <li><a href="#">Danh sách trúng thưởng</a></li>
+                        <li><a href="gameboard.php">Gửi ảnh dự thi</a></li>
+                        <li><a href="library.php">Ảnh dự thi</a></li>
+                        <li><a href="rules.php">Thể lệ & giải thưởng </a></li>
+                        <li><a href="winlist.php">Danh sách trúng thưởng</a></li>
                         <li class="last"></li>
                     </ul>
                 </li>

@@ -1,4 +1,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php
+if (!isset($_SESSION)) {
+    ob_start();
+    @session_start();
+}
+require "lib/functions.php";
+?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -51,18 +58,46 @@ $( document ).ready(function() {
     <div class="wrapper_1000">
     	<div id="logo"><img src="../images/logo-kunkun.png" title="logo_kunkun" alt="logo_kunkun" /></div>
         <div class="iconKun"></div>
-        <div class="login"><a href="#">Đăng nhập</a><span></span></div>
+        <?php
+        if(!isset($_SESSION['uid']) || $_SESSION['uid'] =="")
+        {
+            ?>
+            <div class="login"><a href="login.php">Đăng nhập</a><span></span></div>
+        <?php
+        }
+        else
+        {
+            if(check_user_login($_SESSION['uid'],$_SESSION['pass']) == 1)
+            {
+                ?>
+                <div class="welcome">
+                    <b><?php echo get_name_user($_SESSION['uid']); ?></b>
+                    <a href="profile.php">Xem hồ sơ ››</a>
+                    <a href="logout.php">Đăng xuất</a>
+                </div>
+            <?php
+            }
+        }
+        ?>
         <!-- ------ -->
         <nav>
             <ul>
-                <li class="active"><a href="#"><span></span>Giới thiệu</a></li>
-                <li><a href="#"><span></span>Thể lệ & Giải thưởng</a></li>
-                <li><a href="#"><span></span>Cuộc thi ảnh</a></li>
-                <li><a href="#"><span></span>Thư viện ảnh</a></li>
-                <li><a href="#"><span></span>Mẹo hay</a>
+                <li><a href="home.php"><span></span>Giới thiệu</a></li>
+                <li class=""><a href="#"><span></span>Giải pháp cho trẻ ngán sữa</a>
                     <ul>
-                        <li><a href="#">Bí kíp của mẹ</a></li>
-                        <li><a href="#">Cẩm nang</a></li>
+                        <li><a href="article1.php">Nỗi lo ngán sữa</a></li>
+                        <li><a href="article2.php">Bí kíp của mẹ</a></li>
+                        <li><a href="article3.php">Sữa KUN Cookies</a></li>
+                        <li class="last"></li>
+                    </ul>
+                </li>
+                <li class="active"><a href="#"><span></span>Cuộc thi ảnh</a>
+                    <ul>
+                        <li><a href="gameboard.php">Gửi ảnh dự thi</a></li>
+                        <li><a href="library.php">Ảnh dự thi</a></li>
+                        <li><a href="rules.php">Thể lệ & giải thưởng </a></li>
+                        <li><a href="winlist.php">Danh sách trúng thưởng</a></li>
+                        <li class="last"></li>
                     </ul>
                 </li>
             </ul>

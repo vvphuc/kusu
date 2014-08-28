@@ -3,6 +3,7 @@ if (!isset($_SESSION)) {
     ob_start();
     @session_start();
 }
+require "lib/functions.php";
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -51,21 +52,21 @@ if (!isset($_SESSION)) {
         <!-- ------ -->
         <nav>
             <ul>
-                <li><a href="home.php"><span></span>Giới thiệu</a></li>
-                <li><a href="#"><span></span>Giải pháp cho trẻ ngán sữa</a>
+                <li class=""><a href="home.php"><span></span>Giới thiệu</a></li>
+                <li class=""><a href="#"><span></span>Giải pháp cho trẻ ngán sữa</a>
                     <ul>
-                        <li><a href="#">Nỗi lo ngán sữa</a></li>
-                        <li><a href="#">Bí kíp của mẹ</a></li>
-                        <li><a href="#">Sữa KUN Cookies</a></li>
+                        <li><a href="article1.php">Nỗi lo ngán sữa</a></li>
+                        <li><a href="article2.php">Bí kíp của mẹ</a></li>
+                        <li><a href="article3.php">Sữa KUN Cookies</a></li>
                         <li class="last"></li>
                     </ul>
                 </li>
                 <li class="active"><a href="#"><span></span>Cuộc thi ảnh</a>
                     <ul>
-                        <li><a href="#">Gửi ảnh dự thi</a></li>
-                        <li><a href="#">Ảnh dự thi</a></li>
-                        <li><a href="#">Thể lệ & giải thưởng </a></li>
-                        <li><a href="#">Danh sách trúng thưởng</a></li>
+                        <li><a href="gameboard.php">Gửi ảnh dự thi</a></li>
+                        <li><a href="library.php">Ảnh dự thi</a></li>
+                        <li><a href="rules.php">Thể lệ & giải thưởng </a></li>
+                        <li><a href="winlist.php">Danh sách trúng thưởng</a></li>
                         <li class="last"></li>
                     </ul>
                 </li>

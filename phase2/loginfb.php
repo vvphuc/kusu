@@ -103,17 +103,19 @@ if ( isset( $session ) ) {
   $fb_avatar = "https://graph.facebook.com/$uid/picture?type=large";
   $fb_email = $user['email'];
   $fb_name = $user['name'];
-   $check_user = check_exist_user($uid);
+  $check_user = check_exist_user($uid);
    if($check_user == 0)
    {
         $_SESSION['fbname'] = $fb_name;
-        $_SESSION['uid'] =$uid;
+        $_SESSION['pass'] = "";
+        $_SESSION['uid'] = $uid;
         insert_user_register($uid,"",$fb_name,$fb_email,2,getIP());
    }
    else
    {
-        _alert("Email đã tồn tại!");
-        _redirect("login.php");
+       $_SESSION['pass'] = "";
+       $_SESSION['uid'] = $uid;
+        _redirect("home.php");
    }
 
   /**
@@ -128,6 +130,6 @@ if ( isset( $session ) ) {
   $loginUrl = $helper->getLoginUrl( array( 'email', 'user_friends', 'public_profile' ));
   _redirect($loginUrl);  
 }
-if($_SESSION['fb_uid']){
+if($_SESSION['uid']){
   _redirect("index.php");
 }

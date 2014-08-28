@@ -136,7 +136,7 @@ if(isset($_SESSION['uid']) && $_SESSION['uid'] != "")
                 <li class="active"><a href="home.php"><span></span>Giới thiệu</a></li>
                 <li class=""><a href="#"><span></span>Giải pháp cho trẻ ngán sữa</a>
                     <ul>
-                        <li><a href="article1.php">Nỗi lo ngán sữa</a></li>
+                        <li><a href="article1.php?id=1">Nỗi lo ngán sữa</a></li>
                         <li><a href="article2.php">Bí kíp của mẹ</a></li>
                         <li><a href="article3.php">Sữa KUN Cookies</a></li>
                         <li class="last"></li>

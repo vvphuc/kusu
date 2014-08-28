@@ -9,9 +9,7 @@
 #leftside .rowf { width:400px; clear:both}
 #leftside .rowf span { font-size:15px; color:#009588; font-weight:700; display:block; float:left; width:80px; padding:15px 0 0}
 #leftside .rowf input[type=text] { border:3px solid #fff; border-radius:13px; padding:9px 100px 9px 10px; width:190px; float:right; margin:5px 0}
-#leftside .rowf .edit { position:absolute; left:310px; padding:17px 0 0; font-size:12px}
 #leftside .rowf:hover input[type=text], #leftside .rowf input[type=text]:focus { border-color: #008a7e}
-#leftside .rowf:hover .edit, #leftside .rowf:focus .edit { display:none}
 .rowf input[type=text]:focus > .edit { display:none}
 #leftside input[type=submit] { width:188px; background:url(../images/p2-bg-button.png) no-repeat; margin:10px 0 0 100px; font-family:'UTMAndrogyne', Arial, Helvetica, sans-serif; color:#fff; font-size:18px; padding:3px 0 16px 0; transition:all .3s}
 #leftside input[type=submit]:hover { cursor:pointer; background:url(../images/p2-bg-button_hover.png) no-repeat; transition:all .3s}

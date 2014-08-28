@@ -63,7 +63,7 @@ h1 { position:fixed; top:-99px}
 .welcome { float:right; margin:5px 0 0 0; width:110px}
 .welcome i { font-size:10px; color:#666; display:block; line-height:14px}
 .welcome b { font-size:12px; display:block; color:#009386}
-.welcome a { font-size:11px; color:#009386; transition:all .3s}
+.welcome a { font-size:11px; color:#009386; display:block; transition:all .3s}
 .welcome a:hover { padding-left:10px; color:#F00; transition:all .3s}
 
 /* Menu Dropdown */

@@ -3,16 +3,6 @@
 require 'lib/functions.php';
 $subjectid =1;
 $p = isset($_GET['p']) ? ((int) $_GET['p']) : 1;
-$s ='';
-if(isset($_GET['s']) && $_GET['s'] != ''){
-    $s = $_GET['s'];
-}
-if($s !=''){
-    $sp = select_photo_by_title($title);
-    if($sp != 0 ){
-        $p = $sp;    
-    }
-}
 $photo = select_photo_by_id($p);
 if(have_photo($p)){
     update_view($p,$subjectid);
@@ -31,7 +21,6 @@ if(!$photo){
 <link rel="stylesheet" type="text/css" href="css/p2_details.css" />
 <script src="js/jquery.min.js"></script>
 <script src="js/phase2.js"></script>
-<script type="text/javascript" src="js/jquery.validate.min.js"></script>
 </head>
 
 <body>
@@ -86,9 +75,9 @@ if(!$photo){
     <div class="titlepage"><h2>Ảnh dự thi</h2></div>
     <!-- -->
     <div class="search">
-        	<input type="text" placeholder="Tìm bài dự thi_" name="photo_title" id="search-text" />
-            <input type ="hidden" value="detail.php?p=<?php echo $p;?>" name ="crr_url" id ="curr_url">
-            <div class="icon"><input type="submit" value="" id = "search-btn"/></div>
+        	<input type="text" placeholder="Tìm bài dự thi_" name="photo_title" class="search-text" />
+            <input type ="hidden" value="library.php?" name ="crr_url" class="" ="curr_url">
+            <div class="icon"><input type="submit" value="" class = "search-btn"/></div>
     </div>
     <!-- -->
     <div class="button_play">

@@ -282,16 +282,25 @@ function insert_vote($userid,$ptid,$ip){
 ));
  }
  //phân trang
- function select_paging($tablename,$cpage = 1,$rpp = 8,$oderby = '',$order = '')
+ function select_paging($cpage = 1, $rpp = 8,$title)
 {
 	utf8();
 	$from = (($cpage * $rpp) - $rpp); 
-	$result = DB::query("SELECT * FROM photo LIMIT %d, %d",$from,$rpp);//lấy ra 6 dòng 
+	if($title == ''){
+		$result = DB::query("SELECT * FROM photo LIMIT %d, %d",$from,$rpp);//lấy ra 6 dòng 
+	}
+	else{
+		$result = DB::query("SELECT * FROM photo WHERE `title` like %ss LIMIT %d, %d",$title,$from,$rpp);//lấy ra 6 dòng 	
+	}
 	return $result;
 }
 //danh sách các hình 
 function select_images_subjectid($key){
-$images = DB::query("SELECT * FROM photo  WHERE `subjectid` = $key");
+$images = DB::query("SELECT * FROM photo  WHERE `subjectid` = %d AND `published` = %d",$key,1);
+return $images;
+}
+function search_images_subjectid($key = 1,$s){
+$images = DB::query("SELECT * FROM photo  WHERE `subjectid` = %d AND `published` = %d AND `title` like %ss",$key,1,$s);
 return $images;
 }
 //lấy phần tử phân trang

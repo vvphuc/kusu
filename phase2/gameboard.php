@@ -11,6 +11,36 @@
 <script src="js/jquery.Jcrop.min.js"></script>
 <script src="js/script.js"></script>
 <script src="js/phase2.js"></script>
+<script type="text/javascript">
+$( document ).ready(function() {
+  $(".main-form").validate({
+        "rules" :{
+            "babyname" :{
+                "required" : true   
+            },
+            "yourname" :{
+                "required" : true   
+            },
+            "phone" :{
+                "required" : true,
+                "digits"   : true,
+                "rangelength": [6, 12]
+            },
+            "email" :{
+                "required" : true,
+                "email"    : true
+            },
+            "pid" :{
+                "required" : true,  
+                "number"   : true
+            },
+            "filename" :{
+                "required" : true   
+            },
+        },
+    });
+});
+ </script> 
 <script type="text/javascript" src="js/jquery.validate.min.js"></script>
 </head>
 

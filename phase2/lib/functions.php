@@ -1,13 +1,14 @@
-﻿<?php 
-require('config/config.php');
-require('config/function.php');
+﻿<?php
+require_once('config/config.php');
+require_once('config/function.php');
+require_once 'meekrodb.2.3.class.php';
 
 //Demo function
 function function_name($conn){
-	try{  
+	try{
 		// mysql_query("SET NAMES 'utf8'");
 		// mysql_query("SET CHARACTER SET 'utf8'");
-		// $query = sprintf("SELECT * FROM winner WHERE fbid!='111' and name!='' ORDER BY time DESC LIMIT 0,500");		
+		// $query = sprintf("SELECT * FROM winner WHERE fbid!='111' and name!='' ORDER BY time DESC LIMIT 0,500");
 		// mysql_query("SET NAMES 'utf8'", $conn);
 		// $result = mysql_query($query, $conn);
 		//return $result;
@@ -21,7 +22,6 @@ function utf8(){
 	mysql_query("SET NAMES 'utf8'");
 	mysql_query("SET CHARACTER SET 'utf8'");
 }
-require_once 'meekrodb.2.3.class.php';
 /*DB::$user = 'kusu';
 DB::$password = 'kusu@1qaz@WSX';
 DB::$dbName = 'kusudemodb';
@@ -29,13 +29,13 @@ DB::$dbName = 'kusudemodb';
 DB::$user = DBUSER;
 DB::$password = DBPASS;
 DB::$dbName = DBNAME;
-// tìm kiếm 
+// tìm ki?m
 function send($key){
 utf8();
 if (isset($key)){
 	$KQ = DB::query("SELECT * FROM `user` WHERE  `fbname` = '$key' OR `phone` = '$key' OR `fbemail` = '$key'");
  }else{
-	$KQ = "bạn phải nhập ít nhất 1 giá trị";
+	$KQ = "b?n ph?i nh?p ít nh?t 1 giá tr?";
  }
  return $KQ;
  }
@@ -168,7 +168,7 @@ function update_profile($email,$name,$phone,$idcard,$type)
 /******************************end*****************************/
 
 
-//kiểm tra đăng nhập
+/*//ki?m tra ??ng nh?p
 function login($user,$pass){
     utf8();
     $flast = 0;
@@ -185,7 +185,7 @@ function login($user,$pass){
 }
 function updata_user($id){
     DB::insertUpdate('user', array(
-        'id' => $id, //primary key update dòng dựa trên khóa chính (ptử dầu tiên của mãng)
+        'id' => $id, //primary key update dòng d?a trên khóa chính (pt? d?u tiên c?a mãng)
     ), array(
         'type' => 1,
         'name' => 'no'
@@ -193,13 +193,13 @@ function updata_user($id){
 }
 /*
 $data là 1 mãng
-vừa insert vừa update nếu ko tồn tại id thì insert
-nếu tồn tại id thì update lúc này các biến dc thay đổi tùy chỉnh
+v?a insert v?a update n?u ko t?n t?i id thì insert
+n?u t?n t?i id thì update lúc này các bi?n dc thay ??i tùy ch?nh
 */
-function insert_ubdate_fb($data){
+/*function insert_ubdate_fb($data){
     utf8();
     DB::insertUpdate('user', array(
-        'id' => $data['id'], //primary key update dòng dựa trên khóa chính (ptử dầu tiên của mãng)
+        'id' => $data['id'], //primary key update dòng d?a trên khóa chính (pt? d?u tiên c?a mãng)
         'password' =>$data['password'],
         'fbname' => $data['fbname'],
         'fbemail' => $data['fbemail'],
@@ -232,7 +232,7 @@ function insert_ubdate_fb($data){
     ));
 }
 /*
-   lấy danh sách chủ đề dự thi
+   l?y danh sách ch? ?? d? thi
 */
 function select_subject(){
     utf8();
@@ -315,7 +315,7 @@ function search_detail($title){
     return $result;
 }
 
-//gửi hình dự thi (insert vào DB)
+//g?i hình d? thi (insert vào DB)
 function insert_images($data){
     utf8();
     DB::insert('photo', array(
@@ -337,10 +337,10 @@ function select_paging($cpage = 1, $rpp = 8,$title)
     utf8();
     $from = (($cpage * $rpp) - $rpp);
     if($title == ''){
-        $result = DB::query("SELECT * FROM photo LIMIT %d, %d",$from,$rpp);//lấy ra 6 dòng
+        $result = DB::query("SELECT * FROM photo LIMIT %d, %d",$from,$rpp);//l?y ra 6 dòng
     }
     else{
-        $result = DB::query("SELECT * FROM photo WHERE `title` like %ss LIMIT %d, %d",$title,$from,$rpp);//lấy ra 6 dòng
+        $result = DB::query("SELECT * FROM photo WHERE `title` like %ss LIMIT %d, %d",$title,$from,$rpp);//l?y ra 6 dòng
     }
     return $result;
 }
@@ -353,19 +353,19 @@ function search_images_subjectid($key = 1,$s){
     $images = DB::query("SELECT * FROM photo  WHERE `subjectid` = %d AND `published` = %d AND `title` like %ss",$key,1,$s);
     return $images;
 }
-//lấy phần tử phân trang
+//l?y ph?n t? phân trang
 function get_array($array,$cpage){
     $truoc  = (6*($cpage-1));
     $a = array_slice ($array, $truoc, 6);
     return $a;
 }
-//danh sách tin tức
+//danh sách tin t?c
 function select_tintuc(){
     $total = DB::query("SELECT `id`, `userid` ,`photoid`, `vote` FROM news  ");
     return $total;
 }
 //------------------------------Hao--------------------------------------//
-//thêm câu trả lời vào bảng answer
+//thêm câu tr? l?i vào b?ng answer
 function insert_answer($email,$message,$avatar,$fbid,$fbname,$check)
 {
     DB::$encoding = 'utf8';
@@ -385,7 +385,7 @@ function insert_answer($email,$message,$avatar,$fbid,$fbname,$check)
         _redirect("loginfb.php");
     }
 }
-//lấy câu trả lời
+//l?y câu tr? l?i
 function select_answer()
 {
     DB::$encoding = 'utf8';

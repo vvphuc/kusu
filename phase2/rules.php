@@ -60,7 +60,7 @@ if (!isset($_SESSION)) {
                         <li class="last"></li>
                     </ul>
                 </li>
-                <li class="active"><a href="#"><span></span>Cuộc thi ảnh</a>
+                <li class=""><a href="#"><span></span>Cuộc thi ảnh</a>
                     <ul>
                         <li><a href="#">Gửi ảnh dự thi</a></li>
                         <li><a href="#">Ảnh dự thi</a></li>

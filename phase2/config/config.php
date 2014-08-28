@@ -6,7 +6,7 @@
 	define('HOST','localhost');
 	define('DBUSER','root');
 	define('DBPASS','');
-	define('DBNAME', 'kusudb');
+	define('DBNAME', 'kusudemodb');
 	
 	
 	//Cấu hình trên server.
@@ -19,11 +19,10 @@
 	
 	//URL cua Website
 	define('WEBSITEURL', 'https://ngansua.vn');
-	define('SITEURL','http://ngansua.vn/loginfb.php');
-
-	//Cấu hình application
-	define('APPID', '689829694437730');
-	define('SECRET', 'f62bb4e5e2c82933ed2ec1728702da87');
+    define('SITEURL','http://app.digitalconference.vn/demo/kusu/phase2/loginfb.php');
+    //Cấu hình application
+    define('APPID', '1527278247506006');
+    define('SECRET', '11ca38612cfb089b878ac35f92bc72a2');
     define('APPNAME','ngansua');
 	   	
 ?>

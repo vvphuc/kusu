@@ -66,6 +66,7 @@ function check_user_login($id,$pass)
         $total = DB::query("SELECT count(*) as total FROM user WHERE `id` = %s AND `password` = %s",$id,$pass_in);
         if($total[0]['total'] == 1)
         {
+            update_lastlogin($id);
             return 1;
         }
         else
@@ -78,6 +79,7 @@ function check_user_login($id,$pass)
         $total = DB::query("SELECT count(*) as total FROM user WHERE `id` = %s",$id);
         if($total[0]['total'] == 1)
         {
+            update_lastlogin($id);
             return 1;
         }
         else
@@ -89,10 +91,10 @@ function check_user_login($id,$pass)
 //update lastlogin
 function update_lastlogin($id)
 {
+    date_default_timezone_set("Asia/Bangkok");
     DB::$encoding = 'utf8';
-    $total = DB::query("SELECT `type` FROM user WHERE `id` = %s",$id);
-    $result = DB::query("UPDATE user SET `type` = %i WHERE `id` = %s",$total[0]['name'],$id);
-    return $result;
+    $today = date("Y-m-d H:i:s");
+    $result = DB::query("UPDATE user SET `lastlogin` = %t WHERE `id` = %s",$today,$id);
 }
 //check exist user
 function check_exist_user($id)
@@ -132,7 +134,7 @@ function insert_user_register($id,$pass,$fbname,$fbmail,$check,$ip)
             'id' => $id,
             'password' => $pass,
             'fbname' => $fbname,
-            'fbenail' => $fbmail,
+            'fbemail' => $fbmail,
             'ip' => $ip,
             'type' => $check,
             'registerdate' => $today,
@@ -151,18 +153,16 @@ function get_info_user($id)
 function update_profile($email,$name,$phone,$idcard,$type)
 {
     DB::$encoding = 'utf8';
-    $result = 0;
     if($type == 1)
     {
-        $result = DB::query("UPDATE user SET `name` = %s , `phone` = %s , `idcard` = %s WHERE `id` = %s ",$name,$phone,$idcard,$email);
+        DB::query("UPDATE user SET `name` = %s , `phone` = %s , `idcard` = %s WHERE `id` = %s ",$name,$phone,$idcard,$email);
         _redirect("profile.php");
     }
     else
     {
-        $result = DB::query("UPDATE user SET `name` = %s , `fbname` = %s , `phone` = %s , `idcard` = %s WHERE `id` = %s ",$name,$name,$phone,$idcard,$email);
+        DB::query("UPDATE user SET `name` = %s , `fbname` = %s , `phone` = %s , `idcard` = %s WHERE `id` = %s ",$name,$name,$phone,$idcard,$email);
         _redirect("profile.php");
     }
-    return $result;
 }
 
 /******************************end*****************************/

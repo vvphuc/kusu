@@ -7,9 +7,9 @@ require "lib/functions.php";
 if(isset($_SESSION['uid']) && $_SESSION['uid'] != "" )
 {
     $profile = get_info_user($_SESSION['uid']);
-    $name ="";
+    $name = "";
+    $email = "";
     $type = $profile[0]['type'];
-    $email="";
     if($profile[0]['type']==1)
     {
         $name = $profile[0]['name'];
@@ -99,7 +99,7 @@ if(isset($_SESSION['uid']) && $_SESSION['uid'] != "" )
                         <li class="last"></li>
                     </ul>
                 </li>
-                <li class="active"><a href="#"><span></span>Cuộc thi ảnh</a>
+                <li class=""><a href="#"><span></span>Cuộc thi ảnh</a>
                     <ul>
                         <li><a href="#">Gửi ảnh dự thi</a></li>
                         <li><a href="#">Ảnh dự thi</a></li>
@@ -120,7 +120,7 @@ if(isset($_SESSION['uid']) && $_SESSION['uid'] != "" )
         <h4>1. Thông tin cá nhân</h4>
         <div class="rowf"><span>Tên bạn:</span><input type="text" id="name" value="<?php echo $name;  ?>" /><div class="edit">Chỉnh sửa</div></div>
         <div class="rowf"><span>Điện thoại:</span><input type="text" id="phone" value="<?php echo $phone;  ?>" /><div class="edit">Chỉnh sửa</div></div>
-        <div class="rowf"><span>Email:</span><input type="text" readonly="true" id="email" value="<?php echo $email;  ?>" /><div class="edit">Chỉnh sửa</div></div>
+        <div class="rowf"><span>Email:</span><input type="text" readonly="true"  id="email" value="<?php echo $email; ?>" /><div class="edit">Chỉnh sửa</div></div>
         <div class="rowf"><span>CMND:</span><input type="text" id="idcard" value="<?php echo $idcard;  ?>" /><div class="edit">Chỉnh sửa</div></div>
         <input type="button" value="Lưu" onclick="checkUpdateInfo()" />
     </div>

@@ -3,20 +3,8 @@ if (!isset($_SESSION)) {
     ob_start();
     @session_start();
 }
-
 require_once "lib/functions.php";
-$mes = 'notOk';
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    if ($_POST['captcha'] == $_SESSION['cap_code']) {
-        // Nhập Captcha chính xác, bạn có thể làm điều gì đó ở đây
-        // ex: lưu xuống DB, send email,..
-        $mes = 'Ok';
-    } else {
-        // Nhập Captcha sai
-        $mes = '';
-    }
-}
-if(isset($_SESSION['uid']) && $_SESSION['uid'] !="")
+if(isset($_SESSION['uid']) && $_SESSION['uid'] != "")
 {
     _redirect("index.php");
 }
@@ -31,13 +19,12 @@ if(isset($_SESSION['uid']) && $_SESSION['uid'] !="")
     <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
     <script>
         function checkRegister(){
-            var email = document.getElementById('email').value;
-            var pass = document.getElementById('pass').value;
+            var email = document.getElementById('email1').value;
+            var pass = document.getElementById('pass1').value;
             var cfpass = document.getElementById('cfpass').value;
             var captcha = document.getElementById('captcha').value;
-            var captcha_session = '<?php echo $_SESSION['cap_code']; ?>';
+            //var captcha_session = '<?php //echo$_SESSION['cap_code']; ?>';
             var rs = new RegExp("([A-Za-z0-9_.-]){2,}@([A-Za-z0-9_.-]){2,}.([A-Za-z0-9_.-]){2,}");
-
             if(email=='')
             {
                 alert('Xin vui lòng nhập email !');
@@ -68,12 +55,6 @@ if(isset($_SESSION['uid']) && $_SESSION['uid'] !="")
                 alert('Xin vui lòng nhập mã xác nhận !');
                 return false;
             }
-            // Kiểm tra captcha có đúng hay không rồi hiện thông báo phù hợp
-            /*if(captcha != captcha_session)
-            {
-                alert("Mã xác nhận chưa đúng vui lòng nhập lại!")
-                return false;
-            }*/
             return true;
         }
         function checkLogin(){
@@ -87,7 +68,7 @@ if(isset($_SESSION['uid']) && $_SESSION['uid'] !="")
             }
             else if( pass == '')
             {
-                alert('Xin vui lòng nhập câu trả lời !');
+                alert('Xin vui lòng nhập mật khẩu !');
                 return false;
             }
             else if(email.match(rs) == null)
@@ -106,7 +87,6 @@ if(isset($_SESSION['uid']) && $_SESSION['uid'] !="")
                         if(msg == 1)
                         {
                             window.top.location.href = "index.php";
-
                         }
                         else
                         {
@@ -115,7 +95,10 @@ if(isset($_SESSION['uid']) && $_SESSION['uid'] !="")
                     });
                 //return true;
             }
-
+        }
+        function loginFB()
+        {
+            window.top.location.href = '<?php echo SITEURL; ?>';
         }
     </script>
 </head>
@@ -160,7 +143,7 @@ if(isset($_SESSION['uid']) && $_SESSION['uid'] !="")
                         <li class="last"></li>
                     </ul>
                 </li>
-                <li class="active"><a href="#"><span></span>Cuộc thi ảnh</a>
+                <li class=""><a href="#"><span></span>Cuộc thi ảnh</a>
                     <ul>
                         <li><a href="#">Gửi ảnh dự thi</a></li>
                         <li><a href="#">Ảnh dự thi</a></li>
@@ -185,15 +168,15 @@ if(isset($_SESSION['uid']) && $_SESSION['uid'] !="")
         <input type="password" name="pass" id="pass" />
         <input class="submit" type="button" value="Đăng nhập" onclick="checkLogin()" />
         <center>hoặc</center>
-        <input class="fb" type="button" value="" onclick="" />
+        <input class="fb" type="button" value="" onclick="loginFB()" />
     </form>
     <!-- -->
     <form class="fregister" method="post" action="insertuser.php" name="register" onsubmit="return checkRegister();">
         <h4>Bạn chưa là thành viên của gia đình Kun? Hãy đăng ký ngay hôm nay:</h4>
         <div class="fam"></div>
         <div class="text"></div>
-        <input type="text" name="email" id="email"/>
-        <input type="password" name="pass" id="pass" />
+        <input type="text" name="email" id="email1"/>
+        <input type="password" name="pass" id="pass1" />
         <input type="password" name="cfpass" id="cfpass" />
         <input type="text" name="captcha" id="captcha" maxlength="6" size="6" />
         <div class="capt"><img style="width: 80px;height: 25px;margin-top: -10px;" src="captcha_code.php"/></div>

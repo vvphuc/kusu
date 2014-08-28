@@ -11,21 +11,13 @@ if(isset($_POST['dt']))
 {
     $data = $_POST['dt'];
     $data_arr = explode("|",$data);
-    $email = $data_arr[0];
-    $pass = $data_arr[1];
-    $result = check_user_login($email,$pass);
-    if($result == 1)
-    {
-        $_SESSION['uid'] = $email;
-        $_SESSION['pass'] = $pass;
-        update_lastlogin($email);
-        echo 1;
-    }
-    else
-    {
-        echo 0;
-    }
-
+    $email = $_SESSION['uid'];
+    $name = $data_arr[0];
+    $phone = $data_arr[1];
+    $idcard = $data_arr[2];
+    $type = $data_arr[3];
+    update_profile($email,$name,$phone,$idcard,$type);
+    echo 1;
 }
 else
 {

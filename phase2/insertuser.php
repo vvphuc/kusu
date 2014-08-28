@@ -4,9 +4,9 @@ if (!isset($_SESSION)) {
     @session_start();
 }
 require "lib/functions.php";
-if(isset($_SESSION['uid']) && $_SESSION['uid'] != "")
+if(!isset($_SESSION['uid']) || $_SESSION['uid'] == "")
 {
-    _redirect("index.php");
+    _redirect("login.php");
 }
 if(isset($_POST['submit']) && $_POST['submit'] != "")
 {

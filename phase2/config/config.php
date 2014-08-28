@@ -6,7 +6,7 @@
 	define('HOST','localhost');
 	define('DBUSER','root');
 	define('DBPASS','');
-	define('DBNAME', 'kusudemodb');
+	define('DBNAME', 'kusudb');
 	
 	
 	//Cấu hình trên server.

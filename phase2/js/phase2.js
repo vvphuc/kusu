@@ -9,32 +9,7 @@ $( document ).ready(function() {
 		closeAvaEdit();
 	});
    //validate profile form
-   $(".main-form").validate({
-		"rules" :{
-			"babyname" :{
-				"required" : true	
-			},
-			"yourname" :{
-				"required" : true	
-			},
-			"phone" :{
-				"required" : true,
-				"digits"   : true,
-				"rangelength": [6, 12]
-			},
-			"email" :{
-				"required" : true,
-				"email"	   : true
-			},
-			"pid" :{
-				"required" : true,	
-				"number"   : true
-			},
-			"filename" :{
-				"required" : true	
-			},
-		},
-	});
+ 
 
    $('#vote-photo').click(function(){
    		$('#vote-photo').attr('disabled','disabled');
@@ -53,11 +28,11 @@ $( document ).ready(function() {
 			}
 		  });
 	});
-   $('#search-btn').click(function(){
-   		var searchtext = $('#search-text').val();
-   		var curr_url= $('#curr_url').val();
+   $('.search-btn').click(function(){
+   		var searchtext = $('.search-text').val();
+   		var curr_url= $('.curr_url').val();
    		if(searchtext != ''){
-   			window.location.href = curr_url+"&s="+searchtext;
+   			window.location.href = curr_url+"s="+searchtext;
    		}
    });
 });

@@ -1,3 +1,29 @@
+<?php
+if (!isset($_SESSION)) {
+    ob_start();
+    @session_start();
+}
+require "lib/functions.php";
+if(isset($_SESSION['uid']) && $_SESSION['uid'] != "" )
+{
+    $profile = get_info_user($_SESSION['uid']);
+    $name ="";
+    $type = $profile[0]['type'];
+    $email="";
+    if($profile[0]['type']==1)
+    {
+        $name = $profile[0]['name'];
+        $email = $profile[0]['id'];
+    }
+    else
+    {
+        $name = $profile[0]['fbname'];
+        $email = $profile[0]['fbemail'];
+    }
+    $phone = $profile[0]['phone'];
+    $idcard = $profile[0]['idcard'];
+
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,6 +32,31 @@
     <link rel="stylesheet" type="text/css" href="css/p2_style.css" />
     <link rel="stylesheet" type="text/css" href="css/p2_profile.css" />
     <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript">
+        function checkUpdateInfo(){
+            var name = document.getElementById('name').value;
+            var phone = document.getElementById('phone').value;
+            var idcard = document.getElementById('idcard').value;
+            var type = <?php echo $type ; ?>;
+            var data = name + "|" + phone + "|"+ idcard + "|"+ type;
+            $.ajax({
+                type: "POST",
+                url: "updateinfo.php",
+                data:{dt:data}
+            }).done(function(msg){
+                    if(msg == 1)
+                    {
+                        window.top.location.href = "profile.php";
+
+                    }
+                    else
+                    {
+                        alert("Lỗi sự cố! Vui lòng nhập lại.");
+                    }
+                });
+            //return true;
+        }
+    </script>
 </head>
 
 <body>
@@ -15,18 +66,46 @@
     <div class="wrapper_1000">
         <div id="logo"><img src="images/logo-kunkun.png" title="logo_kunkun" alt="logo_kunkun" /></div>
         <div class="iconKun"></div>
-        <div class="login"><a href="#">Đăng nhập</a><span></span></div>
+        <?php
+        if(!isset($_SESSION['uid']) || $_SESSION['uid'] =="")
+        {
+            ?>
+            <div class="login"><a href="login.php">Đăng nhập</a><span></span></div>
+        <?php
+        }
+        else
+        {
+            if(check_user_login($_SESSION['uid'],$_SESSION['pass']) == 1)
+            {
+                ?>
+                <div class="welcome">
+                    <b><?php echo get_name_user($_SESSION['uid']); ?></b>
+                    <a href="profile.php">Xem hồ sơ ››</a>
+                    <a href="logout.php">Đăng xuất</a>
+                </div>
+            <?php
+            }
+        }
+        ?>
         <!-- ------ -->
         <nav>
             <ul>
-                <li><a href="#"><span></span>Giới thiệu</a></li>
-                <li><a href="#"><span></span>Thể lệ & Giải thưởng</a></li>
-                <li><a href="#"><span></span>Cuộc thi ảnh</a></li>
-                <li class="active"><a href="#"><span></span>Thư viện ảnh</a></li>
-                <li><a href="#"><span></span>Mẹo hay</a>
+                <li class="active"><a href="home.php"><span></span>Giới thiệu</a></li>
+                <li><a href="#"><span></span>Giải pháp cho trẻ ngán sữa</a>
                     <ul>
+                        <li><a href="#">Nỗi lo ngán sữa</a></li>
                         <li><a href="#">Bí kíp của mẹ</a></li>
-                        <li><a href="#">Cẩm nang</a></li>
+                        <li><a href="#">Sữa KUN Cookies</a></li>
+                        <li class="last"></li>
+                    </ul>
+                </li>
+                <li class="active"><a href="#"><span></span>Cuộc thi ảnh</a>
+                    <ul>
+                        <li><a href="#">Gửi ảnh dự thi</a></li>
+                        <li><a href="#">Ảnh dự thi</a></li>
+                        <li><a href="#">Thể lệ & giải thưởng </a></li>
+                        <li><a href="#">Danh sách trúng thưởng</a></li>
+                        <li class="last"></li>
                     </ul>
                 </li>
             </ul>
@@ -39,11 +118,11 @@
     <div id="frame_profile"></div>
     <div id="leftside">
         <h4>1. Thông tin cá nhân</h4>
-        <div class="rowf"><span>Tên bạn:</span><input type="text" value="Nguyễn Văn A" /><div class="edit">Chỉnh sửa</div></div>
-        <div class="rowf"><span>Điện thoại:</span><input type="text" value="0123456789" /><div class="edit">Chỉnh sửa</div></div>
-        <div class="rowf"><span>Email:</span><input type="text" value="abc@gmail.com" /><div class="edit">Chỉnh sửa</div></div>
-        <div class="rowf"><span>CMND:</span><input type="text" value="0243333333" /><div class="edit">Chỉnh sửa</div></div>
-        <input type="submit" value="Lưu" />
+        <div class="rowf"><span>Tên bạn:</span><input type="text" id="name" value="<?php echo $name;  ?>" /><div class="edit">Chỉnh sửa</div></div>
+        <div class="rowf"><span>Điện thoại:</span><input type="text" id="phone" value="<?php echo $phone;  ?>" /><div class="edit">Chỉnh sửa</div></div>
+        <div class="rowf"><span>Email:</span><input type="text" readonly="true" id="email" value="<?php echo $email;  ?>" /><div class="edit">Chỉnh sửa</div></div>
+        <div class="rowf"><span>CMND:</span><input type="text" id="idcard" value="<?php echo $idcard;  ?>" /><div class="edit">Chỉnh sửa</div></div>
+        <input type="button" value="Lưu" onclick="checkUpdateInfo()" />
     </div>
     <!-- -->
     <div id="rightside">
@@ -98,3 +177,10 @@
 <div class="sunflower f11"></div>
 </body>
 </html>
+<?php
+}
+else
+{
+    _redirect("login.php");
+}
+?>

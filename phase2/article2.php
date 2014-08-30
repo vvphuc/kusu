@@ -1,16 +1,15 @@
-<?php
-if (!isset($_SESSION)) {
-    ob_start();
-    @session_start();
-}
-require "lib/functions.php";
-$result = select_answer();
-?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Game Kun - Bí kiếp của mẹ</title>
+    <meta property="fb:app_id" content="689829694437730" />
+    <meta property="og:title" content="Con ngán sữa vấn đề chung của mẹ" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Ngán Sữa"/>
+    <meta property="og:url" content="http://ngansua.vn/uongsuachudong.php"/>
+    <meta property="og:description" content="Các bé ngán sữa? Tại sao? Xin vui lòng truy cập để đón xem các giải pháp được chia sẽ của mẹ." />
+    <meta property="og:image" content="http://ngansua.vn/images/share4.jpg" />
 
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/p2_style.css" />
@@ -59,7 +58,14 @@ $result = select_answer();
     </script>
 
 </head>
-
+<?php
+if (!isset($_SESSION)) {
+    ob_start();
+    @session_start();
+}
+require "lib/functions.php";
+$result = select_answer();
+?>
 <body>
 <h1>Sữa Kun</h1>
 <div id="topbar">
@@ -117,7 +123,18 @@ $result = select_answer();
 <div id="wrap_landingpage" style="margin-top:-120px; z-index:0">
     <div class="tvc" style="top:163px">
         <div class="video"><img src="images/youtube-demo.jpg" /></div>
-        <div class="social">LIKE AND SHARE HERE!!!</div>
+        <div class="social">
+            <div id="fb-root"></div>
+            <script>(function(d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) return;
+                    js = d.createElement(s); js.id = id;
+                    js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&appId=<?php echo APPID; ?>&version=v2.0";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));</script>
+            <div class="fb-like" data-href="http://ngansua.vn/uongsuachudong.php" data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div>
+            <!--<div class="fb-like" data-href="<?php echo WEBSITEURL.$_SERVER['PHP_SELF'];  ?>" data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div>-->
+        </div>
     </div>
     <div class="question_img" style="background-size:80%; margin:30px 0 0 40px"></div>
 

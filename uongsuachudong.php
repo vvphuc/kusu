@@ -3,6 +3,7 @@ if (!isset($_SESSION)) {
     ob_start();
     @session_start();
 }
+require_once ("lib/functions.php");
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -16,6 +17,39 @@ if (!isset($_SESSION)) {
     <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="js/jquery.jcarousel.js"></script>
     <script type="text/javascript" src="js/ga_kun.js"></script>
+    <script src="https://connect.facebook.net/en_US/all.js"></script>
+    <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&appId=<?php echo APPID; ?>&version=v2.0";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+    <script type="text/javascript">
+        FB.init({
+            appId:'<?php echo APPID; ?>',
+            xfbml      : true,
+            version    : 'v2.0'
+        });
+
+        function share()
+        {
+            FB.ui({
+                    method: 'share',
+                    name: 'Facebook Dialogs',
+                    link: '<?php echo WEBSITEURL.$_SERVER['PHP_SELF'];  ?>'
+
+                },
+                function(response) {
+                    if (response && response.post_id) {
+                        alert('Post was published.');
+                    } else {
+                        alert('Post was not published.');
+                    }
+                }
+            );
+        }
+    </script>
     <script type="text/javascript">
 
         function mycarousel_initCallback(carousel)
@@ -69,14 +103,8 @@ if (!isset($_SESSION)) {
         <div class="video"><iframe width="279" height="190" src="//www.youtube.com/embed/NTt_cIoAQfA?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe></div>
         <div class="social">
             <div id="fb-root"></div>
-            <script>(function(d, s, id) {
-                    var js, fjs = d.getElementsByTagName(s)[0];
-                    if (d.getElementById(id)) return;
-                    js = d.createElement(s); js.id = id;
-                    js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&appId=<?php echo APPID; ?>&version=v2.0";
-                    fjs.parentNode.insertBefore(js, fjs);
-                }(document, 'script', 'facebook-jssdk'));</script>
             <div class="fb-like" data-href="<?php echo WEBSITEURL.$_SERVER['PHP_SELF'];  ?>" data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div>
+            <div onclick="share()">Share</div>
         </div>
     </div>
     <?php

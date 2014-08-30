@@ -1,23 +1,20 @@
 ﻿<?php
-require_once('config/config.php');
-require_once('config/function.php');
+require '../config/function.php';
 require_once 'meekrodb.2.3.class.php';
-
+/*define('HOST','localhost');
+define('DBUSER','root');
+define('DBPASS','');
+define('DBNAME', 'kusudemodb');*/
+define('HOST','localhost');
+define('DBUSER','kusu');
+define('DBPASS','kusu@1qaz@WSX');
+define('DBNAME', 'kusudemodb');
+define('WEBSITEURL', 'https://ngansua.vn');
+define('SITEURL','http://app.digitalconference.vn/demo/kusu/phase2/loginfb.php');
+define('APPID', '1527278247506006');
+define('SECRET', '11ca38612cfb089b878ac35f92bc72a2');
+define('APPNAME','ngansua');
 //Demo function
-function function_name($conn){
-	try{
-		// mysql_query("SET NAMES 'utf8'");
-		// mysql_query("SET CHARACTER SET 'utf8'");
-		// $query = sprintf("SELECT * FROM winner WHERE fbid!='111' and name!='' ORDER BY time DESC LIMIT 0,500");
-		// mysql_query("SET NAMES 'utf8'", $conn);
-		// $result = mysql_query($query, $conn);
-		//return $result;
-	}
-	catch(Exception $e){
-		echo "Message " . $e->getMessage();
-		return;
-	}
-}
 function utf8(){
 	mysql_query("SET NAMES 'utf8'");
 	mysql_query("SET CHARACTER SET 'utf8'");
@@ -29,17 +26,6 @@ DB::$dbName = 'kusudemodb';
 DB::$user = DBUSER;
 DB::$password = DBPASS;
 DB::$dbName = DBNAME;
-// tìm ki?m
-function send($key){
-utf8();
-if (isset($key)){
-	$KQ = DB::query("SELECT * FROM `user` WHERE  `fbname` = '$key' OR `phone` = '$key' OR `fbemail` = '$key'");
- }else{
-	$KQ = "b?n ph?i nh?p ít nh?t 1 giá tr?";
- }
- return $KQ;
- }
-
 /******************************Hao*****************************/
 //get name user
 function get_name_user($id)
@@ -167,70 +153,6 @@ function update_profile($email,$name,$phone,$idcard,$type)
 
 /******************************end*****************************/
 
-
-/*//ki?m tra ??ng nh?p
-function login($user,$pass){
-    utf8();
-    $flast = 0;
-    if(isset($user)){
-        if(isset($pass)){
-            $temp = DB::query("SELECT * FROM `user` WHERE  `id` = '$user' AND `password` = '$pass'");
-            $temp = mysql_fetch_assoc($temp);
-            if(!empty($temp)){
-                $flast = 1;
-            }else{$last = 0;}
-        }else{ $flast = 0;}
-    }else{		$flast = 0;}
-    return $flast;
-}
-function updata_user($id){
-    DB::insertUpdate('user', array(
-        'id' => $id, //primary key update dòng d?a trên khóa chính (pt? d?u tiên c?a mãng)
-    ), array(
-        'type' => 1,
-        'name' => 'no'
-    ));
-}
-/*
-$data là 1 mãng
-v?a insert v?a update n?u ko t?n t?i id thì insert
-n?u t?n t?i id thì update lúc này các bi?n dc thay ??i tùy ch?nh
-*/
-/*function insert_ubdate_fb($data){
-    utf8();
-    DB::insertUpdate('user', array(
-        'id' => $data['id'], //primary key update dòng d?a trên khóa chính (pt? d?u tiên c?a mãng)
-        'password' =>$data['password'],
-        'fbname' => $data['fbname'],
-        'fbemail' => $data['fbemail'],
-        'fbphone' => $data['fbphone'],
-        'avatar' => $data['avatar'],
-        'type'=>$data['type'],
-        'name'=>$data['name'],
-        'childrenname' =>$data['childrenname'],
-        'address'=>$data['address'],
-        'email'=>$data['email'],
-        'phone'=>$data['phone'],
-        'idcard'=>$data['idcard'],
-        'lastlogin'=>$data['lastlogin'],
-        'ip'=>$data['ip'],
-        'registerdate'=>$data['registerdate']
-    ), array(
-        'fbname' => $data['fbname'],
-        'fbemail' => $data['fbemail'],
-        'fbphone' => $data['fbphone'],
-        'avatar' => $data['avatar'],
-        'type'=>$data['type'],
-        'name'=>$data['name'],
-        'address'=>$data['address'],
-        'email'=>$data['email'],
-        'phone'=>$data['phone'],
-        'idcard'=>$data['idcard'],
-        'lastlogin'=>$data['lastlogin'],
-        'ip'=>$data['ip'],
-        'registerdate'=>$data['registerdate']
-    ));
-}
 /*
    l?y danh sách ch? ?? d? thi
 */

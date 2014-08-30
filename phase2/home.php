@@ -83,6 +83,7 @@ require_once "lib/functions.php";
     <div class="milkblock"></div>
     <div class="char-home"></div>
     <div class="bubble"></div>
+    <div class="bubble2"></div>
     <div class="sunflower f7"></div>
     <div class="sunflower f8"></div>
     <div class="sunflower f1"></div>

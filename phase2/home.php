@@ -23,7 +23,7 @@ require_once "lib/functions.php";
         <div id="logo"><img src="images/logo-kunkun.png" title="logo_kunkun" alt="logo_kunkun" /></div>
         <div class="iconKun"></div>
         <?php
-        if(!isset($_SESSION['uid']) || $_SESSION['uid'] == "")
+        if((!isset($_SESSION['uid']) || $_SESSION['uid'] == "") && (!isset($_SESSION['pass']) || $_SESSION['pass'] == ""))
         {
             ?>
             <div class="login"><a href="login.php">Đăng nhập</a><span></span></div>
@@ -40,6 +40,10 @@ require_once "lib/functions.php";
                     <a href="logout.php">Đăng xuất</a>
                 </div>
             <?php
+            }
+            else
+            {
+                echo '<div class="login"><a href="login.php">Đăng nhập</a><span></span></div>';
             }
         }
         ?>

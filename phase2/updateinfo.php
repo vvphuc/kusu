@@ -14,9 +14,8 @@ if(isset($_POST['dt']))
     $email = $_SESSION['uid'];
     $name = $data_arr[0];
     $phone = $data_arr[1];
-    $idcard = $data_arr[2];
-    $type = $data_arr[3];
-    update_profile($email,$name,$phone,$idcard,$type);
+    $type = $data_arr[2];
+    update_profile($email,$name,$phone,$type);
     echo 1;
 }
 else

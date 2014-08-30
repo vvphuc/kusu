@@ -1,14 +1,14 @@
 ﻿<?php
 require '../config/function.php';
 require_once 'meekrodb.2.3.class.php';
-/*define('HOST','localhost');
+define('HOST','localhost');
 define('DBUSER','root');
 define('DBPASS','');
-define('DBNAME', 'kusudemodb');*/
-define('HOST','localhost');
+define('DBNAME', 'kusudemodb');
+/*define('HOST','localhost');
 define('DBUSER','kusu');
 define('DBPASS','kusu@1qaz@WSX');
-define('DBNAME', 'kusudemodb');
+define('DBNAME', 'kusudemodb');*/
 define('WEBSITEURL', 'https://ngansua.vn');
 define('SITEURL','http://app.digitalconference.vn/demo/kusu/phase2/loginfb.php');
 define('APPID', '1527278247506006');
@@ -136,17 +136,17 @@ function get_info_user($id)
     return $profile;
 }
 //update profile
-function update_profile($email,$name,$phone,$idcard,$type)
+function update_profile($email,$name,$phone,$type)
 {
     DB::$encoding = 'utf8';
     if($type == 1)
     {
-        DB::query("UPDATE user SET `name` = %s , `phone` = %s , `idcard` = %s WHERE `id` = %s ",$name,$phone,$idcard,$email);
+        DB::query("UPDATE user SET `name` = %s , `phone` = %s WHERE `id` = %s ",$name,$phone,$email);
         _redirect("profile.php");
     }
     else
     {
-        DB::query("UPDATE user SET `name` = %s , `fbname` = %s , `phone` = %s , `idcard` = %s WHERE `id` = %s ",$name,$name,$phone,$idcard,$email);
+        DB::query("UPDATE user SET `name` = %s , `fbname` = %s , `phone` = %s  WHERE `id` = %s ",$name,$name,$phone,$email);
         _redirect("profile.php");
     }
 }

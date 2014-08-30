@@ -36,9 +36,9 @@ if(isset($_SESSION['uid']) && $_SESSION['uid'] != "" )
         function checkUpdateInfo(){
             var name = document.getElementById('name').value;
             var phone = document.getElementById('phone').value;
-            var idcard = document.getElementById('idcard').value;
+           // var idcard = document.getElementById('idcard').value;
             var type = <?php echo $type ; ?>;
-            var data = name + "|" + phone + "|"+ idcard + "|"+ type;
+            var data = name + "|" + phone + "|"+ type;
             $.ajax({
                 type: "POST",
                 url: "updateinfo.php",
@@ -51,7 +51,8 @@ if(isset($_SESSION['uid']) && $_SESSION['uid'] != "" )
                     }
                     else
                     {
-                        alert("Lỗi sự cố! Vui lòng nhập lại.");
+                        //alert("Lỗi sự cố! Vui lòng nhập lại.");
+                        window.top.location.href = "profile.php";
                     }
                 });
             //return true;
@@ -118,10 +119,9 @@ if(isset($_SESSION['uid']) && $_SESSION['uid'] != "" )
     <div id="frame_profile"></div>
     <div id="leftside">
         <h4>1. Thông tin cá nhân</h4>
-        <div class="rowf"><span>Tên bạn:</span><input type="text" id="name" value="<?php echo $name;  ?>" /><div class="edit">Chỉnh sửa</div></div>
-        <div class="rowf"><span>Điện thoại:</span><input type="text" id="phone" value="<?php echo $phone;  ?>" /><div class="edit">Chỉnh sửa</div></div>
-        <div class="rowf"><span>Email:</span><input type="text" readonly="true"  id="email" value="<?php echo $email; ?>" /><div class="edit">Chỉnh sửa</div></div>
-        <div class="rowf"><span>CMND:</span><input type="text" id="idcard" value="<?php echo $idcard;  ?>" /><div class="edit">Chỉnh sửa</div></div>
+        <div class="rowf"><span>Tên bạn:</span><input type="text" id="name" value="<?php echo $name;  ?>" /></div>
+        <div class="rowf"><span>Điện thoại:</span><input type="text" id="phone" value="<?php echo $phone;  ?>" /></div>
+        <div class="rowf"><span>Email:</span><input type="text" readonly="true"  id="email" value="<?php echo $email; ?>" /></div>
         <input type="button" value="Lưu" onclick="checkUpdateInfo()" />
     </div>
     <!-- -->

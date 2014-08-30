@@ -130,7 +130,6 @@ $result =select_news();
         <!-- ------ -->
         <!-- ------ -->
         <div id="content_details">
-            <div class="source">Nguồn bài viết<img src="<?php echo "images/".$result_news[0]['photo']?>" alt="<?php echo $result_news[0]['photo']?>" /></div>
             <div id="scrollbar2">
                 <div class="scrollbar"><div class="track"><div class="thumb"></div></div></div>
                 <div class="viewport">

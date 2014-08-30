@@ -106,33 +106,31 @@ $( document ).ready(function() {
     </div>
 </div>
 <div class="wrapper_1000">
-	<div id="frame_library"></div>
+	<div id="wrap_winlist">
     <div class="titlepage"><h2>Up ảnh dự thi</h2></div>
     <!-- -->
     <form class="main-form"  enctype="multipart/form-data" method="post" action="upload-article.php">
     	<div class="leftside">
-    		<h3>1. Lựa chọn chủ đề:</h3>
+            <h3>1. Chủ đề tuần này</h3>
             <div class="f13">Bạn hãy lựa chọn chủ đề mình yêu thích, sau đó tải hình ảnh tương tự như hình chủ đề bạn đã chọn.</div>
             <br>
-            <div>
-                <a href="#" id="n1" onclick="getID(1)" class="choose"><img src="../images/p2-chude1.png" /></a>
-                <a href="#" id="n2" onclick="getID(2)"><img src="../images/p2-chude2.png" /></a>
-            </div>
+            <div><img src="images/p2-chude.png" alt="Chủ đề" /></div>
             <div class="clear"></div>
-            <div class="fileUpload">
-            	<input class="uploadFile" name="filename" type="text" placeholder = "Chưa chọn file" value="" />
-                <div class="text">Chọn hình</div>
-                <div class="uploadBtn" id="uploadBtn" ></div>
-            </div>
-            <p class="alert">Hình dự thi là JPG/PNG và dung lượng không quá 5MB</p>
         </div>
+        <!-- -->
         <div class="rightside">
         	<h3>2. Thông tin người dự thi</h3>
-            <div class="rowf"><span>Tên bé:</span><input type="text" name="babyname" value="" /></div>
+            <div class="rowf"><span>Tên bé:</span><input type="text" name="babyname" /></div>
             <div class="rowf"><span>Tên bạn:</span><input type="text" name="yourname" value="" /></div>
             <div class="rowf"><span>Điện thoại:</span><input type="text" name="phone" value="" /></div>
             <div class="rowf"><span>Email:</span><input type="text" name="email" value="" /></div>
-            <div class="rowf"><span>CMND:</span><input type="text" name="pid" value="" /></div>
+                <div class="rowf"><span>Up ảnh:</span></div>
+            <div class="fileUpload">
+                <input class="uploadFile" type="text" value="Chưa chọn file" />
+                <div class="text">Chọn hình</div>
+                <input id="uploadBtn" type="file" class="upload" />
+            </div>
+            <p class="alert">Hình dự thi là JPG/PNG và dung lượng không quá 5MB</p>
              <input type="submit" > 
         </div>
         <div id="FrameImg">

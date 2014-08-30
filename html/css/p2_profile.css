@@ -11,8 +11,8 @@
 #leftside .rowf input[type=text] { border:3px solid #fff; border-radius:13px; padding:9px 100px 9px 10px; width:190px; float:right; margin:5px 0}
 #leftside .rowf:hover input[type=text], #leftside .rowf input[type=text]:focus { border-color: #008a7e}
 .rowf input[type=text]:focus > .edit { display:none}
-#leftside input[type=submit] { width:188px; background:url(../images/p2-bg-button.png) no-repeat; margin:10px 0 0 100px; font-family:'UTMAndrogyne', Arial, Helvetica, sans-serif; color:#fff; font-size:18px; padding:3px 0 16px 0; transition:all .3s}
-#leftside input[type=submit]:hover { cursor:pointer; background:url(../images/p2-bg-button_hover.png) no-repeat; transition:all .3s}
+#leftside input[type=button] { width:188px; background:url(../images/p2-bg-button.png) no-repeat; margin:10px 0 0 100px; font-family:'UTMAndrogyne', Arial, Helvetica, sans-serif; color:#fff; font-size:18px; padding:3px 0 16px 0; transition:all .3s}
+#leftside input[type=button]:hover { cursor:pointer; background:url(../images/p2-bg-button_hover.png) no-repeat; transition:all .3s}
 
 /* RIGHT SIDE */
 #rightside { position:absolute; top:39px; left:535px; width:460px; height:385px}

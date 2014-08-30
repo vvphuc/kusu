@@ -61,7 +61,7 @@ $result =select_news();
         <nav>
             <ul>
                 <li><a href="home.php"><span></span>Giới thiệu</a></li>
-                <li class="active"><a href="#"><span></span>Giải pháp cho trẻ ngán sữa</a>
+                <li class="active"><a href="article2.php"><span></span>Giải pháp cho trẻ ngán sữa</a>
                     <ul>
                         <li><a href="article1.php?id=1">Nỗi lo ngán sữa</a></li>
                         <li><a href="article2.php">Bí kíp của mẹ</a></li>
@@ -69,7 +69,7 @@ $result =select_news();
                         <li class="last"></li>
                     </ul>
                 </li>
-                <li class=""><a href="#"><span></span>Cuộc thi ảnh</a>
+                <li class=""><a href="aboutgame.php"><span></span>Cuộc thi ảnh</a>
                     <ul>
                         <li><a href="gameboard.php">Gửi ảnh dự thi</a></li>
                         <li><a href="library.php">Ảnh dự thi</a></li>

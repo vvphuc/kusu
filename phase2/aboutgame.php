@@ -82,7 +82,7 @@ require "lib/functions.php";
         <nav>
             <ul>
                 <li><a href="home.php"><span></span>Giới thiệu</a></li>
-                <li><a href="#"><span></span>Giải pháp cho trẻ ngán sữa</a>
+                <li><a href="article2.php"><span></span>Giải pháp cho trẻ ngán sữa</a>
                     <ul>
                         <li><a href="article1.php?id=1">Nỗi lo ngán sữa</a></li>
                         <li><a href="article2.php">Bí kíp của mẹ</a></li>
@@ -90,7 +90,7 @@ require "lib/functions.php";
                         <li class="last"></li>
                     </ul>
                 </li>
-                <li class="active"><a href="#"><span></span>Cuộc thi ảnh</a>
+                <li class="active"><a href="aboutgame.php"><span></span>Cuộc thi ảnh</a>
                     <ul>
                         <li><a href="gameboard.php">Gửi ảnh dự thi</a></li>
                         <li><a href="library.php">Ảnh dự thi</a></li>
@@ -108,7 +108,7 @@ require "lib/functions.php";
     <div id="wrap_winlist">
         <!-- -->
         <a href="#" class="back-link"></a>
-        <a href="#" class="upload"></a>
+        <a href="gameboard.php" class="upload"></a>
         <a href="#" class="playgame"></a>
         <div class="titlepage"><h2>Cuộc thi ảnh</h2></div>
         <div class="imgtitle"></div>

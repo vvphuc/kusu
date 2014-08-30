@@ -83,7 +83,7 @@ $( document ).ready(function() {
         <nav>
             <ul>
                 <li><a href="home.php"><span></span>Giới thiệu</a></li>
-                <li class=""><a href="#"><span></span>Giải pháp cho trẻ ngán sữa</a>
+                <li class=""><a href="article2.php"><span></span>Giải pháp cho trẻ ngán sữa</a>
                     <ul>
                         <li><a href="article1.php?id=1">Nỗi lo ngán sữa</a></li>
                         <li><a href="article2.php">Bí kíp của mẹ</a></li>
@@ -91,7 +91,7 @@ $( document ).ready(function() {
                         <li class="last"></li>
                     </ul>
                 </li>
-                <li class="active"><a href="#"><span></span>Cuộc thi ảnh</a>
+                <li class="active"><a href="aboutgame.php"><span></span>Cuộc thi ảnh</a>
                     <ul>
                         <li><a href="gameboard.php">Gửi ảnh dự thi</a></li>
                         <li><a href="library.php">Ảnh dự thi</a></li>
@@ -107,6 +107,9 @@ $( document ).ready(function() {
 </div>
 <div class="wrapper_1000">
 	<div id="wrap_winlist">
+    <a href="#" class="back-link"></a>
+    <a href="gameboard.php" class="upload"></a>
+    <a href="#" class="playgame"></a>
     <div class="titlepage"><h2>Up ảnh dự thi</h2></div>
     <!-- -->
     <form class="main-form"  enctype="multipart/form-data" method="post" action="upload-article.php">

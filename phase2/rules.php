@@ -22,7 +22,7 @@ require "lib/functions.php";
 
 </head>
 
-<body>
+<body style="margin-top:-18px">
 <div id="topbar">
     <div class="repeatmenu"></div>
     <div class="wrapper_1000">

@@ -49,3 +49,5 @@ form h3 {font-family:'UTMAndrogyne',Arial, Helvetica, sans-serif; font-size:18px
 .rightside .rowf label span{ width: 0; height: 0; border-left: 6px solid transparent;border-right: 6px solid transparent;border-bottom: 6px solid #f02222; margin:-42px 0 0; position:absolute}
 
 
+.edit-avatar-region .close-btn { top:7px!important}
+.edit-avatar-region { border-radius:10px;box-shadow: 5px 5px 5px #333; left:50%; margin:0 auto auto -385px!important}

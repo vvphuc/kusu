@@ -24,7 +24,7 @@ require "lib/functions.php";
 
 </head>
 
-<body>
+<body style="margin-top:-18px">
 <h1>Sữa Kun</h1>
 <div id="topbar">
     <div class="repeatmenu"></div>

@@ -45,7 +45,7 @@ $im = select_paging($page,8,$s);
 <script src="js/phase2.js"></script>
 </head>
 
-<body>
+<body style="margin-top:-18px">
 <h1>Sữa Kun</h1>
 <div id="topbar">
     <div class="repeatmenu"></div>

@@ -66,7 +66,7 @@ if (!isset($_SESSION)) {
 require "lib/functions.php";
 $result = select_answer();
 ?>
-<body>
+<body style="margin-top:-18px">
 <h1>Sữa Kun</h1>
 <div id="topbar">
     <div class="repeatmenu"></div>

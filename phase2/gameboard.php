@@ -201,7 +201,6 @@ $( document ).ready(function() {
                         <input type="hidden" id="h" name="h" height="300" />
                     </div>
                     <input id="btn-upload" type="submit" value="" />
-                    <div id="btn-resert"><a href="index.php"><img src="images/guiloichuc-reset.png" /></a></div>
                 </div>
             </form>
         </div>

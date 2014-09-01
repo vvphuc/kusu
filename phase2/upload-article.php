@@ -4,12 +4,18 @@ if (!isset($_SESSION)) {
 	@session_start();
 }
 require 'lib/functions.php';
-$_SESSION['uid'] = 'tambh@youngworld.vn';
 if(!isset($_SESSION['uid']) || $_SESSION['uid'] ==""){
 	_redirect('home.php');
 	return false;
 }
 $userid = $_SESSION['uid'];
+if(!isset($_SESSION['subject']) || $_SESSION['subject'] == ''){
+$subject = select_subject();
+    if($subject){
+         $_SESSION['subject'] = $subject['0'];
+    }
+}
+$sub = $_SESSION['subject'];
 if($userid)
 {
 	if(!isset($_POST['frameImg']) || $_POST['frameImg'] ==''){
@@ -70,7 +76,7 @@ if($userid)
 	imagepng($final_img, $merged_image);
 	$ip = getIP();
 	$data = array(
-					'subjectid'=>1,
+					'subjectid'=>$sub['id'],
 					'userid'=>$userid,
 					'title'=>$babyname,
 					'thumbnail'=> $merged_image,

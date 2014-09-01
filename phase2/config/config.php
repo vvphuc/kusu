@@ -1,16 +1,12 @@
 ﻿<?php
-error_reporting(E_ALL); ini_set('display_errors', 1);
-define('HOST','localhost');
-define('DBUSER','root');
-define('DBPASS','');
+define('HOST', 'localhost');
+define('DBUSER', 'kusu');
+define('DBPASS', 'kusu@1qaz@WSX');
 define('DBNAME', 'kusudemodb');
-/*define('HOST','localhost');
-define('DBUSER','kusu');
-define('DBPASS','kusu@1qaz@WSX');
-define('DBNAME', 'kusudemodb');*/
-define('WEBSITEURL', 'https://ngansua.vn');
-define('SITEURL','http://app.digitalconference.vn/demo/kusu/phase2/loginfb.php');
-define('APPID', '1527278247506006');
-define('SECRET', '11ca38612cfb089b878ac35f92bc72a2');
-define('APPNAME','ngansua');
-?>
+//URL cua Website
+define('WEBSITEURL', 'http://app.digitalconference.vn/demo/kusu/phase2/');
+define('SITEURL', 'http://ngansua.vn/loginfb.php');
+//Cấu hình application
+define('APPID', '689829694437730');
+define('SECRET', 'f62bb4e5e2c82933ed2ec1728702da87');
+define('APPNAME','ngansua');	   	

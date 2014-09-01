@@ -105,14 +105,14 @@ $user_info= get_info_user($photo['0']['userid']);
         <!-- -->
         <div id="col-3">
             <div id="fb-root"></div>
-                <script>(function(d, s, id) {
-                  var js, fjs = d.getElementsByTagName(s)[0];
-                  if (d.getElementById(id)) return;
-                  js = d.createElement(s); js.id = id;
-                  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=".APPID."&version=v2.0";
-                  fjs.parentNode.insertBefore(js, fjs);
-                }(document, 'script', 'facebook-jssdk'));</script>
-            <div class="fb-comments" data-href="<?php echo curPageURL(); ?>" data-numposts="5" data-colorscheme="light"></div>    
+            <script>(function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=<?php echo APPID;?>&version=v2.0";
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+             <div class="fb-comments" data-href="<?php echo WEBSITEURL;?>/detail.php?p=<?php echo $p;?>" data-width="320" data-num-posts="2"></div>    
         </div>
         <!-- -->
     </div>
@@ -121,7 +121,7 @@ $user_info= get_info_user($photo['0']['userid']);
     <!-- -->
     <div class="search">
         	<input type="text" placeholder="Tìm bài dự thi_" name="photo_title" class="search-text" />
-            <input type ="hidden" value="library.php?" name ="crr_url" class="" ="curr_url">
+            <input type ="hidden" value="library.php?" name ="crr_url" class="curr_url">
             <div class="icon"><input type="submit" value="" class = "search-btn"/></div>
     </div>
     <!-- -->

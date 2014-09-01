@@ -250,7 +250,7 @@ function insert_profile($id, $name, $phone, $email){
     return $result;
 }
 //phân trang
-function select_paging($cpage = 1, $rpp = 8,$title)
+function select_paging($cpage = 1, $rpp = 8,$title = '')
 {
     utf8();
     $from = (($cpage * $rpp) - $rpp);
@@ -262,9 +262,33 @@ function select_paging($cpage = 1, $rpp = 8,$title)
     }
     return $result;
 }
+function select_profile_paging($cpage = 1, $rpp = 8,$userid = '')
+{
+    utf8();
+    $from = (($cpage * $rpp) - $rpp);
+    if($userid == ''){
+        $result = DB::query("SELECT * FROM photo LIMIT %d, %d",$from,$rpp);//l?y ra 6 dòng
+    }
+    else{
+        $result = DB::query("SELECT * FROM photo WHERE `userid` like %ss LIMIT %d, %d",$userid,$from,$rpp);//l?y ra 6 dòng
+    }
+    return $result;
+}
 //danh sách các hình
-function select_images_subjectid($key){
-    $images = DB::query("SELECT * FROM photo  WHERE `subjectid` = %d AND `published` = %d",$key,1);
+function select_images_subjectid($key ='', $userid=''){
+    if($userid == ''){
+        $images = DB::query("SELECT * FROM photo  WHERE `subjectid` = %d AND `published` = %d",$key,1);
+    }
+    else{
+        $images = DB::query("SELECT * FROM photo  WHERE `subjectid` = %d AND `published` = %d AND `userid` = %s",$key,1, $userid);   
+    }
+    return $images;
+}
+/**
+ * Select top 5 of week
+ */
+function select_images_top($key =''){
+    $images = DB::query("SELECT * FROM photo  WHERE `subjectid` = %d AND `published` = %d ORDER BY `vote` DESC LIMIT 5 ",$key,1);
     return $images;
 }
 function search_images_subjectid($key = 1,$s){

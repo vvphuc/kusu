@@ -13,7 +13,7 @@ $subject = select_subject();
 }
 $sub = $_SESSION['subject'];
 require 'lib/PHPPagination/Pagination.class.php';
-$image = select_images_subjectid(1);
+$image = select_images_subjectid($sub['id']);
 $s ='';
 if(isset($_GET['s']) && $_GET['s'] != ''){
     $s = $_GET['s'];

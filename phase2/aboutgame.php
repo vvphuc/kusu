@@ -4,6 +4,14 @@ if (!isset($_SESSION)) {
     @session_start();
 }
 require "lib/functions.php";
+if(!isset($_SESSION['subject']) || $_SESSION['subject'] == ''){
+$subject = select_subject();
+    if($subject){
+         $_SESSION['subject'] = $subject['0'];
+    }
+}
+$sub = $_SESSION['subject'];
+$img = select_images_top($sub['id']);
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -139,11 +147,20 @@ require "lib/functions.php";
         <!-- -->
         <div class="topimg">
             <ul id="mycarousel" class="jcarousel-skin-tango">
+            <?php 
+            if($img){
+                foreach ($img as $key => $value) {
+            ?>
+            <li><a href="<?php echo WEBSITEURL;?>detail?p=<?php echo $value['id'] ?>"><img src="<?php echo $value['thumbnail'] ?>" width="117" height="98" alt="bài dự thi" /><span><?php echo $value['title']; ?></span></a></li>
+            <?php        
+                }
+
+            }?>
+            <!--     <li><a href="#"><img src="images/post/baby.png" width="117" height="98" alt="bài dự thi" /><span>Tên của bé</span></a></li>
                 <li><a href="#"><img src="images/post/baby.png" width="117" height="98" alt="bài dự thi" /><span>Tên của bé</span></a></li>
                 <li><a href="#"><img src="images/post/baby.png" width="117" height="98" alt="bài dự thi" /><span>Tên của bé</span></a></li>
                 <li><a href="#"><img src="images/post/baby.png" width="117" height="98" alt="bài dự thi" /><span>Tên của bé</span></a></li>
-                <li><a href="#"><img src="images/post/baby.png" width="117" height="98" alt="bài dự thi" /><span>Tên của bé</span></a></li>
-                <li><a href="#"><img src="images/post/baby.png" width="117" height="98" alt="bài dự thi" /><span>Tên của bé</span></a></li>
+                <li><a href="#"><img src="images/post/baby.png" width="117" height="98" alt="bài dự thi" /><span>Tên của bé</span></a></li> -->
             </ul>
         </div>
         <a class="otherpic" href="#">Hình ảnh khác >></a>

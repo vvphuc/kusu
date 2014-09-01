@@ -4,6 +4,14 @@ if (!isset($_SESSION)) {
     @session_start();
 }
 require "lib/functions.php";
+require 'lib/PHPPagination/Pagination.class.php';
+if(!isset($_SESSION['subject']) || $_SESSION['subject'] == ''){
+$subject = select_subject();
+    if($subject){
+         $_SESSION['subject'] = $subject['0'];
+    }
+}
+$sub = $_SESSION['subject'];
 if(isset($_SESSION['uid']) && $_SESSION['uid'] != "" )
 {
     $profile = get_info_user($_SESSION['uid']);
@@ -22,6 +30,16 @@ if(isset($_SESSION['uid']) && $_SESSION['uid'] != "" )
     }
     $phone = $profile[0]['phone'];
     $idcard = $profile[0]['idcard'];
+    $image = select_images_subjectid($sub['id'], $_SESSION['uid']);
+    $total = count($image);
+    // determine page (based on <_GET>)
+    $page = isset($_GET['page']) ? ((int) $_GET['page']) : 1;
+    // instantiate; set current page; set number of records
+    $pagination = (new Pagination());
+    $pagination->setCurrent($page);
+    $pagination->setRPP(2);
+    $pagination->setTotal($total);
+    $im = select_profile_paging($page,2, $_SESSION['uid'] );
 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -128,34 +146,32 @@ if(isset($_SESSION['uid']) && $_SESSION['uid'] != "" )
     <div id="rightside">
         <h4>2. Hình ảnh dự thi của bạn:</h4>
         <!-- -->
-        <div class="item">
-            <div class="thumb">
-                <a href="#"><img src="images/thumbs-library.jpg" alt="thumb" /></a>
-                <div class="circle"><span>999</span></div>
-                <div class="info"><span>Tên của bé</span>01/08/2014</div>
-                <div class="like">999</div>
-            </div>
-        </div>
-        <!-- -->
-        <div class="item">
-            <div class="thumb">
-                <a href="#"><img src="images/thumbs-library.jpg" alt="thumb" /></a>
-                <div class="circle"><span>999</span></div>
-                <div class="info"><span>Tên của bé</span>01/08/2014</div>
-                <div class="like">999</div>
-            </div>
-        </div>
+        <?php 
+        if($im){
+            foreach ($im as $key => $value) {
+        ?>    
+                <div class="item">
+                    <div class="thumb">
+                        <a href="<?php echo 'detail.php?p='.$value['id']; ?> "><img src="<?php echo $value['thumbnail'];?>" alt="thumb" /></a>
+                        <div class="circle"><span><?php echo $value['view']; ?></span></div>
+                        <div class="info"><span><?php echo $value['title'] ?></span><?php echo date('d/m/Y',strtotime($value['submitdate']));?></div>
+                        <div class="like"><?php echo $value['vote']; ?></div>
+                    </div>
+                </div>
+        <?php
+            }
+        }
+        else{
+            echo 'không có kết quả nào!';
+        }
+        ?>
         <!-- -->
         <div class="paging">
-            <a href="#" class="prev"></a>
-            <a href="#">1</a>
-            <a href="#">2</a>
-            <a href="#" class="pageon">3</a>
-            <a href="#">4</a>
-            <span>...</span>
-            <a href="#">6</a>
-            <a href="#">7</a>
-            <a href="#" class="next"></a>
+            <?php
+             // grab rendered/parsed pagination markup
+            $markup = $pagination->parse();
+            echo $markup;
+            ?>
         </div>
         <!-- -->
         <div class="score">

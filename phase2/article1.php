@@ -87,7 +87,7 @@ $result =select_news();
 <div id="wrap_detailspage">
     <div id="details">
         <!-- ------ -->
-        <a href="#" class="back-link"></a>
+        <a href="javascript: history.go(-1)" class="back-link"></a>
         <!-- ------ -->
         <ul id="menu" class="noilongansua active">
             <li><b></b><a href="article1.php?id=1">Nỗi lo ngán sữa</a><span></span></li>

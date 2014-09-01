@@ -115,7 +115,7 @@ $img = select_images_top($sub['id']);
 <div class="wrapper_1000">
     <div id="wrap_winlist">
         <!-- -->
-        <a href="#" class="back-link"></a>
+        <a href="javascript: history.go(-1)" class="back-link"></a>
         <a href="gameboard.php" class="upload"></a>
         <a href="#" class="playgame"></a>
         <div class="titlepage"><h2>Cuộc thi ảnh</h2></div>

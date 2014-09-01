@@ -82,7 +82,7 @@ require "lib/functions.php";
 <div id="wrap_detailspage">
     <div id="details">
         <!-- ------ -->
-        <a href="#" class="back-link"></a>
+        <a href="javascript: history.go(-1)" class="back-link"></a>
         <!-- ------ -->
         <ul id="menu" class="noilongansua">
             <li><b></b><a href="#">Nỗi lo ngán sữa</a><span></span></li>

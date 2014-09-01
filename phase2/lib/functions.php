@@ -1,28 +1,12 @@
 ﻿<?php
-require '../config/function.php';
+require_once 'config/config.php';
+require_once 'config/function.php';
 require_once 'meekrodb.2.3.class.php';
-define('HOST','localhost');
-define('DBUSER','root');
-define('DBPASS','');
-define('DBNAME', 'kusudemodb');
-/*define('HOST','localhost');
-define('DBUSER','kusu');
-define('DBPASS','kusu@1qaz@WSX');
-define('DBNAME', 'kusudemodb');*/
-define('WEBSITEURL', 'https://ngansua.vn');
-define('SITEURL','http://app.digitalconference.vn/demo/kusu/phase2/loginfb.php');
-define('APPID', '1527278247506006');
-define('SECRET', '11ca38612cfb089b878ac35f92bc72a2');
-define('APPNAME','ngansua');
 //Demo function
 function utf8(){
 	mysql_query("SET NAMES 'utf8'");
 	mysql_query("SET CHARACTER SET 'utf8'");
 }
-/*DB::$user = 'kusu';
-DB::$password = 'kusu@1qaz@WSX';
-DB::$dbName = 'kusudemodb';
-*/
 DB::$user = DBUSER;
 DB::$password = DBPASS;
 DB::$dbName = DBNAME;
@@ -158,7 +142,7 @@ function update_profile($email,$name,$phone,$type)
 */
 function select_subject(){
     utf8();
-    $data = DB::query("SELECT * FROM `subject`");
+    $data = DB::query("SELECT * FROM `subject` where status = 1");
     return $data;
 }
 /**
@@ -252,6 +236,18 @@ function insert_images($data){
         'published'=>$data['published'],
         'ip'=>$data['ip'],
     ));
+}
+/**
+ * update  user profile for first time
+ */
+function insert_profile($id, $name, $phone, $email){
+    utf8();
+    $result = DB::update('user', array(
+          'name' => $name,
+          'phone'=> $phone,
+          'email'=> $email
+          ), "id=%s", $id);
+    return $result;
 }
 //phân trang
 function select_paging($cpage = 1, $rpp = 8,$title)

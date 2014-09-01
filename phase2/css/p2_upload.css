@@ -32,7 +32,7 @@ form h3 {font-family:'UTMAndrogyne',Arial, Helvetica, sans-serif; font-size:18px
 .fileUpload .text { float:right; margin:-15px 12px 0 0; color:#fff; font-weight:700; transition:all .3s}
 .fileUpload:hover .text { color:#fce22b; transition:all .3s}
 .leftside div.clear { height:20px}
-.uploadFile { background:none; padding:12px 0 0 15px; width:250px}
+.uploadFile { background:none; padding:12px 0 0 15px; width:185px}
 .fileUpload input.upload {position: absolute;top: 0;right: 0;margin: 0;padding: 8px 0;font-size: 20px;cursor: pointer;opacity: 0;filter: alpha(opacity=0);
 }
 .rightside { width:420px; float:left}

@@ -5,6 +5,13 @@ if (!isset($_SESSION)) {
     @session_start();
 }
 require_once "lib/functions.php";
+if(!isset($_SESSION['subject']) || $_SESSION['subject'] == ''){
+$subject = select_subject();
+    if($subject){
+         $_SESSION['subject'] = $subject['0'];
+    }
+}
+$sub = $_SESSION['subject'];
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>

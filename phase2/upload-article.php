@@ -4,44 +4,44 @@ if (!isset($_SESSION)) {
 	@session_start();
 }
 require 'lib/functions.php';
-$userid = '123';
+$_SESSION['uid'] = 'tambh@youngworld.vn';
+if(!isset($_SESSION['uid']) || $_SESSION['uid'] ==""){
+	_redirect('home.php');
+	return false;
+}
+$userid = $_SESSION['uid'];
 if($userid)
 {
 	if(!isset($_POST['frameImg']) || $_POST['frameImg'] ==''){
 		_redirect('home.php');
-		exit();
+		return false;
 	}	
 	$frame = $_POST['frameImg'];
 	if(!isset($_POST['ImgCurr']) || $_POST['ImgCurr'] ==''){
 		_redirect('home.php');
-		exit();
+		return false;
 	}	
 	$Img = $_POST['ImgCurr'];
 	if(!isset($_POST['babyname']) || $_POST['babyname'] ==''){
 		_redirect('home.php');
-		exit();
+		return false;
 	}	
 	$babyname = $_POST['babyname'];
 	if(!isset($_POST['yourname']) || $_POST['yourname'] ==''){
 		_redirect('home.php');
-		exit();
+		return false;
 	}	
 	$yourname = $_POST['yourname'];
 	if(!isset($_POST['phone']) || $_POST['phone'] ==''){
 		_redirect('home.php');
-		exit();
+		return false;
 	}	
 	$phone = $_POST['phone'];
 	if(!isset($_POST['email']) || $_POST['email'] ==''){
 		_redirect('home.php');
-		exit();
+		return false;
 	}	
 	$email = $_POST['email'];
-	if(!isset($_POST['pid']) || $_POST['pid'] ==''){
-		_redirect('home.php');
-		exit();
-	}	
-	$pid = $_POST['pid'];
 	$published = "yes";
 	$width = 447;
 	$height = 379;
@@ -82,6 +82,7 @@ if($userid)
 					'ip'=>$ip
 					);
 	insert_images($data);
+	insert_profile($userid, $yourname, $phone, $email);
 	_redirect('library.php?page=1');
 }
 else{

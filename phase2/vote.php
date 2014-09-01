@@ -1,5 +1,13 @@
 <?php 
 require 'lib/functions.php';
+if (!isset($_SESSION)) {
+    ob_start();
+	@session_start();
+}
+if(!isset($_SESSION['uid']) || $_SESSION['uid'] ==""){
+	echo -2;
+	return ;
+}
 if(!isset($_POST['ptid']) ||  $_POST['ptid'] == ''){
 	echo -1;
 	return;

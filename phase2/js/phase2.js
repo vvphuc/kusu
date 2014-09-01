@@ -1,7 +1,6 @@
 $( document ).ready(function() {
    // call show popup funtion
    $( ".uploadBtn" ).click(function() {
-   		$( ".uploadBtn" ).attr("disabled", "disabled");
 		showCropAvatar();
 	});
    // call close popup function
@@ -24,7 +23,15 @@ $( document ).ready(function() {
 				$('.like').html('<b>'+h+'</b>');
 			}
 			else{
-				alert("Bạn đã bình chọn rồi");
+				if(msg == -2){
+					alert("Vui lòng đăng nhập để tham gia bình chọn");	
+				}
+				else if(msg == -1){
+					alert("Đã gặp sự cố khi bình chọn. Vui lòng thử lại sau");
+				}
+				else{
+					alert("Bạn đã bình chọn rồi");
+				}
 			}
 		  });
 	});

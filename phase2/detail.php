@@ -15,6 +15,8 @@ if(!$photo){
     _redirect('library.php');
     return;
 }
+$user_info = '';
+$user_info= get_info_user($photo['0']['userid']);
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -50,6 +52,7 @@ if(!$photo){
                     <b><?php echo get_name_user($_SESSION['uid']); ?></b>
                     <a href="profile.php">Xem hồ sơ ››</a>
                     <a href="logout.php">Đăng xuất</a>
+                    <input type="hidden" name="log_in" class="log_in" value="$_SESSION['uid']">
                 </div>
             <?php
             }
@@ -85,8 +88,8 @@ if(!$photo){
 	<div id="frame_details">
     	<!-- -->
     	<div id="col-1">
-        	<div class="face"><img src="images/p2-char-home.png" /></div>
-            <div class="name">Tên facebook</div>
+        	<div class="face"><img src="<?php if($user_info['0']['avatar'] != ''){ echo trim($user_info['0']['avatar']);}else{echo 'images/p2-char-home.png';} ?>" /></div>
+            <div class="name"><?php echo $user_info['0']['name']; ?></div>
             <div class="view"><b><?php echo $photo['0']['view'];?></b></div>
             <div class="like"><b><?php echo $photo['0']['vote'];?></b><input type="hidden" value="<?php echo $photo['0']['vote'];?>" name ="vote-count" id="vote-count"></div>
             <div class="date">Ngày đăng<Br /><?php echo date('d/m/Y',strtotime($photo['0']['submitdate']));?></div>
@@ -100,7 +103,17 @@ if(!$photo){
             <div class="name"><?php echo $photo['0']['title'];?></div>
         </div>
         <!-- -->
-        <div id="col-3">[API FACEBOOK COMMENT HERE]</div>
+        <div id="col-3">
+            <div id="fb-root"></div>
+                <script>(function(d, s, id) {
+                  var js, fjs = d.getElementsByTagName(s)[0];
+                  if (d.getElementById(id)) return;
+                  js = d.createElement(s); js.id = id;
+                  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=".APPID."&version=v2.0";
+                  fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));</script>
+            <div class="fb-comments" data-href="<?php echo curPageURL(); ?>" data-numposts="5" data-colorscheme="light"></div>    
+        </div>
         <!-- -->
     </div>
     <!-- -->

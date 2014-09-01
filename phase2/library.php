@@ -5,6 +5,13 @@ if (!isset($_SESSION)) {
     @session_start();
 }
 require 'lib/functions.php';
+if(!isset($_SESSION['subject']) || $_SESSION['subject'] == ''){
+$subject = select_subject();
+    if($subject){
+         $_SESSION['subject'] = $subject['0'];
+    }
+}
+$sub = $_SESSION['subject'];
 require 'lib/PHPPagination/Pagination.class.php';
 $image = select_images_subjectid(1);
 $s ='';
@@ -101,10 +108,10 @@ $im = select_paging($page,8,$s);
         <div class="icon"><input type="submit" value="" class="search-btn" /></div>
     </div>
     <div class="tableft">
-        <div class="tab current">
+        <div class="tab <?php if($sub['id'] == 1) echo 'current'; ?>">
             <a href="#">Chủ đề 1</a>
         </div>
-        <div class="tab">
+        <div class="tab <?php if($sub['id'] == 2) echo 'current'; ?>">
             <a href="#">Chủ đề 2</a>
         </div>
     </div>

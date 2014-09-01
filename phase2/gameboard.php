@@ -5,6 +5,13 @@ if (!isset($_SESSION)) {
     @session_start();
 }
 require "lib/functions.php";
+if(!isset($_SESSION['subject']) || $_SESSION['subject'] == ''){
+$subject = select_subject();
+    if($subject){
+         $_SESSION['subject'] = $subject['0'];
+    }
+}
+$sub = $_SESSION['subject'];
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -37,15 +44,18 @@ $( document ).ready(function() {
                 "required" : true,
                 "email"    : true
             },
-            "pid" :{
-                "required" : true,  
-                "number"   : true
-            },
-            "filename" :{
-                "required" : true   
-            },
         },
     });
+  $("#main-submit").click(function(){
+    if($('#log_in').val() == ''){
+        alert("vui lòng đăng nhập!")
+        return false;
+    }
+    if($(".uploadFile").val() ==''){
+        alert("vui lòng chọn hình tham gia!")
+        return false;   
+    } 
+  });
 });
  </script> 
 <script type="text/javascript" src="js/jquery.validate.min.js"></script>
@@ -59,6 +69,10 @@ $( document ).ready(function() {
     	<div id="logo"><img src="../images/logo-kunkun.png" title="logo_kunkun" alt="logo_kunkun" /></div>
         <div class="iconKun"></div>
         <?php
+        $name = "";
+        $email = "";
+        $phone = '';
+        $userid = '';
         if(!isset($_SESSION['uid']) || $_SESSION['uid'] =="")
         {
             ?>
@@ -69,13 +83,28 @@ $( document ).ready(function() {
         {
             if(check_user_login($_SESSION['uid'],$_SESSION['pass']) == 1)
             {
+                $userid = $_SESSION['uid'];
                 ?>
                 <div class="welcome">
                     <b><?php echo get_name_user($_SESSION['uid']); ?></b>
                     <a href="profile.php">Xem hồ sơ ››</a>
                     <a href="logout.php">Đăng xuất</a>
+                    <input type="hidden" name="log_in" id="log_in" value="<?php echo  $userid; ?>">
                 </div>
             <?php
+            $profile = get_info_user($_SESSION['uid']);
+            $type = $profile[0]['type'];
+            if($profile[0]['type']==1)
+            {
+                $name = $profile[0]['name'];
+                $email = $profile[0]['id'];
+            }
+            else
+            {
+                $name = $profile[0]['fbname'];
+                $email = $profile[0]['fbemail'];
+            }
+            $phone = $profile[0]['phone'];
             }
         }
         ?>
@@ -117,24 +146,24 @@ $( document ).ready(function() {
             <h3>1. Chủ đề tuần này</h3>
             <div class="f13">Bạn hãy lựa chọn chủ đề mình yêu thích, sau đó tải hình ảnh tương tự như hình chủ đề bạn đã chọn.</div>
             <br>
-            <div><img src="images/p2-chude.png" alt="Chủ đề" /></div>
+            <div><img src="<?php echo $sub['photo']; ?>" alt="Chủ đề" /></div>
             <div class="clear"></div>
         </div>
         <!-- -->
         <div class="rightside">
         	<h3>2. Thông tin người dự thi</h3>
             <div class="rowf"><span>Tên bé:</span><input type="text" name="babyname" /></div>
-            <div class="rowf"><span>Tên bạn:</span><input type="text" name="yourname" value="" /></div>
-            <div class="rowf"><span>Điện thoại:</span><input type="text" name="phone" value="" /></div>
-            <div class="rowf"><span>Email:</span><input type="text" name="email" value="" /></div>
+            <div class="rowf"><span>Tên bạn:</span><input type="text" name="yourname" value="<?php echo $name; ?>" /></div>
+            <div class="rowf"><span>Điện thoại:</span><input type="text" name="phone" value="<?php echo $phone; ?>" /></div>
+            <div class="rowf"><span>Email:</span><input type="text" name="email" value="<?php echo $email;?>" /></div>
                 <div class="rowf"><span>Up ảnh:</span></div>
             <div class="fileUpload">
-                <input class="uploadFile" type="text" value="Chưa chọn file" />
+                <input class="uploadFile" type="text" name="uploadFile" placeholder = "Chưa chọn file" />
                 <div class="text">Chọn hình</div>
-                <input id="uploadBtn" type="file" class="upload" />
+                <input id="uploadBtn" type="button" class="upload uploadBtn" />
             </div>
             <p class="alert">Hình dự thi là JPG/PNG và dung lượng không quá 5MB</p>
-             <input type="submit" > 
+             <input type="submit" id="main-submit" > 
         </div>
         <div id="FrameImg">
            <img src="images/frame1.png" />

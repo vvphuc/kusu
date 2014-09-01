@@ -56,13 +56,15 @@ function showCropAvatar(){
 	$('#y2').val('');
 	$('#w').val('');
 	$('#h').val('');
+	$('body').css('overflow-y', 'auto');
 }
 /**
  * close popup funtion
  */
 function closeAvaEdit(){
 	$("#edit-mask").hide();
-	$('.edit-avatar-region').hide();   
+	$('.edit-avatar-region').hide();
+	$('body').css('overflow-y', 'hidden')   
 }
 /**
  * show picture at step 2

@@ -214,6 +214,7 @@ $result = select_answer();
             ?>
             <!-- -->
         </ul>
+        <a href="answer.php" class="binhluantiep">Bình luận tiếp</a>
         <div class="count_cm">Tổng số bình luận: <?php echo count($result); ?></div>
     </div>
 </div>

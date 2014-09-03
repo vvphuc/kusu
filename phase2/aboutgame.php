@@ -122,24 +122,24 @@ $img = select_images_top($sub['id']);
         <div class="imgtitle"></div>
         <!-- -->
         <div class="info">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+            Trăm lo không bằng lo con ngán sữa. Hãy cùng <span style="font-weight:700; color:#009386">KUN Cookies</span> giúp bé hết ngán sữa và mỗi giờ uống sữa là 1 giờ vui nhộn với bé và mẹ. Mẹ hãy chụp khoảnh khắc <span style="font-weight:700; color:#009386">“UỐNG KUN MÊ TÍT”</span> của bé theo phong cách BTC đưa ra mỗi tuần để nhận được những phần quà thật hấp dẫn nhé.
         </div>
         <!-- -->
         <div class="button_play">
-            <a>
+            <a href="gameboard.php">
                 <span></span>
                 <h4>THAM GIA NGAY!</h4>
             </a>
         </div>
         <!-- -->
         <ul id="menu" class="anhduthi">
-            <li><a href="#">Ảnh dự thi</a><span></span></li>
+            <li><a href="library.php">Ảnh dự thi</a><span></span></li>
         </ul>
         <ul id="menu" class="thele">
-            <li><a href="#">Thể lệ & Giải thưởng</a><span></span></li>
+            <li><a href="rules.php">Thể lệ & Giải thưởng</a><span></span></li>
         </ul>
         <ul id="menu" class="danhsach">
-            <li><a href="#">Danh sách trúng thưởng</a><span></span></li>
+            <li><a href="winlist.php">Danh sách trúng thưởng</a><span></span></li>
         </ul>
         <ul id="menu" class="top5">
             <li><a>Top 5 trong tuần</a><span></span></li>
@@ -163,7 +163,7 @@ $img = select_images_top($sub['id']);
                 <li><a href="#"><img src="images/post/baby.png" width="117" height="98" alt="bài dự thi" /><span>Tên của bé</span></a></li> -->
             </ul>
         </div>
-        <a class="otherpic" href="#">Hình ảnh khác >></a>
+        <a class="otherpic" href="library.php">Hình ảnh khác >></a>
         <!-- -->
     </div>
 </div>

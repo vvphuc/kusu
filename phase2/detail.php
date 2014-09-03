@@ -29,7 +29,7 @@ $user_info= get_info_user($photo['0']['userid']);
 <script src="js/phase2.js"></script>
 </head>
 
-<body>
+<body style="margin-top:-18px">
 <h1>Sữa Kun</h1>
 <div id="topbar">
 	<div class="repeatmenu"></div>

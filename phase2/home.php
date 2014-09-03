@@ -20,6 +20,31 @@ $sub = $_SESSION['subject'];
 
 <link rel="stylesheet" type="text/css" href="css/p2_style.css" />
 <link rel="stylesheet" type="text/css" href="css/p2_homepage.css" />
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script>
+$( document ).ready(function() {
+	$(".bubble").css('display','none');
+	$(".green").mouseover(function(){
+		$(".bubble").fadeIn();
+	});
+	$(".green").mouseout(function(){
+		$(".bubble").fadeOut();
+	});
+	$(".violet").mouseover(function(){
+		$(".bubble2").fadeOut(function(){
+			$(".bubble2").delay(100).css('background-position','-1120px -570px');	
+		});
+		$(".bubble2").delay(100).fadeIn();
+		
+	});
+	$(".violet").mouseout(function(){
+		$(".bubble2").fadeOut(function(){
+			$(".bubble2").delay(100).css('background-position','-790px -570px');
+		});
+		$(".bubble2").delay(100).fadeIn();	
+	});
+});
+</script>
 </head>
 
 <body style="margin-top:-18px">

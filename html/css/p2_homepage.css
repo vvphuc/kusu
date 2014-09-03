@@ -91,20 +91,22 @@
 /* Bubble Fade */
 @-webkit-keyframes fade {
 	0% { transform: scale(1)}
-	75% { transform: scale(1)}
-	80% { transform: scale(1.1)}
-	85% { transform: scale(0.9)}
-	90% { transform: scale(1.1)}
-	95% { transform: scale(0.9)}
+	10% { transform: scale(1.2)}
+	15% { transform: scale(1)}
+	20% { transform: scale(1.2)}
+	25% { transform: scale(1)}
+	30% { transform: scale(1.2)}
+	35% { transform: scale(1)}
 	100% { transform: scale(1)}
 }
 @-moz-keyframes fade {
 	0% { transform: scale(1)}
-	75% { transform: scale(1)}
-	80% { transform: scale(1.1)}
-	85% { transform: scale(0.9)}
-	90% { transform: scale(1.1)}
-	95% { transform: scale(0.9)}
+	10% { transform: scale(1.2)}
+	15% { transform: scale(1)}
+	20% { transform: scale(1.2)}
+	25% { transform: scale(1)}
+	30% { transform: scale(1.2)}
+	35% { transform: scale(1)}
 	100% { transform: scale(1)}
 }
 .bubble { width:192px; height:169px; background: url(../images/p2-background-elements.png) -560px -570px no-repeat; position:absolute; top: 110px;right: 160px;

@@ -2,11 +2,7 @@
 require_once 'config/config.php';
 require_once 'config/function.php';
 require_once 'meekrodb.2.3.class.php';
-//Demo function
-function utf8(){
-	mysql_query("SET NAMES 'utf8'");
-	mysql_query("SET CHARACTER SET 'utf8'");
-}
+
 DB::$user = DBUSER;
 DB::$password = DBPASS;
 DB::$dbName = DBNAME;
@@ -141,7 +137,7 @@ function update_profile($email,$name,$phone,$type)
    l?y danh sách ch? ?? d? thi
 */
 function select_subject(){
-    utf8();
+    DB::$encoding = 'utf8';
     $data = DB::query("SELECT * FROM `subject` where status = 1");
     return $data;
 }
@@ -149,7 +145,7 @@ function select_subject(){
  * Select photo by id
  */
 function select_photo_by_id($id){
-    utf8();
+    DB::$encoding = 'utf8';
     $photo = DB::query("SELECT * FROM photo WHERE id = %d",$id);
     return $photo;
 }
@@ -157,7 +153,7 @@ function select_photo_by_id($id){
  * Select photo by title
  */
 function select_photo_by_title($title){
-    utf8();
+    DB::$encoding = 'utf8';
     $pt = DB::query("SELECT * FROM photo WHERE title = %ss",$title);
     return $pt;
 }
@@ -165,7 +161,7 @@ function select_photo_by_title($title){
  * check have_photo
  */
 function have_photo($ptid){
-    utf8();
+    DB::$encoding = 'utf8';
     $photo = DB::query("SELECT count(*) FROM photo WHERE id = %d",$ptid);
     return $photo;
 }
@@ -173,7 +169,7 @@ function have_photo($ptid){
  * check have vote
  */
 function have_vote($userid,$ptid){
-    utf8();
+    DB::$encoding = 'utf8';
     $voted = DB::query("SELECT * FROM vote WHERE userid = %d AND photoid = %d",$userid,$ptid);
     $count =count($voted);
     if($count == 0){
@@ -187,7 +183,7 @@ function have_vote($userid,$ptid){
  * check have vote
  */
 function insert_vote($userid,$ptid,$ip){
-    utf8();
+    DB::$encoding = 'utf8';
     $result = DB::insert('vote', array(
         'userid'=>$userid,
         'photoid'=>$ptid,
@@ -200,7 +196,7 @@ function insert_vote($userid,$ptid,$ip){
  * update vote for photo
  */
 function update_vote($id, $subjectid){
-    utf8();
+    DB::$encoding = 'utf8';
     $result = DB::query("UPDATE photo SET vote = vote+1 WHERE id = %d AND subjectid = %d",$id,$subjectid);
     return $result;
 }
@@ -208,7 +204,7 @@ function update_vote($id, $subjectid){
  * update view for photo
  */
 function update_view($id, $subjectid){
-    utf8();
+    DB::$encoding = 'utf8';
     $result = DB::query("UPDATE photo SET view = view+1 WHERE id = %d AND subjectid = %d",$id,$subjectid);
     return $result;
 }
@@ -216,14 +212,14 @@ function update_view($id, $subjectid){
  * search detail
  */
 function search_detail($title){
-    utf8();
+    DB::$encoding = 'utf8';
     $result = DB::query("SELECT * FROM photo WHERE title = %s",$title);
     return $result;
 }
 
 //g?i hình d? thi (insert vào DB)
 function insert_images($data){
-    utf8();
+    DB::$encoding = 'utf8';
     DB::insert('photo', array(
         'subjectid'=>$data['subjectid'],
         'userid'=>$data['userid'],
@@ -241,7 +237,7 @@ function insert_images($data){
  * update  user profile for first time
  */
 function insert_profile($id, $name, $phone, $email){
-    utf8();
+    DB::$encoding = 'utf8';
     $result = DB::update('user', array(
           'name' => $name,
           'phone'=> $phone,
@@ -252,7 +248,7 @@ function insert_profile($id, $name, $phone, $email){
 //phân trang
 function select_paging($cpage = 1, $rpp = 8,$title = '')
 {
-    utf8();
+   DB::$encoding = 'utf8';
     $from = (($cpage * $rpp) - $rpp);
     if($title == ''){
         $result = DB::query("SELECT * FROM photo LIMIT %d, %d",$from,$rpp);//l?y ra 6 dòng
@@ -264,7 +260,7 @@ function select_paging($cpage = 1, $rpp = 8,$title = '')
 }
 function select_profile_paging($cpage = 1, $rpp = 8,$userid = '')
 {
-    utf8();
+    DB::$encoding = 'utf8';
     $from = (($cpage * $rpp) - $rpp);
     if($userid == ''){
         $result = DB::query("SELECT * FROM photo LIMIT %d, %d",$from,$rpp);//l?y ra 6 dòng
@@ -288,10 +284,12 @@ function select_images_subjectid($key ='', $userid=''){
  * Select top 5 of week
  */
 function select_images_top($key =''){
+	DB::$encoding = 'utf8';
     $images = DB::query("SELECT * FROM photo  WHERE `subjectid` = %d AND `published` = %d ORDER BY `vote` DESC LIMIT 5 ",$key,1);
     return $images;
 }
 function search_images_subjectid($key = 1,$s){
+	DB::$encoding = 'utf8';
     $images = DB::query("SELECT * FROM photo  WHERE `subjectid` = %d AND `published` = %d AND `title` like %ss",$key,1,$s);
     return $images;
 }
@@ -303,6 +301,7 @@ function get_array($array,$cpage){
 }
 //danh sách tin t?c
 function select_tintuc(){
+	DB::$encoding = 'utf8';
     $total = DB::query("SELECT `id`, `userid` ,`photoid`, `vote` FROM news  ");
     return $total;
 }

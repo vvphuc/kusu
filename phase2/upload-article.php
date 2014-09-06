@@ -18,11 +18,11 @@ $subject = select_subject();
 $sub = $_SESSION['subject'];
 if($userid)
 {
-	if(!isset($_POST['frameImg']) || $_POST['frameImg'] ==''){
+	/*if(!isset($_POST['frameImg']) || $_POST['frameImg'] ==''){
 		_redirect('home.php');
 		return false;
 	}	
-	$frame = $_POST['frameImg'];
+	$frame = $_POST['frameImg'];*/
 	if(!isset($_POST['ImgCurr']) || $_POST['ImgCurr'] ==''){
 		_redirect('home.php');
 		return false;
@@ -49,7 +49,11 @@ if($userid)
 	}	
 	$email = $_POST['email'];
 	$published = "yes";
-	$width = 447;
+
+	/*
+	 *merge image function
+	 */
+	/*$width = 447;
 	$height = 379;
 	$final_img = imagecreatetruecolor ($width, $height);
 	
@@ -73,14 +77,14 @@ if($userid)
 	
 	imagecopy($final_img,$top_image, 0, 0, 0, 0, $width, $height);
 	
-	imagepng($final_img, $merged_image);
+	imagepng($final_img, $merged_image);*/
 	$ip = getIP();
 	$data = array(
 					'subjectid'=>$sub['id'],
 					'userid'=>$userid,
 					'title'=>$babyname,
-					'thumbnail'=> $merged_image,
-					'photo'=>$merged_image,
+					'thumbnail'=> $Img,
+					'photo'=>$Img,
 					'description'=>'',
 					'view'=>0,
 					'vote'=>0,

@@ -6,6 +6,31 @@
 
 <link rel="stylesheet" type="text/css" href="css/p2_style.css" />
 <link rel="stylesheet" type="text/css" href="css/p2_homepage.css" />
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script>
+$( document ).ready(function() {
+	$(".bubble").css('display','none');
+	$(".green").mouseover(function(){
+		$(".bubble").fadeIn();
+	});
+	$(".green").mouseout(function(){
+		$(".bubble").fadeOut();
+	});
+	$(".violet").mouseover(function(){
+		$(".bubble2").fadeOut(function(){
+			$(".bubble2").delay(100).css('background-position','-1120px -570px');	
+		});
+		$(".bubble2").delay(100).fadeIn();
+		
+	});
+	$(".violet").mouseout(function(){
+		$(".bubble2").fadeOut(function(){
+			$(".bubble2").delay(100).css('background-position','-790px -570px');
+		});
+		$(".bubble2").delay(100).fadeIn();	
+	});
+});
+</script>
 </head>
 
 <body>
@@ -13,7 +38,7 @@
 <div id="topbar">
 	<div class="repeatmenu"></div>
     <div class="wrapper_1000">
-    	<div id="logo"><img src="images/logo-kunkun.png" title="logo_kunkun" alt="logo_kunkun" /></div>
+    	<div id="logo"><a href="home.php"><img src="images/logo-kunkun.png" title="logo_kunkun" alt="logo_kunkun" /></a></div>
         <div class="iconKun"><span></span></div>
         <!-- <div class="login"><a href="#">Đăng nhập</a><span></span></div> -->
         <div class="welcome">

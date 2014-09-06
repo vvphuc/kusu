@@ -15,7 +15,7 @@
 #tvc .video { width:443px; height:263px; margin:109px 0 0 38px; background-color:#060}
 .grass { width:510px; height:190px; background: url(../images/p2-background-elements.png) 0 -690px no-repeat; position:absolute; top:380px; left:10px}
 .char-home { width:301px; height:415px; position:absolute; top:73px; left:473px; background:url(../images/p2-background-elements.png) -790px -140px no-repeat}
-.milkblock { position:absolute; top:165px; right:-10px; width:315px; height:257px; background:url(../images/p2-background-elements.png) -790px -780px no-repeat}
+.milkblock { position:absolute; top:165px; right:-10px; width:312px; height:263px; background:url(../images/p2-background-elements.png) -790px -780px no-repeat}
 .board { width:170px; height:230px; position:absolute; top:-30px; right:20px}
 .board .stick { width:34px; height:342px; background:url(../images/p2-background-elements.png) -1120px -140px no-repeat; right:75px; position:absolute}
 .board .green a { display:block; width:155px; height:95px; background:url(../images/p2-background-elements.png) -560px -310px no-repeat; position:absolute; right:-7px; top:15px;
@@ -91,20 +91,22 @@
 /* Bubble Fade */
 @-webkit-keyframes fade {
 	0% { transform: scale(1)}
-	75% { transform: scale(1)}
-	80% { transform: scale(1.1)}
-	85% { transform: scale(0.9)}
-	90% { transform: scale(1.1)}
-	95% { transform: scale(0.9)}
+	10% { transform: scale(1.2)}
+	15% { transform: scale(1)}
+	20% { transform: scale(1.2)}
+	25% { transform: scale(1)}
+	30% { transform: scale(1.2)}
+	35% { transform: scale(1)}
 	100% { transform: scale(1)}
 }
 @-moz-keyframes fade {
 	0% { transform: scale(1)}
-	75% { transform: scale(1)}
-	80% { transform: scale(1.1)}
-	85% { transform: scale(0.9)}
-	90% { transform: scale(1.1)}
-	95% { transform: scale(0.9)}
+	10% { transform: scale(1.2)}
+	15% { transform: scale(1)}
+	20% { transform: scale(1.2)}
+	25% { transform: scale(1)}
+	30% { transform: scale(1.2)}
+	35% { transform: scale(1)}
 	100% { transform: scale(1)}
 }
 .bubble { width:192px; height:169px; background: url(../images/p2-background-elements.png) -560px -570px no-repeat; position:absolute; top: 110px;right: 160px;

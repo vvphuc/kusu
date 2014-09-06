@@ -102,12 +102,12 @@ if(isset($_SESSION['uid']) && $_SESSION['uid'] != "")
     </script>
 </head>
 
-<body>
+<body style="margin-top:-18px">
 <h1>Sữa Kun</h1>
 <div id="topbar">
     <div class="repeatmenu"></div>
     <div class="wrapper_1000">
-        <div id="logo"><img src="images/logo-kunkun.png" title="logo_kunkun" alt="logo_kunkun" /></div>
+        <div id="logo"><a href="home.php"><img src="images/logo-kunkun.png" title="logo_kunkun" alt="logo_kunkun" /></a></div>
         <div class="iconKun"></div>
         <?php
         if(!isset($_SESSION['uid']))

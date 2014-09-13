@@ -16,7 +16,7 @@
 function uploadImageFile() { // Note: GD library is required for this function
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        $iWidth = 447;
+        $iWidth = 448;
 		$iHeight = 379; // desired image result dimensions
         $iJpgQuality = 90;
 

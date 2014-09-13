@@ -56,6 +56,12 @@ $( document ).ready(function() {
         return false;   
     } 
   });
+  $("#ifram1").click(function(){
+    $("#fr1").attr('checked','checked');
+  });
+  $("#ifram2").click(function(){
+    $("#fr2").attr('checked', 'checked');
+  });
 });
  </script> 
 <script type="text/javascript" src="js/jquery.validate.min.js"></script>
@@ -163,7 +169,12 @@ $( document ).ready(function() {
                 <input id="uploadBtn" type="button" class="upload uploadBtn" />
             </div>
             <p class="alert">Hình dự thi là JPG/PNG và dung lượng không quá 5MB</p>
-             <input type="submit" id="main-submit" > 
+            <div class="rowf">
+                <span>Chọn khung:</span>
+                <span style="text-align:center;"><a href="javascript:void(0)" id="ifram1"><img src="images/frame2.png" width="60px" style="margin-bottom:3px;"></a><br/><input type="radio" value="images/frame2.png" name="frame_image" id="fr1"></span>
+                <span style="text-align:center;"><a href="javascript:void(0)" id="ifram2"><img src="images/frame3.png" width="60px" style="margin-bottom:3px;"></a><br/><input type="radio" value="images/frame3.png" name="frame_image" id="fr2"></span>
+                <input type="submit" id="main-submit" > 
+            </div>
         </div>
         <div id="FrameImg">
            <img src="images/frame1.png" />

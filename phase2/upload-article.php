@@ -18,11 +18,20 @@ $subject = select_subject();
 $sub = $_SESSION['subject'];
 if($userid)
 {
-	/*if(!isset($_POST['frameImg']) || $_POST['frameImg'] ==''){
+	if(!isset($_POST['frame_image'])){
+		$frame_image='';
+	}
+	else{
+		$frame_image = $_POST['frame_image'];
+	}
+	if(!isset($_POST['frameImg']) || $_POST['frameImg'] ==''){
 		_redirect('home.php');
 		return false;
 	}	
-	$frame = $_POST['frameImg'];*/
+	$frame = $_POST['frameImg'];
+	if($frame_image != ''){
+		$frame = $frame_image;
+	}
 	if(!isset($_POST['ImgCurr']) || $_POST['ImgCurr'] ==''){
 		_redirect('home.php');
 		return false;
@@ -53,7 +62,7 @@ if($userid)
 	/*
 	 *merge image function
 	 */
-	/*$width = 447;
+	$width = 448;
 	$height = 379;
 	$final_img = imagecreatetruecolor ($width, $height);
 	
@@ -64,7 +73,7 @@ if($userid)
 	$top_image = imagecreatefrompng("".$frame."");
 	$merged_image = "photo/".time().".png";
 	
-	imagecopymerge($final_img,$base_image,  18, 14, 0, 0, $width, $height,100);
+	imagecopymerge($final_img,$base_image,  0, 0, 0, 0, $width, $height,100);
 	
 	imagefill($final_img,0,0,0x7fff0000);
 	imagesavealpha($final_img, true);
@@ -77,14 +86,14 @@ if($userid)
 	
 	imagecopy($final_img,$top_image, 0, 0, 0, 0, $width, $height);
 	
-	imagepng($final_img, $merged_image);*/
+	imagepng($final_img, $merged_image);
 	$ip = getIP();
 	$data = array(
 					'subjectid'=>$sub['id'],
 					'userid'=>$userid,
 					'title'=>$babyname,
-					'thumbnail'=> $Img,
-					'photo'=>$Img,
+					'thumbnail'=> $merged_image,
+					'photo'=>$merged_image,
 					'description'=>'',
 					'view'=>0,
 					'vote'=>0,

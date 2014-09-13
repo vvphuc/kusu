@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Game Kun - P2 - Home</title>
+
+<link rel="stylesheet" type="text/css" href="css/p2_style_2.css" />
+<link rel="stylesheet" type="text/css" href="css/p2_homepage_2.css" />
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script>
+$( document ).ready(function() {
+	$(".bubble").css('display','none');
+	$(".green").mouseover(function(){
+		$(".bubble").fadeIn();
+	});
+	$(".green").mouseout(function(){
+		$(".bubble").fadeOut();
+	});
+	$(".violet").mouseover(function(){
+		$(".bubble2").fadeOut(function(){
+			$(".bubble2").delay(100).css('background-position','-1120px -570px');	
+		});
+		$(".bubble2").delay(100).fadeIn();
+		
+	});
+	$(".violet").mouseout(function(){
+		$(".bubble2").fadeOut(function(){
+			$(".bubble2").delay(100).css('background-position','-790px -570px');
+		});
+		$(".bubble2").delay(100).fadeIn();	
+	});
+});
+</script>
+</head>
+
+<body>
+<h1>Sữa Kun</h1>
+<div id="topbar">
+	<div class="repeatmenu"></div>
+    <div class="wrapper_1000">
+    	<div id="logo"><a href="home.php"><img src="images/logo-kunkun-2.png" title="logo_kunkun" alt="logo_kunkun" /></a></div>
+		<a class="facebook"></a>
+        <div class="login"><a href="#">Đăng nhập</a><span></span></div>
+        
+        <!-- SAU KHI ĐĂNG NHẬP THÀNH CÔNG -->
+        <!-- <div class="welcome">
+            <b>Nguyễn Văn Anh</b>
+            <a href="#">Xem hồ sơ ››</a>
+            <a href="#">Đăng xuất ››</a>
+        </div> -->
+        <!-- ------ -->
+        <nav>
+            <ul>
+                <li class="round"><span></span></li>
+                <li><a class="active" href="#">Trang chủ</a></li>
+                <li class="round"><span></span></li>
+                <li><a href="#">Giải pháp cho trẻ ngán sữa</a></li>
+                <li class="round"><span></span></li>
+                <li><a href="#">Cuộc thi ảnh</a></li>
+                <li class="round"><span></span></li>
+            </ul>
+        </nav>
+        <!-- ------ -->
+    </div>
+</div>
+<div class="wrapper_1000">
+	<div class="leftnews"><a href="#">Tìm hiểu thêm ›</a></div>
+    <div class="rightnews">
+    	<div class="first">
+        	<a class="img"><img src="images/post/home-post1.jpg" alt="post1" width="210" height="210" /></a>
+            <div class="trans">
+            	<span>Xem 13</span>
+                <var>Like 13</var>
+            </div>
+        </div>
+        <div class="small">
+        	<a class="img"><img src="images/post/home-post1.jpg" alt="post1" width="99" height="99" /></a>
+            <div class="trans">
+            	<span>13</span>
+                <var>13</var>
+            </div>
+        </div>
+        <div class="small">
+        	<a class="img"><img src="images/post/home-post1.jpg" alt="post1" width="99" height="99" /></a>
+            <div class="trans">
+            	<span>13</span>
+                <var>13</var>
+            </div>
+        </div>
+        <div class="small">
+        	<a class="img"><img src="images/post/home-post1.jpg" alt="post1" width="99" height="99" /></a>
+            <div class="trans">
+            	<span>13</span>
+                <var>13</var>
+            </div>
+        </div>
+        <div class="small">
+        	<a class="img"><img src="images/post/home-post1.jpg" alt="post1" width="99" height="99" /></a>
+            <div class="trans">
+            	<span>13</span>
+                <var>13</var>
+            </div>
+        </div>
+        <div class="chude"><img src="images/p2-home-chude1.png" alt="chủ đề" /></div>
+        <a class="more" href="#">Tìm hiểu thêm ›</a>
+    </div>
+    <div class="award"><img src="images/p2-home-giaithuongtext.png" alt="giải thưởng" /></div>
+    <div class="sunflower f7"></div>
+    <div class="sunflower f8"></div>
+    <div class="sunflower f1"></div>
+    <div class="sunflower f2"></div>
+    <div class="sunflower f3"></div>
+    <div class="sunflower f4"></div>
+    <div class="sunflower f5"></div>
+    <div class="sunflower f6"></div>
+</div>
+</body>
+</html>

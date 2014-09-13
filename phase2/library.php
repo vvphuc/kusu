@@ -39,7 +39,7 @@ $im = select_paging($page,8,$s);
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Game Kun - P2 - Library</title>
 
-<link rel="stylesheet" type="text/css" href="css/p2_style.css" />
+<link rel="stylesheet" type="text/css" href="css/p2_style_2.css" />
 <link rel="stylesheet" type="text/css" href="css/p2_library.css" />
 <script src="js/jquery.min.js"></script>
 <script src="js/phase2.js"></script>
@@ -48,16 +48,21 @@ $im = select_paging($page,8,$s);
 <body style="margin-top:-18px">
 <h1>Sữa Kun</h1>
 <div id="topbar">
-    <div class="repeatmenu"></div>
+	<div class="repeatmenu"></div>
     <div class="wrapper_1000">
-        <div id="logo"><a href="home.php"><img src="images/logo-kunkun.png" title="logo_kunkun" alt="logo_kunkun" /></a></div>
-        <div class="iconKun"></div>
-        <?php
-        if(!isset($_SESSION['uid']) || $_SESSION['uid'] =="")
+    	<div id="logo"><a href="home.php"><img src="images/logo-kunkun-2.png" title="logo_kunkun" alt="logo_kunkun" /></a></div>
+		<a class="facebook"></a>
+
+
+
+		<?php
+        if((!isset($_SESSION['uid']) || $_SESSION['uid'] == "") && (!isset($_SESSION['pass']) || $_SESSION['pass'] == ""))
         {
             ?>
             <div class="login"><a href="login.php">Đăng nhập</a><span></span></div>
-        <?php
+        <!-- SAU KHI ĐĂNG NHẬP THÀNH CÔNG -->
+
+		<?php
         }
         else
         {
@@ -65,39 +70,52 @@ $im = select_paging($page,8,$s);
             {
                 ?>
                 <div class="welcome">
+
+
                     <b><?php echo get_name_user($_SESSION['uid']); ?></b>
                     <a href="profile.php">Xem hồ sơ ››</a>
                     <a href="logout.php">Đăng xuất</a>
                 </div>
             <?php
             }
+            else
+            {
+                echo '<div class="login"><a href="login.php">Đăng nhập</a><span></span></div>';
+            }
         }
         ?>
+        <!-- <div class="welcome">
+            <b>Nguyễn Văn Anh</b>
+
+            <a href="#">Xem hồ sơ ››</a>
+            <a href="#">Đăng xuất ››</a>
+        </div> -->
         <!-- ------ -->
         <nav>
-            <ul>
-                <li><a href="home.php"><span></span>Giới thiệu</a></li>
-                <li class=""><a href="article2.php"><span></span>Giải pháp cho trẻ ngán sữa</a>
-                    <ul>
-                        <li><a href="article1.php?id=1">Nỗi lo ngán sữa</a></li>
-                        <li><a href="article2.php">Bí kíp của mẹ</a></li>
-                        <li><a href="article3.php">Sữa KUN Cookies</a></li>
-                        <li class="last"></li>
-                    </ul>
-                </li>
-                <li class="active"><a href="aboutgame.php"><span></span>Cuộc thi ảnh</a>
-                    <ul>
-                        <li><a href="gameboard.php">Gửi ảnh dự thi</a></li>
-                        <li><a href="library.php">Ảnh dự thi</a></li>
-                        <li><a href="rules.php">Thể lệ & giải thưởng </a></li>
-                        <li><a href="winlist.php">Danh sách trúng thưởng</a></li>
-                        <li class="last"></li>
-                    </ul>
-                </li>
-            </ul>
+            <li class="round"><span></span></li>
+            <li><a href="home.php">Trang chủ</a></li>
+            <li class="round"><span></span></li>
+            <li><a href="article2.php">Giải pháp cho trẻ ngán sữa</a>
+                <ul>
+                    <li><a href="article1.php?id=1">Nỗi lo ngán sữa</a></li>
+                    <li><a href="article2.php">Bí kíp của mẹ</a></li>
+                    <li><a href="article3.php">Sữa KUN Cookies</a></li>
+                </ul>
+            </li>
+            <li class="round"><span></span></li>
+            <li><a class="active" href="aboutgame.php">Cuộc thi ảnh</a>
+                <ul>
+                    <li><a href="gameboard.php">Gửi ảnh dự thi</a></li>
+                    <li><a href="library.php">Ảnh dự thi</a></li>
+                    <li><a href="rules.php">Thể lệ & giải thưởng </a></li>
+                    <li><a href="winlist.php">Danh sách trúng thưởng</a></li>
+                </ul>
+            </li>
+            <li class="round"><span></span></li>
         </nav>
         <!-- ------ -->
     </div>
+
 </div>
 <div class="wrapper_1000">
     <div id="frame_library"></div>

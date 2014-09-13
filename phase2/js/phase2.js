@@ -42,8 +42,16 @@ $( document ).ready(function() {
    			window.location.href = curr_url+"s="+searchtext;
    		}
    });
+   $('#btn-resert').click(function(){
+   		image_reset();
+   });
 });
-
+/**
+ * show popup function
+ */
+function image_reset(){
+	window.location.reload();
+}
 /**
  * show popup function
  */
@@ -71,7 +79,6 @@ function closeAvaEdit(){
  */
 function ShowPicture(sImage)
 {
-	console.log(sImage);
 	$("#edit-mask").hide();
     $('.edit-avatar-region').hide(); 
 	var data = '<img src="'+sImage+'" /><input type="hidden" name="ImgCurr" id="ImgCurr" value="'+sImage+'" > ';

@@ -213,7 +213,7 @@ function update_view($id, $subjectid){
  */
 function search_detail($title){
     DB::$encoding = 'utf8';
-    $result = DB::query("SELECT * FROM photo WHERE title = %s",$title);
+    $result = DB::query("SELECT * FROM photo WHERE title = %s ORDER BY submitdate DESC",$title);
     return $result;
 }
 
@@ -251,10 +251,10 @@ function select_paging($cpage = 1, $rpp = 8,$title = '')
    DB::$encoding = 'utf8';
     $from = (($cpage * $rpp) - $rpp);
     if($title == ''){
-        $result = DB::query("SELECT * FROM photo LIMIT %d, %d",$from,$rpp);//l?y ra 6 dòng
+        $result = DB::query("SELECT * FROM photo ORDER BY submitdate DESC LIMIT %d, %d",$from,$rpp);//l?y ra 6 dòng
     }
     else{
-        $result = DB::query("SELECT * FROM photo WHERE `title` like %ss LIMIT %d, %d",$title,$from,$rpp);//l?y ra 6 dòng
+        $result = DB::query("SELECT * FROM photo WHERE `title` like %ss ORDER BY submitdate DESC LIMIT %d, %d",$title,$from,$rpp);//l?y ra 6 dòng
     }
     return $result;
 }
@@ -263,20 +263,20 @@ function select_profile_paging($cpage = 1, $rpp = 8,$userid = '')
     DB::$encoding = 'utf8';
     $from = (($cpage * $rpp) - $rpp);
     if($userid == ''){
-        $result = DB::query("SELECT * FROM photo LIMIT %d, %d",$from,$rpp);//l?y ra 6 dòng
+        $result = DB::query("SELECT * FROM photo ORDER BY submitdate DESC LIMIT %d, %d",$from,$rpp);//l?y ra 6 dòng
     }
     else{
-        $result = DB::query("SELECT * FROM photo WHERE `userid` like %ss LIMIT %d, %d",$userid,$from,$rpp);//l?y ra 6 dòng
+        $result = DB::query("SELECT * FROM photo WHERE `userid` like %ss ORDER BY submitdate DESC LIMIT %d, %d",$userid,$from,$rpp);//l?y ra 6 dòng
     }
     return $result;
 }
 //danh sách các hình
 function select_images_subjectid($key ='', $userid=''){
     if($userid == ''){
-        $images = DB::query("SELECT * FROM photo  WHERE `subjectid` = %d AND `published` = %d",$key,1);
+        $images = DB::query("SELECT * FROM photo  WHERE `subjectid` = %d AND `published` = %d ORDER BY submitdate DESC",$key,1);
     }
     else{
-        $images = DB::query("SELECT * FROM photo  WHERE `subjectid` = %d AND `published` = %d AND `userid` = %s",$key,1, $userid);   
+        $images = DB::query("SELECT * FROM photo  WHERE `subjectid` = %d AND `published` = %d AND `userid` = %s ORDER BY submitdate DESC",$key,1, $userid);   
     }
     return $images;
 }
@@ -290,7 +290,7 @@ function select_images_top($key =''){
 }
 function search_images_subjectid($key = 1,$s){
 	DB::$encoding = 'utf8';
-    $images = DB::query("SELECT * FROM photo  WHERE `subjectid` = %d AND `published` = %d AND `title` like %ss",$key,1,$s);
+    $images = DB::query("SELECT * FROM photo  WHERE `subjectid` = %d AND `published` = %d AND `title` like %ss ORDER BY submitdate DESC",$key,1,$s);
     return $images;
 }
 //l?y ph?n t? phân trang

@@ -2,7 +2,7 @@
 define('HOST','localhost');
 define('DBUSER','root');
 define('DBPASS','');
-define('DBNAME', 'kusudemodb');
+define('DBNAME', 'kusudb');
 /*define('HOST', 'localhost');
 define('DBUSER', 'kusu');
 define('DBPASS', 'kusu@1qaz@WSX');

@@ -56,7 +56,7 @@
             });
         });
     </script>
-
+	<script type="text/javascript" src="js/ga_kun.js"></script>
 </head>
 <?php
 if (!isset($_SESSION)) {
@@ -120,7 +120,7 @@ $result = select_answer();
                 <ul>
                     <li><a href="article1.php?id=1">Nỗi lo ngán sữa</a></li>
                     <li><a href="article2.php">Bí kíp của mẹ</a></li>
-                    <li><a href="article3.php">Sữa KUN Cookies</a></li>
+                    <!--<li><a href="article3.php">Sữa KUN Cookies</a></li>-->
                 </ul>
             </li>
             <li class="round"><span></span></li>

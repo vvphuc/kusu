@@ -37,12 +37,13 @@ $im = select_paging($page,8,$s);
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Game Kun - P2 - Library</title>
+<title>Kun Cookies - Thư viện ảnh dự thi</title>
 
 <link rel="stylesheet" type="text/css" href="css/p2_style_2.css" />
 <link rel="stylesheet" type="text/css" href="css/p2_library.css" />
 <script src="js/jquery.min.js"></script>
 <script src="js/phase2.js"></script>
+<script type="text/javascript" src="js/ga_kun.js"></script>
 </head>
 
 <body style="margin-top:-18px">
@@ -99,7 +100,7 @@ $im = select_paging($page,8,$s);
                 <ul>
                     <li><a href="article1.php?id=1">Nỗi lo ngán sữa</a></li>
                     <li><a href="article2.php">Bí kíp của mẹ</a></li>
-                    <li><a href="article3.php">Sữa KUN Cookies</a></li>
+                    <!--<li><a href="article3.php">Sữa KUN Cookies</a></li>-->
                 </ul>
             </li>
             <li class="round"><span></span></li>

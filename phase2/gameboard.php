@@ -16,7 +16,7 @@ $sub = $_SESSION['subject'];
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Game Kun - P2 - Library</title>
+<title>Kun Cookies - Gửi Ảnh dự thi</title>
 <link href="css/jquery.Jcrop.min.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="css/p2_style_2.css" />
 <link rel="stylesheet" type="text/css" href="css/p2_upload.css" />
@@ -65,6 +65,7 @@ $( document ).ready(function() {
 });
  </script> 
 <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/ga_kun.js"></script>
 </head>
 
 <body style="margin-top:-18px">
@@ -121,7 +122,7 @@ $( document ).ready(function() {
                 <ul>
                     <li><a href="article1.php?id=1">Nỗi lo ngán sữa</a></li>
                     <li><a href="article2.php">Bí kíp của mẹ</a></li>
-                    <li><a href="article3.php">Sữa KUN Cookies</a></li>
+                    <!--<li><a href="article3.php">Sữa KUN Cookies</a></li>-->
                 </ul>
             </li>
             <li class="round"><span></span></li>
@@ -167,7 +168,7 @@ $( document ).ready(function() {
                 <div class="text">Chọn hình</div>
                 <input id="uploadBtn" type="button" class="upload uploadBtn" />
             </div>
-            <p class="alert">Hình dự thi là JPG/PNG và dung lượng không quá 5MB</p>
+            <p class="alert">Hình dự thi là JPG và dung lượng không quá 2MB</p>
             <div class="rowf">
                 <span>Chọn khung:</span>
                 <span style="text-align:center;"><a href="javascript:void(0)" id="ifram1"><img src="images/frame2.png" width="60px" style="margin-bottom:3px;"></a><br/><input type="radio" value="images/frame2.png" name="frame_image" id="fr1"></span>
@@ -196,12 +197,12 @@ $( document ).ready(function() {
                 <input type="hidden" id="x2" name="x2" />
                 <input type="hidden" id="y2" name="y2" />
                 <div class="step1">
-                <h2>Step1: Chọn hình ảnh Upload</h2>
+                <h2>Bước 1: Chọn hình ảnh Upload</h2>
                 <div><input type="file" name="image_file" id="image_file" onchange="fileSelectHandler()" /></div>
                 </div>
                 <div class="error"></div>
                 <div class="step2">
-                    <h2>Step2: Chỉnh sửa hình ảnh</h2>
+                    <h2>Bước 2: Chỉnh sửa hình ảnh</h2>
                     <img id="preview" />
                     <div class="info">
                         <input type="hidden" id="filesize" name="filesize" />

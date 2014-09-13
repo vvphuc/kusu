@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 
-#wrap_winlist { width:1000px; margin:auto; position:relative; background:url(../images/p2-bg-winlist.png) top right no-repeat; height:464px;top:-20px;}
+#wrap_winlist { width:1000px; margin:auto; position:relative; background:url(../images/p2-bg-upload.png) top right no-repeat; height:464px;top:-20px;}
 .titlepage { width:238px; height:40px; position:absolute; top:-3px; left:290px}
 .titlepage h2 { margin:16px 0 0 28px;font-family:'UTMAndrogyne',Arial, Helvetica, sans-serif; font-size:27px; color:#009386}
 .imgtitle { width:142px; height:108px; background:url(../images/p2-bg-winlist.png) 0 -490px no-repeat; position:absolute; top:-25px; left:486px}

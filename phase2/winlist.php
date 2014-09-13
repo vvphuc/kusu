@@ -9,7 +9,7 @@ require "lib/functions.php";
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Game Kun - Winner Page</title>
+<title>Kun Cookies - Danh sách trúng thưởng</title>
 <link rel="stylesheet" type="text/css" href="css/p2_style_2.css" />
 <link rel="stylesheet" type="text/css" href="css/p2_winlist.css" />
 <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
@@ -19,7 +19,7 @@ require "lib/functions.php";
 		$('#scrollbar1').tinyscrollbar({ thumbSize: 80 });
 	});
 </script>
-
+<script type="text/javascript" src="js/ga_kun.js"></script>
 </head>
 
 <body style="margin-top:-18px">
@@ -76,7 +76,7 @@ require "lib/functions.php";
                 <ul>
                     <li><a href="article1.php?id=1">Nỗi lo ngán sữa</a></li>
                     <li><a href="article2.php">Bí kíp của mẹ</a></li>
-                    <li><a href="article3.php">Sữa KUN Cookies</a></li>
+                    <!--<li><a href="article3.php">Sữa KUN Cookies</a></li>-->
                 </ul>
             </li>
             <li class="round"><span></span></li>
@@ -98,8 +98,7 @@ require "lib/functions.php";
 	<div id="wrap_winlist">
         <!-- -->
     	<a href="javascript: history.go(-1)" class="back-link"></a>
-        <a href="gameboard.php" class="upload"></a>
-        <a href="#" class="playgame"></a>
+        <input class="guianhduthi" type="button" value="Gửi ảnh dự thi" onclick="self.location='gameboard.php'" />
     	<div class="titlepage"><h2>Cuộc thi ảnh</h2></div>
     	<div class="imgtitle"></div>
         <h3>Danh sách trúng thưởng</h3>
@@ -121,57 +120,33 @@ require "lib/functions.php";
                     <tbody>
                         <tr>
                             <td>01</td>
-                            <td>Tên người chơi</td>
-                            <td>Email người chơi</td>
-                            <td>Giải thưởng đạt được</td>
+                            <td>Đang cập nhật</td>
+                            <td>Đang cập nhật</td>
+                            <td>Đang cập nhật</td>
                         </tr>
                         <tr>
-                            <td>01</td>
-                            <td>Tên người chơi</td>
-                            <td>Email người chơi</td>
-                            <td>Giải thưởng đạt được</td>
+                            <td>02</td>
+                            <td>Đang cập nhật</td>
+                            <td>Đang cập nhật</td>
+                            <td>Đang cập nhật</td>
                         </tr>
                         <tr>
-                            <td>01</td>
-                            <td>Tên người chơi</td>
-                            <td>Email người chơi</td>
-                            <td>Giải thưởng đạt được</td>
+                            <td>03</td>
+                            <td>Đang cập nhật</td>
+                            <td>Đang cập nhật</td>
+                            <td>Đang cập nhật</td>
                         </tr>
                         <tr>
-                            <td>01</td>
-                            <td>Tên người chơi</td>
-                            <td>Email người chơi</td>
-                            <td>Giải thưởng đạt được</td>
+                            <td>04</td>
+                            <td>Đang cập nhật</td>
+                            <td>Đang cập nhật</td>
+                            <td>Đang cập nhật</td>
                         </tr>
                         <tr>
-                            <td>01</td>
-                            <td>Tên người chơi</td>
-                            <td>Email người chơi</td>
-                            <td>Giải thưởng đạt được</td>
-                        </tr>
-                        <tr>
-                            <td>01</td>
-                            <td>Tên người chơi</td>
-                            <td>Email người chơi</td>
-                            <td>Giải thưởng đạt được</td>
-                        </tr>
-                        <tr>
-                            <td>01</td>
-                            <td>Tên người chơi</td>
-                            <td>Email người chơi</td>
-                            <td>Giải thưởng đạt được</td>
-                        </tr>
-                        <tr>
-                            <td>01</td>
-                            <td>Tên người chơi</td>
-                            <td>Email người chơi</td>
-                            <td>Giải thưởng đạt được</td>
-                        </tr>
-                        <tr>
-                            <td>01</td>
-                            <td>Tên người chơi</td>
-                            <td>Email người chơi</td>
-                            <td>Giải thưởng đạt được</td>
+                            <td>05</td>
+                            <td>Đang cập nhật</td>
+                            <td>Đang cập nhật</td>
+                            <td>Đang cập nhật</td>
                         </tr>
                     </tbody>
                 </table>

@@ -134,8 +134,7 @@ $img = select_images_top($sub['id']);
     <div id="wrap_winlist">
         <!-- -->
         <a href="javascript: history.go(-1)" class="back-link"></a>
-        <a href="gameboard.php" class="upload"></a>
-        <a href="#" class="playgame"></a>
+        <input class="guianhduthi" type="button" value="Gửi ảnh dự thi" onclick="self.location='gameboard.php'" />
         <div class="titlepage"><h2>Cuộc thi ảnh</h2></div>
         <div class="imgtitle"></div>
         <!-- -->

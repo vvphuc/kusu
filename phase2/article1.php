@@ -14,9 +14,9 @@ $result =select_news();
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Game Kun - Details Page</title>
+    <title>Kun Cookies - Nỗi lo ngán sữa</title>
 
-    <link rel="stylesheet" type="text/css" href="css/p2_style.css" />
+    <link rel="stylesheet" type="text/css" href="css/p2_style_2.css" />
     <link rel="stylesheet" type="text/css" href="css/p2_article.css" />
     <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="js/jquery.tinyscrollbar.js"></script>
@@ -26,7 +26,7 @@ $result =select_news();
             $("#scrollbar2").tinyscrollbar({ thumbSize: 80 });
         });
     </script>
-
+	<script type="text/javascript" src="js/ga_kun.js"></script>
 </head>
 
 <body style="margin-top:-18px;">
@@ -77,13 +77,13 @@ $result =select_news();
         <!-- ------ -->
         <nav>
             <li class="round"><span></span></li>
-            <li><a class="active" href="home.php">Trang chủ</a></li>
+            <li><a href="home.php">Trang chủ</a></li>
             <li class="round"><span></span></li>
-            <li><a href="article2.php">Giải pháp cho trẻ ngán sữa</a>
+            <li><a class="active" href="article2.php">Giải pháp cho trẻ ngán sữa</a>
                 <ul>
                     <li><a href="article1.php?id=1">Nỗi lo ngán sữa</a></li>
                     <li><a href="article2.php">Bí kíp của mẹ</a></li>
-                    <li><a href="article3.php">Sữa KUN Cookies</a></li>
+                    <!--<li><a href="article3.php">Sữa KUN Cookies</a></li>-->
                 </ul>
             </li>
             <li class="round"><span></span></li>
@@ -113,9 +113,11 @@ $result =select_news();
         <ul id="menu" class="bikipcuame">
             <li><b></b><a href="article2.php">Bí kíp của mẹ</a><span></span></li>
         </ul>
+		<!--
         <ul id="menu" class="suakun">
             <li><b></b><a href="article3.php">Sữa Kun Cookies</a><span></span></li>
         </ul>
+		-->
         <!-- ------ -->
         <div id="scrollbar1" class="tab1">
             <div class="scrollbar"><div class="track"><div class="thumb"></div></div></div>

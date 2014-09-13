@@ -24,5 +24,9 @@ thead { border-bottom:1px solid #d7d7d7}
 #scrollbar1 .thumb { background: #faac2a; height: 10px; width: 8px; cursor: pointer; overflow: hidden; position: absolute; top:0; left:-1px}
 #scrollbar1 .disable { display: none; }
 .noSelect { user-select: none; -o-user-select: none; -moz-user-select: none; -khtml-user-select: none; -webkit-user-select: none; }
+.overview em,.overview p,.overview p strong em { font-size:13px!important}
+.overview h2 { padding:10px 0 10px; font-size:20px; color:#009588}
+.overview p strong em { font-size:12px}
+.overview img { margin:auto; display:block}
 
 

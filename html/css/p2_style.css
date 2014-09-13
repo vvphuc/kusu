@@ -3,7 +3,10 @@
 /* ====================== Default ====================== */
 * { margin:0; padding:0; border:0}
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend{ font-family: Arial,Helvetica,sans-serif}
-strong,strong span,b,b a { font-weight:700}
+strong,strong span,b,b a {
+	font-weight: 700;
+	color: #31849b;
+}
 em { font-style:italic; font-family:Arial, Helvetica, sans-serif}
 ul,ol { list-style:none}
 img { border:none}

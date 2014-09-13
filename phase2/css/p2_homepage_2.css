@@ -8,21 +8,21 @@
 .leftnews a:hover { color:#fff; text-decoration:underline; transition:all .3s}
 /* ----- */
 .rightnews { width:440px; height:275px; background:url(../images/p2-home-bg-right.png) no-repeat; position:absolute; top:0; right:10px; padding-top:95px}
-.rightnews .first { width:210px; height:210px; overflow:hidden; border-radius:3px; float:left; position:relative;opacity:1; transition:all .3s}
+.rightnews .first { width:210px; height:178px; overflow:hidden; border-radius:3px; float:left; position:relative;opacity:1; transition:all .3s}
 .rightnews .first a.img { }
 .rightnews .first .trans { background:rgba(255,255,255,0.5); box-shadow:0 0 5px #333; padding:5px; position:absolute; bottom:0; width:100%; font-size:12px}
 .first .trans span { color:#278300; display:block; float:left; background:url(../images/icon-eye-home.png) 0 3px no-repeat; padding:0 0 0 20px}
 .first .trans var { color:#2576b4; display:block; float:right; background:url(../images/icon-like-home.png) 0 1px no-repeat; padding:0 0 0 20px; margin-right:20px}
 .rightnews .first:hover { opacity:.7; transition:all .3s}
 /* ----- */
-.rightnews .small { width:99px; height:99px; overflow:hidden; border-radius:3px; float:left; position:relative;opacity:1; transition:all .3s; margin:0 0 10px 10px}
+.rightnews .small { width:99px; height:84px; overflow:hidden; border-radius:3px; float:left; position:relative;opacity:1; transition:all .3s; margin:0 0 10px 10px}
 .rightnews .small a.img { }
 .rightnews .small .trans { background:rgba(255,255,255,0.5); box-shadow:0 0 5px #333; padding:2px 5px; position:absolute; bottom:0; width:100%; font-size:12px}
 .small .trans span { color:#278300; display:block; float:left; background:url(../images/icon-eye-home.png) 0 3px no-repeat; padding:0 0 0 20px}
 .small .trans var { color:#2576b4; display:block; float:right; background:url(../images/icon-like-home.png) 0 1px no-repeat; padding:0 0 0 20px; margin-right:20px}
 .rightnews .small:hover { opacity:.7; transition:all .3s}
 .rightnews .chude { float:left; clear:both; margin:5px 0 0}
-a.more { font-size:17px; color:#faa51a; display:block; margin:225px 0 0 300px; font-style:italic; font-weight:700; transition:all .3s}
+a.more { font-size:17px; color:#faa51a; display:block; margin:216px 0 0 300px; font-style:italic; font-weight:700; transition:all .3s}
 a.more:hover { color:#fff; text-decoration:underline; transition:all .3s}
 /* ----- */
 .award { position:absolute; top:350px; left:150px}
@@ -51,3 +51,11 @@ a.more:hover { color:#fff; text-decoration:underline; transition:all .3s}
     -moz-transition: .3s ease-in-out;
     -o-transition: .3s ease-in-out;}
 
+.sunflower.f1 { top:428px; left:37px; width:66px; height:169px}
+.sunflower.f2 { top:457px; left:92px; width:48px; height:123px; -webkit-animation-delay: 0.2s; animation-delay: 0.2s}
+.sunflower.f3 { top:478px; left:130px; width:31px; height:79px; -webkit-animation-delay: 0.6s; animation-delay: 0.6s}
+.sunflower.f4 { top:456px; left:387px; width:66px; height:169px; -webkit-animation-delay: 0.7s; animation-delay: 0.7s}
+.sunflower.f5 { top:446px; left:447px; width:66px; height:169px; -webkit-animation-delay: 0.3s; animation-delay: 0.3s}
+.sunflower.f6 { top:474px; left:492px; width:38px; height:97px; -webkit-animation-delay: 0.1s; animation-delay: 0.1s}
+.sunflower.f7 { top:432px; left:770px; width:66px; height:169px; -webkit-animation-delay: 0.5s; animation-delay: 0.5s}
+.sunflower.f8 { top:460px; left:831px; width:48px; height:123px; -webkit-animation-delay: 0.4s; animation-delay: 0.4s}

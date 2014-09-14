@@ -7,13 +7,18 @@ if (!isset($_SESSION)) {
 require 'lib/functions.php';
 $subjectid =1;
 $p = isset($_GET['p']) ? ((int) $_GET['p']) : 1;
+$p_next = $p+1;
+$p_prev = $p-1;
+if($p_prev <1){
+    $p_prev = 1;
+}
 $photo = select_photo_by_id($p);
 if(have_photo($p)){
     update_view($p,$subjectid);
 }
 if(!$photo){
-    _redirect('library.php');
-    return;
+    $p_next =1;
+    $photo = select_photo_by_id(1);
 }
 $user_info = '';
 $user_info= get_info_user($photo['0']['userid']);
@@ -106,9 +111,9 @@ $user_info= get_info_user($photo['0']['userid']);
     	<!-- -->
     	<div id="col-1">
         	<div class="face"><img src="<?php if($user_info['0']['avatar'] != ''){ echo trim($user_info['0']['avatar']);}else{echo 'images/p2-char-home.png';} ?>" /></div>
-            <div class="name"><?php echo $user_info['0']['name']; ?></div>
-            <div class="view"><b><?php echo $photo['0']['view'];?></b></div>
-            <div class="like"><b><?php echo $photo['0']['vote'];?></b><input type="hidden" value="<?php echo $photo['0']['vote'];?>" name ="vote-count" id="vote-count"></div>
+            <div class="name"><?php if(isset($user_info['0']['name'])) echo $user_info['0']['name']; ?></div>
+            <div class="view"><b><?php if(isset($photo['0']['view'])) echo $photo['0']['view'];?></b></div>
+            <div class="like"><b><?php if(isset($photo['0']['vote'])) echo $photo['0']['vote'];?></b><input type="hidden" value="<?php echo $photo['0']['vote'];?>" name ="vote-count" id="vote-count"></div>
             <div class="date">Ngày đăng<Br /><?php echo date('d/m/Y',strtotime($photo['0']['submitdate']));?></div>
             <strong>Chủ đề 1</strong>
             <div class="vote"><a href="#" id="vote-photo"></a><input type="hidden" value="<?php echo $p;?>" id ="pt-id" name = "ptid"></div>
@@ -116,8 +121,8 @@ $user_info= get_info_user($photo['0']['userid']);
         </div>
         <!-- -->
         <div id="col-2">
-        	<div class="next"><a href="#"></a></div>
-        	<div class="prev"><a href="#"></a></div>
+        	<div class="next"><a href="detail.php?p=<?php echo $p_prev;?>"></a></div>
+        	<div class="prev"><a href="detail.php?p=<?php echo $p_next;?>"></a></div>
         	<img src="<?php echo $photo['0']['photo'];?>" />
             <div class="name"><?php echo $photo['0']['title'];?></div>
         </div>

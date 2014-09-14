@@ -98,7 +98,8 @@ if($userid)
 					'view'=>0,
 					'vote'=>0,
 					'published'=>1,
-					'ip'=>$ip
+					'ip'=>$ip,
+					'intsubmitdate' => time()
 					);
 	insert_images($data);
 	insert_profile($userid, $yourname, $phone, $email);

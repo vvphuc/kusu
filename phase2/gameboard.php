@@ -79,6 +79,9 @@ $( document ).ready(function() {
 
 
 		<?php
+        $email ='';
+        $phone ='';
+        $name='';
         if((!isset($_SESSION['uid']) || $_SESSION['uid'] == "") && (!isset($_SESSION['pass']) || $_SESSION['pass'] == ""))
         {
             ?>
@@ -91,6 +94,19 @@ $( document ).ready(function() {
         {
             if(check_user_login($_SESSION['uid'],$_SESSION['pass']) == 1)
             {
+                $profile = get_info_user($_SESSION['uid']);
+                $type = $profile[0]['type'];
+                if($profile[0]['type']==1)
+                {
+                    $name = $profile[0]['name'];
+                    $email = $profile[0]['id'];
+                }
+                else
+                {
+                    $name = $profile[0]['fbname'];
+                    $email = $profile[0]['fbemail'];
+                }
+                $phone = $profile[0]['phone'];
                 ?>
                 <div class="welcome">
 

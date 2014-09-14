@@ -72,6 +72,8 @@ url('../../css/fonts/UTMAndrogyne.svg#UTMAndrogyne') format('svg');
 .welcome b { font-size:12px; display:block; color:#fff}
 .welcome a { font-size:11px; color:#fff; display:block; transition:all .3s}
 .welcome a:hover { padding-left:10px; color:#F00; transition:all .3s}
+.guianhduthi { width:188px; background:url(../images/p2-bg-button.png) no-repeat; font-family:'UTMAndrogyne', Arial, Helvetica, sans-serif; color:#fff; font-size:18px; padding:3px 0 16px 0; position:absolute; top:240px; left:85px; transition:all .3s}
+.guianhduthi:hover { cursor:pointer; background:url(../images/p2-bg-button_hover.png) no-repeat; transition:all .3s}
 
 a.facebook { width:30px; height:30px; background:url(../images/facebook-icon.png) no-repeat; opacity:.8; position:absolute; top:20px; right:0; transition:all .3s}
 a.facebook:hover { box-shadow:0px 0px 5px #fff; opacity:1; transition:all .3s}
@@ -79,10 +81,16 @@ a.facebook:hover { box-shadow:0px 0px 5px #fff; opacity:1; transition:all .3s}
 
 /* Menu Dropdown */
 nav {position:absolute; left:300px; top:20px}
-nav ul li { float:left}
-nav ul li.round span { display:block; width:6px; height:6px; border-radius:3px; background-color:#fff; float:left; margin:12px 10px 0;}
-nav ul li a { font-family:'UVNVan'; display:block; padding:5px 10px; color:#fff; font-size:16px; border-radius:5px; transition:all .3s}
-nav ul li a:hover,nav ul li a.active { color:#009b8c; background-color:#fff; transition:all .3s}
+nav li { float:left; list-style:none}
+nav li.round span { display:block; width:6px; height:6px; border-radius:3px; background-color:#fff; float:left; margin:12px 10px 0;}
+nav li a { font-family:'UVNVan'; display:block; padding:5px 10px; color:#fff; font-size:16px; border-radius:5px; transition:all .3s}
+nav li a:hover,nav li a.active { color:#009b8c; background-color:#fff; transition:all .3s}
+nav li ul { display:none; border-radius:0 0 5px 5px; background-color:#fff; padding:10px 0; margin-left:5px; box-shadow:0 6px 6px #666}
+nav li:hover ul { display:block; position:absolute; top:28px; z-index:999}
+nav li ul li {float:none; width:140px; padding:4px 0; transition:all .3s}
+nav li ul li:hover { background-color:#009b8c; transition:all .3s}
+nav li ul li a { color:#009b8c; transition:all .3s}
+nav li ul li:hover a { color:#fff; background:none; transition:all .3s}
 
 /* Flower moving */
 @-webkit-keyframes spaceboots {
@@ -126,11 +134,14 @@ nav ul li a:hover,nav ul li a.active { color:#009b8c; background-color:#fff; tra
 	-moz-animation-timing-function: ease-in-out;
 }
 
-.sunflower.f1 { top:428px; left:37px; width:66px; height:169px}
-.sunflower.f2 { top:457px; left:92px; width:48px; height:123px; -webkit-animation-delay: 0.2s; animation-delay: 0.2s}
-.sunflower.f3 { top:478px; left:130px; width:31px; height:79px; -webkit-animation-delay: 0.6s; animation-delay: 0.6s}
-.sunflower.f4 { top:456px; left:387px; width:66px; height:169px; -webkit-animation-delay: 0.7s; animation-delay: 0.7s}
-.sunflower.f5 { top:446px; left:447px; width:66px; height:169px; -webkit-animation-delay: 0.3s; animation-delay: 0.3s}
-.sunflower.f6 { top:474px; left:492px; width:38px; height:97px; -webkit-animation-delay: 0.1s; animation-delay: 0.1s}
-.sunflower.f7 { top:432px; left:770px; width:66px; height:169px; -webkit-animation-delay: 0.5s; animation-delay: 0.5s}
-.sunflower.f8 { top:460px; left:831px; width:48px; height:123px; -webkit-animation-delay: 0.4s; animation-delay: 0.4s}
+.sunflower.f1 { bottom:-82px; right:19px; width:66px; height:169px; -webkit-animation-delay: 0.2s; animation-delay: 0.2s}
+.sunflower.f2 { bottom:-16px; right:144px; width:48px; height:123px; -webkit-animation-delay: 0.2s; animation-delay: 0.2s}
+.sunflower.f3 { bottom:11px; right:184px; width:31px; height:79px; -webkit-animation-delay: 0.6s; animation-delay: 0.6s}
+.sunflower.f4 { bottom:-37px; right:93px; width:66px; height:169px; -webkit-animation-delay: 0.7s; animation-delay: 0.7s}
+.sunflower.f5 { bottom:-67px; right:62px; width:66px; height:169px; -webkit-animation-delay: 0.3s; animation-delay: 0.3s}
+.sunflower.f6 { bottom:-43px; right:85px; width:38px; height:97px; -webkit-animation-delay: 0.1s; animation-delay: 0.1s}
+.sunflower.f7 { bottom:-44px; right:37px; width:66px; height:169px; -webkit-animation-delay: 0.5s; animation-delay: 0.5s}
+.sunflower.f8 { bottom:-60px; right:37px; width:48px; height:123px; -webkit-animation-delay: 0.4s; animation-delay: 0.4s}
+.sunflower.f9 { bottom:-60px; right:115px; width:48px; height:123px; -webkit-animation-delay: 0.4s; animation-delay: 0.4s}
+.sunflower.f10 { bottom:-44px; right:10px; width:48px; height:123px; -webkit-animation-delay: 0.2s; animation-delay: 0.2s}
+.sunflower.f11 { bottom:-103px; right:162px; width:66px; height:169px; -webkit-animation-delay: 0.2s; animation-delay: 0.3s}

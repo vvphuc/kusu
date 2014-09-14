@@ -21,13 +21,12 @@ $user_info= get_info_user($photo['0']['userid']);
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Kun Cookies - Ảnh dự thi</title>
+<title>Game Kun - P2 - Library</title>
 
 <link rel="stylesheet" type="text/css" href="css/p2_style_2.css" />
 <link rel="stylesheet" type="text/css" href="css/p2_details.css" />
 <script src="js/jquery.min.js"></script>
 <script src="js/phase2.js"></script>
-<script type="text/javascript" src="js/ga_kun.js"></script>
 </head>
 
 <body style="margin-top:-18px">
@@ -84,7 +83,7 @@ $user_info= get_info_user($photo['0']['userid']);
                 <ul>
                     <li><a href="article1.php?id=1">Nỗi lo ngán sữa</a></li>
                     <li><a href="article2.php">Bí kíp của mẹ</a></li>
-                    <!--<li><a href="article3.php">Sữa KUN Cookies</a></li>-->
+                    <li><a href="article3.php">Sữa KUN Cookies</a></li>
                 </ul>
             </li>
             <li class="round"><span></span></li>
@@ -117,6 +116,8 @@ $user_info= get_info_user($photo['0']['userid']);
         </div>
         <!-- -->
         <div id="col-2">
+        	<div class="next"><a href="#"></a></div>
+        	<div class="prev"><a href="#"></a></div>
         	<img src="<?php echo $photo['0']['photo'];?>" />
             <div class="name"><?php echo $photo['0']['title'];?></div>
         </div>

@@ -29,7 +29,7 @@ $result =select_news();
 	<script type="text/javascript" src="js/ga_kun.js"></script>
 </head>
 
-<body style="margin-top:-18px;">
+<body>
 <h1>Sữa Kun</h1>
 <div id="topbar">
 	<div class="repeatmenu"></div>
@@ -83,7 +83,7 @@ $result =select_news();
                 <ul>
                     <li><a href="article1.php?id=1">Nỗi lo ngán sữa</a></li>
                     <li><a href="article2.php">Bí kíp của mẹ</a></li>
-                    <!--<li><a href="article3.php">Sữa KUN Cookies</a></li>-->
+                    <li><a href="article3.php">Sữa KUN Cookies</a></li>
                 </ul>
             </li>
             <li class="round"><span></span></li>
@@ -113,11 +113,9 @@ $result =select_news();
         <ul id="menu" class="bikipcuame">
             <li><b></b><a href="article2.php">Bí kíp của mẹ</a><span></span></li>
         </ul>
-		<!--
         <ul id="menu" class="suakun">
             <li><b></b><a href="article3.php">Sữa Kun Cookies</a><span></span></li>
         </ul>
-		-->
         <!-- ------ -->
         <div id="scrollbar1" class="tab1">
             <div class="scrollbar"><div class="track"><div class="thumb"></div></div></div>

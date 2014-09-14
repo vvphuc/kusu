@@ -9,7 +9,7 @@ require "lib/functions.php";
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Game Kun - Winner Page</title>
+    <title>Kun Cookies - Thể lệ & Giải thưởng</title>
     <link rel="stylesheet" type="text/css" href="css/p2_style_2.css" />
     <link rel="stylesheet" type="text/css" href="css/p2_winlist.css" />
     <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
@@ -19,7 +19,7 @@ require "lib/functions.php";
             $('#scrollbar1').tinyscrollbar({ thumbSize: 80 });
         });
     </script>
-
+	<script type="text/javascript" src="js/ga_kun.js"></script>
 </head>
 
 <body style="margin-top:-18px">

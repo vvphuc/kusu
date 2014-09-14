@@ -29,10 +29,10 @@
 #col-2 { width:459px; height:389px; float:left; border:2px dashed #f9ce00; border-radius:10px; margin:13px 0 0; overflow:hidden}
 #col-2 img { margin:6px 0 0 6px; border-radius:5px; float:left}
 #col-2 .name { background-color:rgba(255,255,255,0.7); width:100%; padding:10px 10px 50px; float:left; margin:-34px 0 0; font-size:18px; color:#595959;}
-#col-2 .next { background:url(../images/p2-background-elements-thuvien.png) -330px -510px no-repeat; position:absolute; top:180px; left:130px}
+#col-2 .next { background:url(../images/p2-background-elements-thuvien.png) -330px -510px no-repeat; position:absolute; top:180px; left:-35px}
 #col-2 .next a,#col-2 .prev a { display:block;width:21px; height:34px; opacity:0.7}
 #col-2 .next a:hover,#col-2 .prev a:hover { opacity:1}
-#col-2 .prev{ width:21px; height:34px; background:url(../images/p2-background-elements-thuvien.png) -380px -510px no-repeat; position:absolute; top:180px; left:540px}
+#col-2 .prev{ width:21px; height:34px; background:url(../images/p2-background-elements-thuvien.png) -380px -510px no-repeat; position:absolute; top:180px; right:-35px}
 
 /* CONTENT Col-3 */
 #col-3 { width:330px; height:387px; float:left; margin:20px 0 0 10px}
